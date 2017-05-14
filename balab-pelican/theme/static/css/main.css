@@ -23,6 +23,11 @@ h2 {
   text-align: center;
 }
 
+#myScrollspy li.active > a {
+  background-color: rgba(32, 56, 100, 0.7);
+  color: white;
+}
+
 #px1 p > b {
 	color: #203864;
 }
@@ -60,8 +65,7 @@ h2 {
 }
 
 #px2 ul > a > .list-group-item:hover {
-  background-color: rgba(32, 56, 100, 0.7);
-  color: white;
+  background-color: #edeef2;
 }
 
 #px2 ul > a:hover {

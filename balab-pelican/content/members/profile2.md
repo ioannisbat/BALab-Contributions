@@ -1,10 +1,10 @@
-Title: John batas
-Name: John
-Surname:Batas
+Title: Alex Lattas
+Name: Alex
+Surname: Lattas
 Date: 2016-04-30
-Tags: 
+Tags:
 Category: members
-Authors: Batas
+Authors: Latas
 Group: IOS
 Image: lattas.jpg
 Publication_tag: publications-batas

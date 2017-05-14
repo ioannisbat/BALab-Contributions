@@ -12,9 +12,9 @@
                     {% for article in articles_page.object_list %}
               				<div class="col-xs-6 col-sm-4 col-md-3">
               				  <div class="thumbnail">
-              					<img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/{{ article.image }}" alt="...">
+              					<img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/{{ article.image }}" height="200" width="200" class="img-responsive" alt="...">
               					<div id="px1" class="caption">
-              							  <h3>{{article.name}} {{article.surname}}</h3>
+              					  <h3>{{article.name}} {{article.surname}}</h3>
               					  <p><b>Groups</b>  : {{article.group}}</p>
               					  <a href="{{ SITEURL }}/{{ article.url }}" class="button">See More</a>
               					</div>
@@ -40,78 +40,179 @@
                       </div>
                 {% elif category == 'publications'%}
                   <div class="row">
-               		  <div class="panel panel-default">
-                 			<div class="panel-heading">
-                 			  <h2>Publications</h2>
-                 			</div>
-               		  </div>
-                  </div>
-                  <div class = "col-sm-3">
-            			<nav id="myScrollspy">
-            			  <ul class="nav nav-pills nav-stacked" style="position: fixed;">
-            				<li class="active"><a href="#section1">Monographs and edited volumes</a></li>
-            				<li><a href="#section2">Journal articles</a></li>
-            				<li><a href="#section3">Book chapters</a></li>
-            				<li><a href="#section4">Conference publications</a></li>
-            				<li><a href="#section5">White papers</a></li>
-            				<li><a href="#section6">Magazine Articles</a></li>
-            				<li><a href="#section7">Working papers</a></li>
-            			  </ul>
-            			</nav>
-            		</div>
-                  <div class="col-sm-9">
-                    <div id="section1">
+                    <div class="hidden-xs hidden-sm hidden-md col-lg-3 col-xl-3">
+                      <nav id="myScrollspy" data-spy="affix" data-offset-top="50" style="position: fixed;">
+                        <div class="panel panel-default" >
+                          <div class="panel-heading">
+                            Title:
+                          </div>
+
+                          <ul class="nav nav-pills nav-stacked">
+                            <li><a href="#monographs">Monographs and edited volumes</a></li>
+                    				<li><a href="#journal_articles">Journal articles</a></li>
+                    				<li><a href="#book_chapters">Book chapters</a></li>
+                    				<li><a href="#conference_publications">Conference publications</a></li>
+                    				<li><a href="#white_papers">White papers</a></li>
+                    				<li><a href="#magazine_articles">Magazine Articles</a></li>
+                    				<li><a href="#working_papers">Working papers</a></li>
+                          </ul>
+                        </div>
+                      </nav>
+                    </div>
+              		<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-9">
+                    <div id="monographs">
                       <div class="panel panel-default" id="px2">
              				  <div class="panel-heading">
                           <h3>Monographs and edited volumes</h3>
              				  </div>
              			    <ul class="list-group">
                         {% for article in articles_page.object_list %}
-                        {% if article.publication_type == 'monographs' %}
-                        <li class="list-group-item"> {{ article.author }} <a href="{{article.url}}">{{article.title}}.</a>
-                             {{article.volume}}({{article.number}}): {{article.pages}}, {{article.month}} {{article.year}}.{{article.note}}</li>
-                        {% endif%}
+                          {% if article.publication_type == 'monographs' %}
+                            <li class="list-group-item">
+                              {{ article.author }} <a href="{{article.url}}">{{article.title}}.</a>
+                              {{article.volume}}({{article.number}}): {{article.pages}}, {{article.month}} {{article.year}}.{{article.note}}
+                            </li>
+                          {% endif%}
                         {% endfor %}
                       </ul>
                      </div>
                    </div>
-                   <div id="section2">
+                   <div id="journal_articles">
              			   <div class="panel panel-default" id="px2">
              				<div class="panel-heading">
                         <h3>Journal Articles</h3>
              				</div>
              			    <ul class="list-group">
                         {% for article in articles_page.object_list %}
-                        {% if article.publication_type == 'journal_articles' %}
-                          <li class="list-group-item"> {{ article.author }} <a href="{{article.url}}">{{article.title}}.</a>
-                             {{article.volume}}({{article.number}}): {{article.pages}}, {{article.month}} {{article.year}}.{{article.note}}</li>
-                        {% endif%}
+                          {% if article.publication_type == 'journal_articles' %}
+                            <li class="list-group-item">
+                              {{ article.author }} <a href="{{article.url}}">{{article.title}}.</a>
+                              {{article.volume}}({{article.number}}): {{article.pages}}, {{article.month}} {{article.year}}.{{article.note}}
+                            </li>
+                          {% endif%}
                         {% endfor %}
              			   </ul>
              			  </div>
 
              			</div>
+                  <div id="book_chapters">
+                    <div class="panel panel-default" id="px2">
+                    <div class="panel-heading">
+                        <h3>Book Chapters</h3>
+                    </div>
+                    <ul class="list-group">
+                      {% for article in articles_page.object_list %}
+                        {% if article.publication_type == 'book_chapters' %}
+                          <li class="list-group-item">
+                            {{ article.author }} <a href="{{article.url}}">{{article.title}}.</a>
+                            {{article.volume}}({{article.number}}): {{article.pages}}, {{article.month}} {{article.year}}.{{article.note}}
+                          </li>
+                        {% endif%}
+                      {% endfor %}
+                    </ul>
+                   </div>
+                 </div>
+                 <div id="conference_publications">
+                   <div class="panel panel-default" id="px2">
+                    <div class="panel-heading">
+                       <h3>Conference publications</h3>
+                    </div>
+                    <ul class="list-group">
+                      {% for article in articles_page.object_list %}
+                        {% if article.publication_type == 'conference_publications' %}
+                          <li class="list-group-item">
+                            {{ article.author }} <a href="{{article.url}}">{{article.title}}.</a>
+                            {{article.volume}}({{article.number}}): {{article.pages}}, {{article.month}} {{article.year}}.{{article.note}}
+                          </li>
+                        {% endif%}
+                      {% endfor %}
+                   </ul>
+                  </div>
+                </div>
+                <div id="white_papers">
+                  <div class="panel panel-default" id="px2">
+                  <div class="panel-heading">
+                      <h3>White papers</h3>
+                  </div>
+                  <ul class="list-group">
+                    {% for article in articles_page.object_list %}
+                      {% if article.publication_type == 'white_papers' %}
+                        <li class="list-group-item">
+                          {{ article.author }} <a href="{{article.url}}">{{article.title}}.</a>
+                          {{article.volume}}({{article.number}}): {{article.pages}}, {{article.month}} {{article.year}}.{{article.note}}
+                        </li>
+                      {% endif%}
+                    {% endfor %}
+                  </ul>
+                 </div>
+               </div>
+               <div id="magazine_articles">
+                 <div class="panel panel-default" id="px2">
+                  <div class="panel-heading">
+                     <h3>Magazine articles</h3>
+                  </div>
+                  <ul class="list-group">
+                    {% for article in articles_page.object_list %}
+                      {% if article.publication_type == 'magazine_articles' %}
+                        <li class="list-group-item">
+                          {{ article.author }} <a href="{{article.url}}">{{article.title}}.</a>
+                          {{article.volume}}({{article.number}}): {{article.pages}}, {{article.month}} {{article.year}}.{{article.note}}
+                        </li>
+                      {% endif%}
+                    {% endfor %}
+                 </ul>
+                </div>
+              </div>
+              <div id="working_papers">
+                <div class="panel panel-default" id="px2">
+                <div class="panel-heading">
+                    <h3>Working projects</h3>
+                </div>
+                <ul class="list-group">
+                  {% for article in articles_page.object_list %}
+                    {% if article.publication_type == 'working_projects' %}
+                      <li class="list-group-item">
+                        {{ article.author }} <a href="{{article.url}}">{{article.title}}.</a>
+                        {{article.volume}}({{article.number}}): {{article.pages}}, {{article.month}} {{article.year}}.{{article.note}}
+                      </li>
+                    {% endif%}
+                  {% endfor %}
+                </ul>
+               </div>
+             </div>
                 </div>
                 {% else %}
                 <div class="panel panel-default">
                   <div class="panel-heading">
-                    <h2>Completed Projects</h2>
+                    <h2>Projects</h2>
                   </div>
                 </div>
                 <div class="panel panel-default" id="px2">
                  <div class="panel-heading">
-                   <h3 class="panel-title">Our completed projects are:</h3>
+                   <h3 class="panel-title">Current projects:</h3>
                  </div>
                  <ul class="list-group">
                    {% for article in articles_page.object_list %}
-                    <a href="{{ SITEURL }}/{{ article.url }}"><li class="list-group-item"> {{ article.title }}</li></a>
-                    {% endfor %}
+                    {% if article.year == "2017" %}
+                      <a href="{{ SITEURL }}/{{ article.url }}"><li class="list-group-item"> {{ article.title }}  </li></a>
+                    {% endif %}
+                  {% endfor %}
                  </ul>
                </div>
+               <div class="panel panel-default" id="px2">
+                <div class="panel-heading">
+                  <h3 class="panel-title">Completed projects:</h3>
+                </div>
+                <ul class="list-group">
+                  {% for article in articles_page.object_list %}
+                    {% if article.year != "2017" %}
+                      <a href="{{ SITEURL }}/{{ article.url }}"><li class="list-group-item"> {{ article.title }}</li></a>
+                    {% endif %}
+                   {% endfor %}
+                </ul>
+              </div>
                 {% endif %}
-
-  {% else %}
-  <h2>publications not found</h2>
+              </div>
   {% endif %}
 </div>
 {% endblock content %}
