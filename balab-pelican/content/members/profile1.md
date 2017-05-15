@@ -5,7 +5,7 @@ Category: members
 Publication_tag: publications-stath
 Authors: Stathoula
 Group: Sense
-Image: lattas.jpg
+Image: stathoula.jpg
 Name: Stathoula
 Surname: Chioteli
 Email:dsds
