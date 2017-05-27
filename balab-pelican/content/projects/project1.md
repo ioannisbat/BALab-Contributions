@@ -1,6 +1,7 @@
 Title: PRAXIS
 Date: 2010-12-03 10:20
 Category: projects
+State: Current projects
 projtitle: Interconnection of Applications and conduct of inter-business transactions through the internet
 project_type: RTD
 startdate: 2003/10/01

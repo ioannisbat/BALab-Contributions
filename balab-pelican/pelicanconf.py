@@ -2,29 +2,17 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
+JINJA_EXTENSIONS = ['jinja2.ext.loopcontrols']
+
 AUTHOR = 'sta'
-SITENAME = 'new'
+SITENAME = 'BAlab'
 SITEURL = ''
 
 PATH = 'content'
 
-PUBLICATIONS_SRC = 'content/pubs.bib'
-
 TIMEZONE = 'Europe/Athens'
 
 DEFAULT_LANG = 'Greek'
-
-THEME = 'theme'
-
-# static files to copy into root, very useful for robots.txt
-FILES_TO_COPY = (
-   ('extra/robots.txt', 'robots.txt'),
-   ('extra/humans.txt', 'humans.txt'),
-)
-# directories to be copied into output/static/
-STATIC_PATHS = ['img', 'css', 'js']
-# very useful for debugging purposes
-DELETE_OUTPUT_DIRECTORY = True
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
@@ -34,16 +22,32 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Blogroll
-LINKS = (('Pelican', 'http://getpelican.com/'),
-         ('Python.org', 'http://python.org/'),
-         ('Jinja2', 'http://jinja.pocoo.org/'),
-         ('You can modify those links in your config file', '#'),)
+LINKS = None
+#LINKS = (('Github repository', 'http://github.org/nlp-unibuc'),
+#        ('Vlad Niculae', 'http://vene.ro'))
 
 # Social widget
-SOCIAL = (('You can add links in your config file', '#'),
-          ('Another social link', '#'),)
+SOCIAL = ()
 
-DEFAULT_PAGINATION = 10
+# Plugins
+PLUGIN_PATHS = ['plugins/']
+PLUGINS = ['pelican-bibtex']
+PUBLICATIONS_SRC = 'content/pubs.bib'
 
-# Uncomment following line if you want document-relative URLs when developing
+THEME = 'theme'
+
+DIRECT_TEMPLATES = ('publications','index')
+
+DEFAULT_PAGINATION = False
+
+DISPLAY_CATEGORIES_ON_MENU = True
+DISPLAY_PAGES_ON_MENU = True
+MENUITEMS = (
+    ('Publications', 'publications.html'),
+)
+
+# directories to be copied into output/static/
+STATIC_PATHS = ['img', 'css', 'js']
+# very useful for debugging purposes
+DELETE_OUTPUT_DIRECTORY = True
 RELATIVE_URLS = True

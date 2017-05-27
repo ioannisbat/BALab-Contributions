@@ -1,5 +1,5 @@
 Title: PRAXIS2
-year: 2017
+State: Completed projects
 Date: 2017-12-03 10:20
 Category: projects
 projtitle: Interconnection of Applications and conduct of inter-business transactions through the internet
