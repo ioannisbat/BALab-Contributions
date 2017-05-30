@@ -2,6 +2,7 @@ Title: PRAXIS
 Date: 2010-12-03 10:20
 Category: projects
 State: Current projects
+shortname: PRAXIS
 projtitle: Interconnection of Applications and conduct of inter-business transactions through the internet
 project_type: RTD
 startdate: 2003/10/01
@@ -12,13 +13,19 @@ total_budget: 1,713,000
 funding_agency: General Secretariat of Research and Technology, Ministry of Development
 funding_programme: Electronic Business
 project_code: 42
-partner_title: Delta-Singular
-partner_country: GR
-partner_web_site: http://www.singularsoftware.gr/index.asp
+partner_title1: Delta-Singular
+partner_country1: GR
+partner_web_site1: http://www.singularsoftware.gr/index.asp
+partner_title2: Delta-Singular
+partner_country2: GR
+partner_web_site2: http://www.singularsoftware.gr/index.asp
+partner_title3: Delta-Singular
+partner_country3: GR
+partner_web_site3: http://www.singularsoftware.gr/index.asp
 logo: p_eaware.jpeg
-coordinator: diomidis spinellis
+scientific_coordinator: diomidis spinellis
 contact: diomidis spinellis
-Groups: SENSE
+project_manager: aggelikh
 
 The aim of the project is the interconnection of commercial applications
 and the conduct of inter-business transactions through the internet,

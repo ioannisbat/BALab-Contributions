@@ -1,24 +1,32 @@
 Title: PRAXIS2
-State: Completed projects
-Date: 2017-12-03 10:20
+Date: 2010-12-03 10:20
 Category: projects
-projtitle: Interconnection of Applications and conduct of inter-business transactions through the internet 2
+State: Completed projects
+shortname: PRAXIS2
+projtitle: Interconnection of Applications and conduct of inter-business transactions through the internet
 project_type: RTD
-startdate: 2017/10/01
-enddate: 2017/11/30
+startdate: 2003/10/01
+enddate: 2005/11/30
+endyear: 2017
 web_site: http://www.praxisnet.gr/
 our_budget: 125,000
 total_budget: 1,713,000
 funding_agency: General Secretariat of Research and Technology, Ministry of Development
 funding_programme: Electronic Business
 project_code: 42
-partner_title: Delta-Singular
-partner_country: GR
-partner_web_site: http://www.singularsoftware.gr/index.asp
+partner_title1: Delta-Singular
+partner_country1: GR
+partner_web_site1: http://www.singularsoftware.gr/index.asp
+partner_title2: Delta-Singular
+partner_country2: GR
+partner_web_site2: http://www.singularsoftware.gr/index.asp
+partner_title3: Delta-Singular
+partner_country3: GR
+partner_web_site3: http://www.singularsoftware.gr/index.asp
 logo: p_eaware.jpeg
-coordinator: diomidis spinellis
+scientific_coordinator: diomidis spinellis
 contact: diomidis spinellis
-Groups: SENSE
+project_manager: aggelikh
 
 The aim of the project is the interconnection of commercial applications
 and the conduct of inter-business transactions through the internet,

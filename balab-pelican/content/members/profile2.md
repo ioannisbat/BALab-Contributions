@@ -1,17 +1,18 @@
 Title: Alex Lattas
-Name: Alex
+Givenname: Alex
 Surname: Lattas
 Date: 2016-04-30
 Year: 2017
 Category: members
-Authors: Latas
-Group: IOS
-Image: lattas.jpg
+Photo: lattas.jpg
 Id: a_lattas
 office_phone: +30 210 8203466
 office_address: Derigny 12, 7th floor
 postal_address: 76 Patission str, 104 34, Athens, Greece
 email: alattas@dmst.aueb.gr
+phd_title: software bla bla
+phd_supervisor: Diomidis Spinellis
+phd_startdate: 12/12/2016
 
 <p>
 <i>Alexandros Lattas</i> is an undergraduate student at the Athens University of Economics and Business

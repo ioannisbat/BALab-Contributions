@@ -71,7 +71,7 @@ def add_publications(generator):
         entry = bibdata_all.entries[key]
         year = entry.fields.get('year')
         category = entry.fields.get('category')
-        author_id = entry.fields.get('author_id')
+        XEmember = entry.fields.get('XEmember')
         url = entry.fields.get('XEurl')
 
         #render the bibtex string for the entry
@@ -85,7 +85,7 @@ def add_publications(generator):
                              text,
                              bib_buf.getvalue(),
                              url,
-                             author_id,
+                             XEmember,
                              category
                              ))
 

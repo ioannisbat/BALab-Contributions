@@ -2,15 +2,15 @@
 {% block content_title %}{% endblock %}
 {% block content %}
   <div class="container">
-    {% if article.category == 'members' %}
+    {% if article.category == 'members' or  article.category == 'associates' %}
           <div class="panel panel-default">
             <div class="panel-heading">
-              <h2> {{article.name}} {{article.surname}} </h2>
+              <h2> {{article.givenname}} {{article.surname}} </h2>
             </div>
             <div class="panel-body">
               <div class="media">
                 <div class="media-left">
-                   <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/{{ article.image }}" alt="..." style = "width:200px; height:200px" class="img-responsive">
+                   <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/{{ article.photo }}" alt="..." style = "width:200px; height:200px" class="img-responsive">
                  </div>
                  <div class="media-left media-middle">
                 		<!-- <h4 class="media-heading">{{article.name}} {{article.surname}}</h4> -->
@@ -22,6 +22,13 @@
                        <span class="glyphicon glyphicon-globe"></span> Website: </br>
               			   <span class="glyphicon glyphicon-education"></span> Groups: {{article.group}} </br>
               			</p>
+                    {% if article.phd_title %}
+                      <h4> Phd Thesis </h4>
+                      <p> <b> Title:</b> {{article.phd_title}} </br>
+                          <b> Supervisor:</b> {{article.phd_supervisor}} </br>
+                          <b> Starting day:</b> {{article.phd_startdate}} </br>
+                      </p>
+                    {% endif %}
           	      </div>
                 </div>
               </div>
@@ -35,7 +42,7 @@
                 {{ article.content }}
               </div>
             </div>
-            {% if article.id != 'none' %}
+            {% if article.id %}
             <div class="row">
               <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
                 <nav>
@@ -45,8 +52,8 @@
                   </div>
                   <ul class="nav nav-pills nav-stacked">
                     {% for Category in ['Monographs and edited volumes','Journal articles', 'Book chapters', 'Conference publications','White papers','Magazine Articles','Working papers'] %}
-                        {% for key, year, text, bibtex, url, author_id, category in publications %}
-                         {% if category == Category and author_id == article.id %}
+                        {% for key, year, text, bibtex, url, XEmember, category in publications %}
+                         {% if category == Category and XEmember == article.id %}
                           <li><a href="#{{Category.partition(' ')[0]}}">{{Category}}</a></li>
                         {% break %}
                        {% endif %}
@@ -64,16 +71,16 @@
                   </div>
                   <div class="panel-body">
                     {% for Category in ['Monographs and edited volumes','Journal articles', 'Book chapters', 'Conference publications','White papers','Magazine Articles','Working papers'] %}
-                        {% for key, year, text, bibtex, url, author_id, category in publications %}
-                         {% if category == Category and author_id == article.id %}
+                        {% for key, year, text, bibtex, url, XEmember, category in publications %}
+                         {% if category == Category and XEmember == article.id %}
                           <h4 style="color:#203864;" id="{{Category.partition(' ')[0]}}">{{Category}}</h4>
                           {% break %}
                          {% endif %}
                         {% endfor %}
                         <ul class="list-group">
                           <ul>
-                            {% for key, year, text, bibtex, url, author_id, category in publications %}
-                             {% if author_id == article.id and category == Category %}
+                            {% for key, year, text, bibtex, url, XEmember, category in publications %}
+                             {% if XEmember == article.id and category == Category %}
                             <p>
                             <li id="{{ key }}">{{ text }}
                             </br>
@@ -97,7 +104,7 @@
     {% if article.category == 'projects' %}
           <div class="panel panel-default">
             <div class="panel-heading">
-              <h2>{{article.title}}</h2>
+              <h2>{{ article.shortname }} - {{article.projtitle}}</h2>
             </div>
           </div>
           <div class="thumbnail">
@@ -113,9 +120,9 @@
               ISTLab budget: {{article.our_budget}}</br>
               Total budget: {{article.total_budget}}</br>
               <hr>
-              Scientific coordinator: {{article.coordinator}}</br>
+              Scientific coordinator: {{article.scientific_coordinator}}</br>
               Contact: {{article.contact}}</br>
-              Groups: {{article.groups}}</br>
+              Project manager: {{article.project_manager}}</br>
             </p>
           </div>
           <div class="thumbnail">
@@ -124,11 +131,34 @@
           </div>
           <div class="thumbnail">
             <h3 style="text-align: center; color: #203864">Partners</h3>
-            <p> {{article.partner_title}} ({{article.partner_country}}) </br>
-              {% if article.partner_web_site%}
-               <a href="{{article.partner_web_site}}">{{article.partner_web_site}}</a>
-              {% endif %}
-            </p>
+                  {% if article.partner_title1%}
+                  <p> {{article.partner_title1}} ({{article.partner_country1}}) </br>
+                    {% if article.partner_web_site1%}
+                     <a href="{{article.partner_web_site}}">{{article.partner_web_site1}}</a>
+                    {% endif %}
+                  </p>
+                  {% endif %}
+                  {% if article.partner_title2%}
+                  <p> {{article.partner_title2}} ({{article.partner_country2}}) </br>
+                    {% if article.partner_web_site2%}
+                     <a href="{{article.partner_web_site}}">{{article.partner_web_site2}}</a>
+                    {% endif %}
+                  </p>
+                  {% endif %}
+                  {% if article.partner_title3%}
+                  <p> {{article.partner_title3}} ({{article.partner_country3}}) </br>
+                    {% if article.partner_web_site3%}
+                     <a href="{{article.partner_web_site}}">{{article.partner_web_site3}}</a>
+                    {% endif %}
+                  </p>
+                  {% endif %}
+                  {% if article.partner_title4%}
+                  <p> {{article.partner_title4}} ({{article.partner_country4}}) </br>
+                    {% if article.partner_web_site4%}
+                     <a href="{{article.partner_web_site}}">{{article.partner_web_site4}}</a>
+                    {% endif %}
+                  </p>
+                  {% endif %}
           </div>
     {% endif %}
 
@@ -146,9 +176,24 @@
                 Search by Category:
                 </div>
                 <ul class="nav nav-pills nav-stacked">
-                  <li><a href="#publications">Publications</a></li>
-                  <li><a href="#projects">Projects</a></li>
-                  <li><a href="#members">New members</a></li>
+                  {% for key, year, text, bibtex, url, XEmember, category in publications %}
+                   {% if year == article.title%}
+                    <li><a href="#publications">New publications</a></li>
+                    {% break %}
+                   {% endif %}
+                  {% endfor %}
+                  {% for article2 in articles %}
+                     {% if article2.category == 'projects' and (article2.endyear == article.title or article.state == 'Current projects')%}
+                        <li><a href="#projects">Projects</a></li>
+                        {% break %}
+                      {% endif %}
+                  {% endfor %}
+                  {% for article2 in articles %}
+                     {% if article2.category == 'members' and article2.year == article.title%}
+                        <li><a href="#members">New Members</a></li>
+                        {% break %}
+                      {% endif %}
+                  {% endfor %}
                 </ul>
               </div>
               </nav>
@@ -160,84 +205,122 @@
                 Search by Category:
                 </div>
                 <ul class="nav nav-pills nav-stacked">
-                  <li><a href="#publications">Publications</a></li>
-                  <li><a href="#projects">Projects</a></li>
-                  <li><a href="#members">New members</a></li>
+                  {% for key, year, text, bibtex, url, XEmember, category in publications %}
+                   {% if year == article.title%}
+                    <li><a href="#publications">New publications</a></li>
+                    {% break %}
+                   {% endif %}
+                  {% endfor %}
+                  {% for article2 in articles %}
+                     {% if article2.category == 'projects' and (article2.endyear == article.title or article.state == 'Current projects')%}
+                        <li><a href="#projects">Projects</a></li>
+                        {% break %}
+                      {% endif %}
+                  {% endfor %}
+                  {% for article2 in articles %}
+                     {% if article2.category == 'members' and article2.year == article.title%}
+                        <li><a href="#members">New Members</a></li>
+                        {% break %}
+                      {% endif %}
+                  {% endfor %}
                 </ul>
               </div>
               </nav>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-9">
-              <div class="panel panel-default" id="px2">
-                <div class="panel-heading">
-                  <h3 id="publications">Publications</h3>
-                </div>
-                <div class="panel-body">
-                  {% for Category in ['Monographs and edited volumes','Journal articles', 'Book chapters', 'Conference publications','White papers','Magazine Articles','Working papers'] %}
-                      {% for key, year, text, bibtex, url, author_id, category in publications %}
-                       {% if category == Category and year == article.title%}
-                        <h4 style="color:#203864;">{{Category}}</h4>
-                        {% break %}
-                       {% endif %}
-                      {% endfor %}
-                      <ul class="list-group">
-                        <ul>
-                          {% for key, year, text, bibtex, url, author_id, category in publications %}
-                           {% if year == article.title and category == Category %}
-                            <p>
-                            <li id="{{ key }}">{{ text }}
-                            </br>
-                            {% for label, target in [('URL', url)] %}
-                              {{ "[&nbsp;<a href=\"%s\">%s</a>&nbsp;]" % (target, label) if target }}
-                            {% endfor %}
-                            </li>
-                            </p>
-
-                           {% endif %}
-                          {% endfor %}
-                        </ul>
-                      </ul>
-                  {% endfor %}
-                </div>
-              </div>
-             <div class="panel panel-default" id="px2">
-               <div class="panel-heading">
-                 <h3 id="projects">Projects</h3>
-               </div>
-               <div class="panel-body">
-                 {% for Category in ['Current projects', 'Completed projects'] %}
-                     {% for article2 in articles %}
-                       {% if article2.category == 'projects'%}
-                        <h4 style="color:#203864;">{{Category}}</h4>
-                        {% break %}
-                       {% endif%}
-                     {% endfor %}
-                     <ul class="list-group">
-                       <ul>
-                         {% for article2 in articles %}
-                          {% if article2.category == 'projects' and article2.state == Category%}
-                           <p>
-                           <li><a href="{{ SITEURL }}/{{ article2.url }}">{{ article2.projtitle }}</a></li>
-                           </p>
+              {% for key, year, text, bibtex, url, XEmember, category in publications %}
+               {% if year == article.title%}
+                 <div class="panel panel-default" id="px2">
+                   <div class="panel-heading">
+                       <h3 id="publications">Publications</h3>
+                   </div>
+                   <div class="panel-body">
+                     {% for Category in ['Monographs and edited volumes','Journal articles', 'Book chapters', 'Conference publications','White papers','Magazine Articles','Working papers'] %}
+                         {% for key, year, text, bibtex, url, XEmember, category in publications %}
+                          {% if category == Category and year == article.title%}
+                           <h4 style="color:#203864;">{{Category}}</h4>
+                           {% break %}
                           {% endif %}
                          {% endfor %}
-                       </ul>
-                     </ul>
-                 {% endfor %}
-               </div>
-            </div>
-            <div class="panel panel-default" id="px2">
-              <div class="panel-heading">
-                <h3 id="members">New members</h3>
-              </div>
-              <ul class="list-group">
-                 {% for article2 in articles %}
-                 {% if article2.category == 'members' and article2.year == article.title%}
-                  <li class="list-group-item"><a href="{{ SITEURL }}/{{ article2.url }}">{{ article2.name }} {{ article2.surname }}</a></li>
-                 {% endif%}
-                 {% endfor %}
-             </ul>
-           </div>
+                         <ul class="list-group">
+                           <ul>
+                             {% for key, year, text, bibtex, url, XEmember, category in publications %}
+                              {% if year == article.title and category == Category %}
+                               <p>
+                               <li id="{{ key }}">{{ text }}
+                               </br>
+                               {% for label, target in [('URL', url)] %}
+                                 {{ "[&nbsp;<a href=\"%s\">%s</a>&nbsp;]" % (target, label) if target }}
+                               {% endfor %}
+                               </li>
+                               </p>
+                              {% endif %}
+                             {% endfor %}
+                           </ul>
+                         </ul>
+                     {% endfor %}
+                   </div>
+                 </div>
+                {% break %}
+               {% endif %}
+              {% endfor %}
+              {% for article2 in articles %}
+                 {% if article2.category == 'projects' and (article2.endyear == article.title or article.state == 'Current projects')%}
+                     <div class="panel panel-default" id="px2">
+                       <div class="panel-heading">
+                          <h3 id="projects">Projects</h3>
+                       </div>
+                       <div class="panel-body">
+                          {% for Category in ['Current projects', 'Completed projects'] %}
+                             {% for article2 in articles %}
+                               {% if article2.category == 'projects' and (article2.state == 'Current projects' or article2.endyear == article.title) %}
+                                <h4 style="color:#203864;">{{Category}}</h4>
+                                {% break %}
+                               {% endif%}
+                             {% endfor %}
+                             <ul class="list-group">
+                               <ul>
+                                 {% for article2 in articles %}
+                                  {% if article2.category == 'projects' and article2.state == Category%}
+                                    {% if Category == 'Completed projects' and article2.endyear == article.title%}
+                                       <p>
+                                       <li><a href="{{ SITEURL }}/{{ article2.url }}">{{ article2.shortname }} - {{article2.projtitle}}</a></li>
+                                       </p>
+                                     {% elif Category =='Current projects' %}
+                                       <p>
+                                       <li><a href="{{ SITEURL }}/{{ article2.url }}">{{ article2.shortname }} - {{article2.projtitle}}</a></li>
+                                       </p>
+                                     {% endif %}
+                                  {% endif %}
+                                 {% endfor %}
+                               </ul>
+                             </ul>
+                          {% endfor %}
+                       </div>
+                    </div>
+                    {% break %}
+                  {% endif %}
+              {% endfor %}
+            {% for article2 in articles %}
+               {% if article2.category == 'members' and article2.year == article.title%}
+                   <div class="panel panel-default" id="px2">
+                     <div class="panel-heading">
+                         <h3 id="members">New members</h3>
+                     </div>
+                     <ul class="list-group">
+                        {% for article2 in articles %}
+                        {% if (article2.category == 'members' or article2.category == 'associates') and article2.year == article.title%}
+                         <li class="list-group-item"><a href="{{ SITEURL }}/{{ article2.url }}">
+                           {{ article2.givenname }} {{ article2.surname }} {% if article2.phd_title %}(PhD student){% endif %}
+                         </a></li>
+                        {% endif%}
+                        {% endfor %}
+                    </ul>
+                  </div>
+                  {% break %}
+                {% endif %}
+            {% endfor %}
+
           </div>
         </div>
     {% endif %}
