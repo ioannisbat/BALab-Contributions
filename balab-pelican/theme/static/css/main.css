@@ -28,13 +28,20 @@ h2 {
   color: white;
 }
 
+#px1 {
+  padding: 2px;
+}
+
 #px1 p > b {
 	color: #203864;
 }
 
-#px1  h3 {
+#px1  h4 {
 	color:#203864;
-	font-weight: bold;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  margin-left: 0px;
+  margin-right: 0px;
 }
 
 #px1 p  {
@@ -58,6 +65,11 @@ h2 {
     margin: 2px 2px;
     cursor: pointer;
 	border-radius: 10px;
+}
+
+#px2 h3 {
+  margin: 4px;
+  text-align: center;
 }
 
 #px2 ul > a > li {

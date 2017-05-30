@@ -3,37 +3,70 @@
 {% block content %}
   <div class="container">
     {% if article.category == 'members' %}
-          <div class="thumbnail">
-            <div class="media">
-              <div class="media-left">
-                 <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/{{ article.image }}" alt="..." style = "width:200px; height:200px" class="img-responsive">
-               </div>
-               <div class="media-left media-middle">
-              		<h4 class="media-heading">{{article.name}} {{article.surname}}</h4>
-            			<p>
-            			   <span class="glyphicon glyphicon-phone-alt"></span> Office phone: {{article.office_phone}} </br>
-            			   <span class="glyphicon glyphicon-briefcase"></span> Office address: {{article.office_address}} </br>
-            			   <span class="glyphicon glyphicon-envelope"></span> Postal address: {{article.postal_phone}} </br>
-            			   <span class="glyphicon glyphicon-education"></span> Groups: {{article.group}} </br>
-            			</p>
-        	      </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h2> {{article.name}} {{article.surname}} </h2>
+            </div>
+            <div class="panel-body">
+              <div class="media">
+                <div class="media-left">
+                   <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/{{ article.image }}" alt="..." style = "width:200px; height:200px" class="img-responsive">
+                 </div>
+                 <div class="media-left media-middle">
+                		<!-- <h4 class="media-heading">{{article.name}} {{article.surname}}</h4> -->
+              			<p>
+                       <span class="glyphicon glyphicon-envelope"></span> E-mail: {{article.email}} </br>
+              			   <span class="glyphicon glyphicon-phone-alt"></span> Office phone: {{article.office_phone}} </br>
+              			   <span class="glyphicon glyphicon-briefcase"></span> Office address: {{article.office_address}} </br>
+              			   <span class="glyphicon glyphicon-inbox"></span> Postal address: {{article.postal_address}} </br>
+                       <span class="glyphicon glyphicon-globe"></span> Website: </br>
+              			   <span class="glyphicon glyphicon-education"></span> Groups: {{article.group}} </br>
+              			</p>
+          	      </div>
+                </div>
               </div>
             </div>
 
-            <div class="thumbnail">
-              <h2 style="text-align: center; color:#203864;"> Summary </h2>
-               <p style="padding-right:20px;padding-left:10px">
-                 {{ article.content }}
-               </p>
+            <div class="panel panel-default" id="px2">
+              <div class="panel-heading">
+                <h3> Σύντομο βιογραφικό </h3>
+              </div>
+              <div class="panel-body">
+                {{ article.content }}
+              </div>
             </div>
             {% if article.id != 'none' %}
-                <div class="thumbnail">
-                  <h2 style="text-align: center; color:#203864;"> Publication list</h2>
-                  <ul>
+            <div class="row">
+              <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                <nav>
+                <div class="panel panel-default" >
+                  <div class="panel-heading">
+                  Publications by Category:
+                  </div>
+                  <ul class="nav nav-pills nav-stacked">
                     {% for Category in ['Monographs and edited volumes','Journal articles', 'Book chapters', 'Conference publications','White papers','Magazine Articles','Working papers'] %}
                         {% for key, year, text, bibtex, url, author_id, category in publications %}
                          {% if category == Category and author_id == article.id %}
-                          <h4 style="color:#203864;">{{Category}}</h4>
+                          <li><a href="#{{Category.partition(' ')[0]}}">{{Category}}</a></li>
+                        {% break %}
+                       {% endif %}
+                      {% endfor %}
+                    {% endfor %}
+          			  </ul>
+                  </ul>
+                </div>
+                </nav>
+              </div>
+              <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-9">
+                <div class="panel panel-default" id="px2">
+                  <div class="panel-heading">
+                    <h3> Publications</h3>
+                  </div>
+                  <div class="panel-body">
+                    {% for Category in ['Monographs and edited volumes','Journal articles', 'Book chapters', 'Conference publications','White papers','Magazine Articles','Working papers'] %}
+                        {% for key, year, text, bibtex, url, author_id, category in publications %}
+                         {% if category == Category and author_id == article.id %}
+                          <h4 style="color:#203864;" id="{{Category.partition(' ')[0]}}">{{Category}}</h4>
                           {% break %}
                          {% endif %}
                         {% endfor %}
@@ -54,8 +87,10 @@
                           </ul>
                         </ul>
                       {% endfor %}
-                  </ul>
+                  </div>
                 </div>
+              </div>
+            </div>
             {% endif %}
     {% endif %}
 
@@ -103,69 +138,107 @@
               <h2>Yearly Reports - {{article.title}}</h2>
             </div>
           </div>
-          <div class="thumbnail">
-            <h2 style="text-align: center; color:#203864;"> publications </h2>
-            <ul>
-              {% for Category in ['Monographs and edited volumes','Journal articles', 'Book chapters', 'Conference publications','White papers','Magazine Articles','Working papers'] %}
-                  {% for key, year, text, bibtex, url, author_id, category in publications %}
-                   {% if category == Category and year == article.title%}
-                    <h4 style="color:#203864;">{{Category}}</h4>
-                    {% break %}
-                   {% endif %}
-                  {% endfor %}
-                  <ul class="list-group">
-                    <ul>
+          <div class="row">
+            <div class="hidden-xs hidden-sm col-md-3 col-lg-3 col-xl-3">
+              <nav id="myScrollspy" data-spy="affix" data-offset-top="50" style="position: fixed;">
+              <div class="panel panel-default" >
+                <div class="panel-heading">
+                Search by Category:
+                </div>
+                <ul class="nav nav-pills nav-stacked">
+                  <li><a href="#publications">Publications</a></li>
+                  <li><a href="#projects">Projects</a></li>
+                  <li><a href="#members">New members</a></li>
+                </ul>
+              </div>
+              </nav>
+            </div>
+            <div class="col-xs-12 col-sm-12 hidden-md hidden-lg hidden-xl">
+              <nav>
+              <div class="panel panel-default" >
+                <div class="panel-heading">
+                Search by Category:
+                </div>
+                <ul class="nav nav-pills nav-stacked">
+                  <li><a href="#publications">Publications</a></li>
+                  <li><a href="#projects">Projects</a></li>
+                  <li><a href="#members">New members</a></li>
+                </ul>
+              </div>
+              </nav>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-9">
+              <div class="panel panel-default" id="px2">
+                <div class="panel-heading">
+                  <h3 id="publications">Publications</h3>
+                </div>
+                <div class="panel-body">
+                  {% for Category in ['Monographs and edited volumes','Journal articles', 'Book chapters', 'Conference publications','White papers','Magazine Articles','Working papers'] %}
                       {% for key, year, text, bibtex, url, author_id, category in publications %}
-                       {% if year == article.title and category == Category %}
-                        <p>
-                        <li id="{{ key }}">{{ text }}
-                        </br>
-                        {% for label, target in [('URL', url)] %}
-                          {{ "[&nbsp;<a href=\"%s\">%s</a>&nbsp;]" % (target, label) if target }}
-                        {% endfor %}
-                        </p>
-                        </li>
+                       {% if category == Category and year == article.title%}
+                        <h4 style="color:#203864;">{{Category}}</h4>
+                        {% break %}
                        {% endif %}
                       {% endfor %}
-                    </ul>
-                  </ul>
-              {% endfor %}
-            </ul>
-          </div>
-          <div class="thumbnail">
-            <h2 style="text-align: center; color:#203864;"> Members </h2>
-              <ul>
-              	 {% for article2 in articles %}
-              	 {% if article2.category == 'members' and article2.year == article.title%}
-                  <h4 style="color:#203864;"> {{ article2.name }} {{ article2.surname }} </h4>
-              	 {% endif%}
-              	 {% endfor %}
-             </ul>
-         </div>
-         <div class="thumbnail">
-           <h2 style="text-align: center; color:#203864;"> Projects </h2>
-           <ul>
-             {% for Category in ['Current projects', 'Completed projects'] %}
-                 {% for article2 in articles %}
-                   {% if article2.category == 'projects'%}
-                    <h4 style="color:#203864;">{{Category}}</h4>
-                    {% break %}
-                   {% endif%}
-                 {% endfor %}
-                 <ul class="list-group">
-                   <ul>
+                      <ul class="list-group">
+                        <ul>
+                          {% for key, year, text, bibtex, url, author_id, category in publications %}
+                           {% if year == article.title and category == Category %}
+                            <p>
+                            <li id="{{ key }}">{{ text }}
+                            </br>
+                            {% for label, target in [('URL', url)] %}
+                              {{ "[&nbsp;<a href=\"%s\">%s</a>&nbsp;]" % (target, label) if target }}
+                            {% endfor %}
+                            </li>
+                            </p>
+
+                           {% endif %}
+                          {% endfor %}
+                        </ul>
+                      </ul>
+                  {% endfor %}
+                </div>
+              </div>
+             <div class="panel panel-default" id="px2">
+               <div class="panel-heading">
+                 <h3 id="projects">Projects</h3>
+               </div>
+               <div class="panel-body">
+                 {% for Category in ['Current projects', 'Completed projects'] %}
                      {% for article2 in articles %}
-                      {% if article2.category == 'projects' and article2.state == Category%}
-                       <p>
-                       <li>{{ article2.projtitle }}
-                       </p>
-                       </li>
-                      {% endif %}
+                       {% if article2.category == 'projects'%}
+                        <h4 style="color:#203864;">{{Category}}</h4>
+                        {% break %}
+                       {% endif%}
                      {% endfor %}
-                   </ul>
-                 </ul>
-             {% endfor %}
-           </ul>
+                     <ul class="list-group">
+                       <ul>
+                         {% for article2 in articles %}
+                          {% if article2.category == 'projects' and article2.state == Category%}
+                           <p>
+                           <li><a href="{{ SITEURL }}/{{ article2.url }}">{{ article2.projtitle }}</a></li>
+                           </p>
+                          {% endif %}
+                         {% endfor %}
+                       </ul>
+                     </ul>
+                 {% endfor %}
+               </div>
+            </div>
+            <div class="panel panel-default" id="px2">
+              <div class="panel-heading">
+                <h3 id="members">New members</h3>
+              </div>
+              <ul class="list-group">
+                 {% for article2 in articles %}
+                 {% if article2.category == 'members' and article2.year == article.title%}
+                  <li class="list-group-item"><a href="{{ SITEURL }}/{{ article2.url }}">{{ article2.name }} {{ article2.surname }}</a></li>
+                 {% endif%}
+                 {% endfor %}
+             </ul>
+           </div>
+          </div>
         </div>
     {% endif %}
 

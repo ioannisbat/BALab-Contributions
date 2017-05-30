@@ -2,7 +2,7 @@ Title: PRAXIS2
 State: Completed projects
 Date: 2017-12-03 10:20
 Category: projects
-projtitle: Interconnection of Applications and conduct of inter-business transactions through the internet
+projtitle: Interconnection of Applications and conduct of inter-business transactions through the internet 2
 project_type: RTD
 startdate: 2017/10/01
 enddate: 2017/11/30

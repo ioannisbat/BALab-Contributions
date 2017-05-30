@@ -10,14 +10,15 @@
                 </div>
               </div>
               {% for article in articles_page.object_list %}
-        				<div class="col-xs-6 col-sm-4 col-md-3">
+        				<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
         				  <div class="thumbnail">
-        					<img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/{{ article.image }}" height="200" width="200" class="img-responsive" alt="...">
-        					<div id="px1" class="caption">
-        					  <h3>{{article.name}} {{article.surname}}</h3>
-        					  <p><b>Groups</b>  : {{article.group}}</p>
-        					  <a href="{{ SITEURL }}/{{ article.url }}" class="button">See More</a>
-        					</div>
+                    <a href="{{ SITEURL }}/{{ article.url }}">
+            					<img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/{{ article.image }}" height="200" width="200" class="img-responsive" alt="...">
+            					<div id="px1" class="caption">
+                        <h4>{{article.surname}}</h4>
+            					  <h4>{{article.name}} <span class="glyphicon glyphicon-new-window pull-right"></span></h4>
+            					</div>
+                    </a>
         				  </div>
         				</div>
                 {% endfor %}
@@ -26,12 +27,6 @@
                 <div class="panel panel-default">
                   <div class="panel-heading">
                     <h2>Yearly Reports</h2>
-                  </div>
-                </div>
-
-                 <div class="panel panel-default" id="px2">
-                  <div class="panel-heading">
-                    <h3 class="panel-title">ISTLab Yearly Reports</h3>
                   </div>
                   <ul class="list-group">
                     {% for article in articles_page.object_list %}
@@ -46,27 +41,40 @@
                   </div>
                 </div>
                 <div class="row">
-              		<div class="hidden-xs hidden-sm hidden-md col-lg-3 col-xl-3">
+              		<div class="hidden-xs hidden-sm col-md-3 col-lg-3 col-xl-3">
               		  <nav id="myScrollspy" data-spy="affix" data-offset-top="50" style="position: fixed;">
                 			<div class="panel panel-default" >
                 			  <div class="panel-heading">
-                				Title:
+                				Search by Category:
                 			  </div>
                 			  <ul class="nav nav-pills nav-stacked">
-                						<li><a href="#Current projects">Current projects</a></li>
-                						<li><a href="#Completed projects">Completed projects</a></li>
+                						<li><a href="#Current">Current projects</a></li>
+                						<li><a href="#Completed">Completed projects</a></li>
                 			  </ul>
                 			</div>
               		  </nav>
               		</div>
+                  <div class="col-xs-12 col-sm-12 hidden-md hidden-lg hidden-xl">
+                    <nav>
+                      <div class="panel panel-default" >
+                        <div class="panel-heading">
+                        Search by Category:
+                        </div>
+                        <ul class="nav nav-pills nav-stacked">
+                            <li><a href="#Current">Current projects</a></li>
+                            <li><a href="#Completed">Completed projects</a></li>
+                        </ul>
+                      </div>
+                    </nav>
+                  </div>
+
               		<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-9">
                        {% for Category in ['Current projects', 'Completed projects'] %}
-                         <div id="{{Category}}">
                             <div class="panel panel-default" id="px2">
                              {% for article in articles %}
                                {% if article.category == 'projects'%}
                                  <div class="panel-heading">
-                                   <h3>{{Category}}</h3>
+                                   <h3 id="{{Category.partition(' ')[0]}}">{{Category}}</h3>
                                  </div>
                                 {% break %}
                                {% endif%}
@@ -74,14 +82,14 @@
                              <ul class="list-group">
                                  {% for article in articles %}
                                   {% if article.category == 'projects' and article.state == Category%}
-                                   <a href="{{ SITEURL }}/{{ article.url }}"><li class="list-group-item"> {{ article.title }}</li></a>
+                                   <li class="list-group-item"><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></li>
                                   {% endif %}
                                  {% endfor %}
                              </ul>
                            </div>
-                         </div>
                        {% endfor %}
               	 </div>
+               </div>
           {% endif %}
     </div>
   {% endif %}

@@ -21,32 +21,51 @@
     </div>
   </div>
 	<div class="row">
-		<div class="hidden-xs hidden-sm hidden-md col-lg-3 col-xl-3">
+		<div class="hidden-xs hidden-sm col-md-3 col-lg-3 col-xl-3">
 		  <nav id="myScrollspy" data-spy="affix" data-offset-top="50" style="position: fixed;">
 			<div class="panel panel-default" >
 			  <div class="panel-heading">
-				Title:
+				Search by Category:
 			  </div>
-			  <ul class="nav nav-pills nav-stacked">
-				<li><a href="#Monographs and edited volumes">Monographs and edited volumes</a></li>
-						<li><a href="#Journal articles">Journal articles</a></li>
-						<li><a href="#Journal articles">Book chapters</a></li>
-						<li><a href="#Conference publications">Conference publications</a></li>
-						<li><a href="#White papers">White papers</a></li>
-						<li><a href="#Magazine Articles">Magazine Articles</a></li>
-						<li><a href="#Working papers">Working papers</a></li>
-			  </ul>
+        <ul class="nav nav-pills nav-stacked">
+        {% for Category in ['Monographs and edited volumes','Journal articles', 'Book chapters', 'Conference publications','White papers','Magazine Articles','Working papers'] %}
+            {% for key, year, text, bibtex, url, author_id, category in publications %}
+             {% if category == Category %}
+              <li><a href="#{{Category.partition(' ')[0]}}">{{Category}}</a></li>
+            {% break %}
+           {% endif %}
+          {% endfor %}
+        {% endfor %}
+        </ul>
 			</div>
 		  </nav>
 		</div>
+    <div class="col-xs-12 col-sm-12 hidden-md hidden-lg hidden-xl">
+      <nav>
+      <div class="panel panel-default" >
+        <div class="panel-heading">
+        Search by Category:
+        </div>
+        <ul class="nav nav-pills nav-stacked">
+        {% for Category in ['Monographs and edited volumes','Journal articles', 'Book chapters', 'Conference publications','White papers','Magazine Articles','Working papers'] %}
+            {% for key, year, text, bibtex, url, author_id, category in publications %}
+             {% if category == Category %}
+              <li><a href="#{{Category.partition(' ')[0]}}">{{Category}}</a></li>
+            {% break %}
+           {% endif %}
+          {% endfor %}
+        {% endfor %}
+        </ul>
+      </div>
+      </nav>
+    </div>
 		<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-9">
       {% for Category in ['Monographs and edited volumes','Journal articles', 'Book chapters', 'Conference publications','White papers','Magazine Articles','Working papers'] %}
-          <div id="{{Category}}">
              <div class="panel panel-default" id="px2">
                {% for key, year, text, bibtex, url, author_id, category in publications %}
                 {% if category == Category %}
                      <div class="panel-heading">
-                       <h3>{{Category}}</h3>
+                       <h3 id="{{Category.partition(' ')[0]}}">{{Category}}</h3>
                      </div>
                      {% break %}
                 {% endif %}
@@ -68,7 +87,6 @@
                  </ul>
                </ul>
              </div>
-          </div>
       {% endfor %}
 	 </div>
 	</div>
