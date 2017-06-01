@@ -10,7 +10,7 @@ office_phone: +30 210 8203466
 office_address: Derigny 12, 7th floor
 postal_address: 76 Patission str, 104 34, Athens, Greece
 email: alattas@dmst.aueb.gr
-phd_title: software bla bla
+phd_title: Security
 phd_supervisor: Diomidis Spinellis
 phd_startdate: 12/12/2016
 
