@@ -86,7 +86,7 @@
                              <ul class="list-group">
                                  {% for article in articles %}
                                   {% if article.category == 'projects' and article.state == Category%}
-                                   <li class="list-group-item"><a href="{{ SITEURL }}/{{ article.url }}">{{ article.shortname }} - {{article.projtitle}}</a></li>
+                                   <a href="{{ SITEURL }}/{{ article.url }}"><li class="list-group-item">{{ article.shortname }} - {{article.projtitle}}</li></a>
                                   {% endif %}
                                  {% endfor %}
                              </ul>
@@ -99,4 +99,4 @@
   {% endif %}
 {% endblock content %}
 
-{% block title %}{{ SITENAME }} - {{ category }}{% endblock %}
+{% block title %}{{ category }}{% endblock %}

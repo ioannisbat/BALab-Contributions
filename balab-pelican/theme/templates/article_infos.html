@@ -20,7 +20,6 @@
               			   <span class="glyphicon glyphicon-briefcase"></span> Office address: {{article.office_address}} </br>
               			   <span class="glyphicon glyphicon-inbox"></span> Postal address: {{article.postal_address}} </br>
                        <span class="glyphicon glyphicon-globe"></span> Website: </br>
-              			   <span class="glyphicon glyphicon-education"></span> Groups: {{article.group}} </br>
               			</p>
                     {% if article.phd_title %}
                       <h4> Phd Thesis </h4>
@@ -104,7 +103,7 @@
     {% if article.category == 'projects' %}
           <div class="panel panel-default">
             <div class="panel-heading">
-              <h2>{{ article.shortname }} - {{article.projtitle}}</h2>
+              <h2>{{ article.shortname }} &mdash; {{article.projtitle}}</h2>
             </div>
           </div>
           <div class="thumbnail">
@@ -165,11 +164,11 @@
     {% if article.category == 'yearly_reports' %}
           <div class="panel panel-default">
             <div class="panel-heading">
-              <h2>Yearly Reports - {{article.title}}</h2>
+              <h2>Yearly Report {{article.title}}</h2>
             </div>
           </div>
           <div class="row">
-            <div class="hidden-xs hidden-sm col-md-3 col-lg-3 col-xl-3">
+            <div class="hidden-xs hidden-sm col-md-3 col-lg-3 col-xl-3" id="print">
               <nav id="myScrollspy" data-spy="affix" data-offset-top="50" style="position: fixed;">
               <div class="panel panel-default" >
                 <div class="panel-heading">
@@ -198,7 +197,7 @@
               </div>
               </nav>
             </div>
-            <div class="col-xs-12 col-sm-12 hidden-md hidden-lg hidden-xl">
+            <div class="col-xs-12 col-sm-12 hidden-md hidden-lg hidden-xl" id="print">
               <nav>
               <div class="panel panel-default" >
                 <div class="panel-heading">
@@ -310,9 +309,9 @@
                      <ul class="list-group">
                         {% for article2 in articles %}
                         {% if (article2.category == 'members' or article2.category == 'associates') and article2.year == article.title%}
-                         <li class="list-group-item"><a href="{{ SITEURL }}/{{ article2.url }}">
-                           {{ article2.givenname }} {{ article2.surname }} {% if article2.phd_title %}(PhD student){% endif %}
-                         </a></li>
+                         <a href="{{ SITEURL }}/{{ article2.url }}">
+                           <li class="list-group-item">{{ article2.givenname }} {{ article2.surname }} {% if article2.phd_title %}(PhD student){% endif %}</li>
+                         </a>
                         {% endif%}
                         {% endfor %}
                     </ul>
@@ -328,4 +327,4 @@
   </div>
 {% endblock content %}
 
-{% block title %}{{ SITENAME }} - {{ category }}{% endblock %}
+{% block title %}{{ article.title }}{% endblock %}

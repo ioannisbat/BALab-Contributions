@@ -73,7 +73,7 @@ h2 {
 }
 
 #px2 ul > a > li {
-  color: #203864;
+  /*color: #203864;*/
 }
 
 #px2 ul > a > .list-group-item:hover {
@@ -194,3 +194,9 @@ h2 {
   background-color: rgba(32, 56, 100, 0.7);
   color: white;
 }*/
+
+@media print {
+  #print div {
+    display: none;
+  }
+}
