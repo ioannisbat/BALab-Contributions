@@ -10,7 +10,11 @@
             <div class="panel-body">
               <div class="media">
                 <div class="media-left">
-                   <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/{{ article.photo }}" alt="..." style = "width:200px; height:200px" class="img-responsive">
+                  {% if article.photo %}
+                  <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/{{ article.photo }}" height="200" width="200" class="img-responsive" alt="...">
+                  {% else %}
+                  <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/lamp.png" alt="..." style = "width:200px; height:200px" class="img-responsive">
+                  {% endif %}
                  </div>
                  <div class="media-left media-middle">
                 		<!-- <h4 class="media-heading">{{article.name}} {{article.surname}}</h4> -->
@@ -22,11 +26,19 @@
                        <span class="glyphicon glyphicon-globe"></span> Website: </br>
               			   <span class="glyphicon glyphicon-education"></span> Groups: {{article.group}} </br>
               			</p>
-                    {% if article.phd_title %}
+                    {% if (article.phd_title or article.phd_startdate) and article.phd_completed == '0' %}
                       <h4> Phd Thesis </h4>
                       <p> <b> Title:</b> {{article.phd_title}} </br>
-                          <b> Supervisor:</b> {{article.phd_supervisor}} </br>
+                          <b> Supervisor:</b>
+                           {% for art in articles %}
+                              {% if art.category == 'members' %}
+                                {% if art.id == article.phd_supervisor %}
+                                    {{art.surname}} {{art.givenname}}</br>
+                                {% endif %}
+                              {% endif %}
+                            {% endfor %}
                           <b> Starting day:</b> {{article.phd_startdate}} </br>
+                          <!--<b> summary:</b> {{article.phd_summary}} </br> -->
                       </p>
                     {% endif %}
           	      </div>
@@ -42,64 +54,67 @@
                 {{ article.content }}
               </div>
             </div>
-            {% if article.id %}
-            <div class="row">
-              <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
-                <nav>
-                <div class="panel panel-default" >
-                  <div class="panel-heading">
-                  Publications by Category:
-                  </div>
-                  <ul class="nav nav-pills nav-stacked">
-                    {% for Category in ['Monographs and edited volumes','Journal articles', 'Book chapters', 'Conference publications','White papers','Magazine Articles','Working papers'] %}
-                        {% for key, year, text, bibtex, url, XEmember, category in publications %}
-                         {% if category == Category and XEmember == article.id %}
-                          <li><a href="#{{Category.partition(' ')[0]}}">{{Category}}</a></li>
-                        {% break %}
-                       {% endif %}
-                      {% endfor %}
-                    {% endfor %}
-          			  </ul>
-                  </ul>
-                </div>
-                </nav>
-              </div>
-              <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-9">
-                <div class="panel panel-default" id="px2">
-                  <div class="panel-heading">
-                    <h3> Publications</h3>
-                  </div>
-                  <div class="panel-body">
-                    {% for Category in ['Monographs and edited volumes','Journal articles', 'Book chapters', 'Conference publications','White papers','Magazine Articles','Working papers'] %}
-                        {% for key, year, text, bibtex, url, XEmember, category in publications %}
-                         {% if category == Category and XEmember == article.id %}
-                          <h4 style="color:#203864;" id="{{Category.partition(' ')[0]}}">{{Category}}</h4>
-                          {% break %}
-                         {% endif %}
-                        {% endfor %}
-                        <ul class="list-group">
-                          <ul>
-                            {% for key, year, text, bibtex, url, XEmember, category in publications %}
-                             {% if XEmember == article.id and category == Category %}
-                            <p>
-                            <li id="{{ key }}">{{ text }}
-                            </br>
-                            {% for label, target in [('URL', url)] %}
-                            {{ "[&nbsp;<a href=\"%s\">%s</a>&nbsp;]" % (target, label) if target }}
-                            {% endfor %}
-                            </p>
-                            </li>
-                             {% endif %}
-                            {% endfor %}
-                          </ul>
-                        </ul>
-                      {% endfor %}
-                  </div>
-                </div>
-              </div>
-            </div>
-            {% endif %}
-    {% endif %}
+            {% for key, year, text, bibtex, url, XEmember, category in publications %}
+             {% if XEmember == article.id %}
+                     <div class="row">
+                       <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                         <nav>
+                         <div class="panel panel-default" >
+                           <div class="panel-heading">
+                           Publications by Category:
+                           </div>
+                           <ul class="nav nav-pills nav-stacked">
+                             {% for Category in ['Monographs and edited volumes','Journal articles', 'Book chapters', 'Conference publications','White papers','Magazine Articles','Working papers'] %}
+                                 {% for key, year, text, bibtex, url, XEmember, category in publications %}
+                                  {% if category == Category and XEmember == article.id %}
+                                   <li><a href="#{{Category.partition(' ')[0]}}">{{Category}}</a></li>
+                                 {% break %}
+                                {% endif %}
+                               {% endfor %}
+                             {% endfor %}
+                           </ul>
+                           </ul>
+                         </div>
+                         </nav>
+                       </div>
+                       <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-9">
+                         <div class="panel panel-default" id="px2">
+                           <div class="panel-heading">
+                             <h3> Publications</h3>
+                           </div>
+                           <div class="panel-body">
+                             {% for Category in ['Monographs and edited volumes','Journal articles', 'Book chapters', 'Conference publications','White papers','Magazine Articles','Working papers'] %}
+                                 {% for key, year, text, bibtex, url, XEmember, category in publications %}
+                                  {% if category == Category and XEmember == article.id %}
+                                   <h4 style="color:#203864;" id="{{Category.partition(' ')[0]}}">{{Category}}</h4>
+                                   {% break %}
+                                  {% endif %}
+                                 {% endfor %}
+                                 <ul class="list-group">
+                                   <ul>
+                                     {% for key, year, text, bibtex, url, XEmember, category in publications %}
+                                      {% if XEmember == article.id and category == Category %}
+                                     <p>
+                                     <li id="{{ key }}">{{ text }}
+                                     </br>
+                                     {% for label, target in [('URL', url)] %}
+                                     {{ "[&nbsp;<a href=\"%s\">%s</a>&nbsp;]" % (target, label) if target }}
+                                     {% endfor %}
+                                     </p>
+                                     </li>
+                                      {% endif %}
+                                     {% endfor %}
+                                   </ul>
+                                 </ul>
+                               {% endfor %}
+                           </div>
+                         </div>
+                       </div>
+                     </div>
+                     {% break %}
+               {% endif %}
+              {% endfor %}
+        {% endif %}
 
     {% if article.category == 'projects' %}
           <div class="panel panel-default">
@@ -311,7 +326,7 @@
                         {% for article2 in articles %}
                         {% if (article2.category == 'members' or article2.category == 'associates') and article2.year == article.title%}
                          <li class="list-group-item"><a href="{{ SITEURL }}/{{ article2.url }}">
-                           {{ article2.givenname }} {{ article2.surname }} {% if article2.phd_title %}(PhD student){% endif %}
+                           {{ article2.givenname }} {{ article2.surname }} {% if article2.phd_title or article2.phd_startdate %}(PhD student){% endif %}
                          </a></li>
                         {% endif%}
                         {% endfor %}
