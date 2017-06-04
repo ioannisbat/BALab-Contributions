@@ -19,11 +19,13 @@
                  <div class="media-left media-middle">
                 		<!-- <h4 class="media-heading">{{article.name}} {{article.surname}}</h4> -->
               			<p>
-                       <span class="glyphicon glyphicon-envelope"></span> E-mail: {{article.email}} </br>
-              			   <span class="glyphicon glyphicon-phone-alt"></span> Office phone: {{article.office_phone}} </br>
-              			   <span class="glyphicon glyphicon-briefcase"></span> Office address: {{article.office_address}} </br>
-              			   <span class="glyphicon glyphicon-inbox"></span> Postal address: {{article.postal_address}} </br>
-                       <span class="glyphicon glyphicon-globe"></span> Website: </br>
+                      {% if article.email %}<span class="glyphicon glyphicon-envelope"></span> E-mail: {{article.email}} </br>{% endif %}
+              			   {% if article.office_phone %}<span class="glyphicon glyphicon-phone-alt"></span> Office phone: {{article.office_phone}} </br>{% endif %}
+                       {% if article.fax %}<span class="glyphicon glyphicon-phone-alt"></span> Fax: {{article.fax}} </br>{% endif %}
+              			   {% if article.office_address %}<span class="glyphicon glyphicon-briefcase"></span> Office address: {{article.office_address}} </br>{% endif %}
+              			   {% if article.postal_address %}<span class="glyphicon glyphicon-inbox"></span> Postal address: {{article.postal_address}} </br>{% endif %}
+                       {% if article.website %}<span class="glyphicon glyphicon-globe"></span> Website: {{article.website}}</br>{% endif %}
+                       {% if article.web_log %}<span class="glyphicon glyphicon-globe"></span> Website: {{article.web_log}}</br>{% endif %}
               			</p>
                     {% if (article.phd_title or article.phd_startdate) and article.phd_completed == '0' %}
                       <h4> Phd Thesis </h4>
@@ -249,7 +251,7 @@
                     </ul>
                   </ul>
               </div>
-            </div>          
+            </div>
         {% endif %}
 
     {% endif %}
@@ -275,7 +277,7 @@
                    {% endif %}
                   {% endfor %}
                   {% for article2 in articles %}
-                     {% if article2.category == 'projects' and (article2.endyear == article.title or article.state == 'Current projects')%}
+                     {% if article2.category == 'projects' and (article2.startdate[:4] == article.title or article2.enddate[:4] == article.title)%}
                         <li><a href="#projects">Projects</a></li>
                         {% break %}
                       {% endif %}
@@ -304,7 +306,7 @@
                    {% endif %}
                   {% endfor %}
                   {% for article2 in articles %}
-                     {% if article2.category == 'projects' and (article2.endyear == article.title or article.state == 'Current projects')%}
+                     {% if article2.category == 'projects' and (article2.startdate[:4] == article.title or article2.enddate[:4] == article.title)%}
                         <li><a href="#projects">Projects</a></li>
                         {% break %}
                       {% endif %}
@@ -356,37 +358,46 @@
                {% endif %}
               {% endfor %}
               {% for article2 in articles %}
-                 {% if article2.category == 'projects' and (article2.endyear == article.title or article.state == 'Current projects')%}
+                 {% if article2.category == 'projects' and (article2.startdate[:4] == article.title or article2.enddate[:4] == article.title)%}
                      <div class="panel panel-default" id="px2">
                        <div class="panel-heading">
                           <h3 id="projects">Projects</h3>
                        </div>
                        <div class="panel-body">
-                          {% for Category in ['Current projects', 'Completed projects'] %}
                              {% for article2 in articles %}
-                               {% if article2.category == 'projects' and (article2.state == 'Current projects' or article2.endyear == article.title) %}
-                                <h4 style="color:#203864;">{{Category}}</h4>
+                               {% if article2.category == 'projects' and  article2.startdate[:4] == article.title %}
+                                <h4 style="color:#203864;">New projects</h4>
                                 {% break %}
                                {% endif%}
                              {% endfor %}
                              <ul class="list-group">
                                <ul>
                                  {% for article2 in articles %}
-                                  {% if article2.category == 'projects' and article2.state == Category%}
-                                    {% if Category == 'Completed projects' and article2.endyear == article.title%}
-                                       <p>
-                                       <li>{{ article2.shortname }} - {{article2.projtitle}} <a href="{{ SITEURL }}/{{ article2.url }}"><span class="glyphicon glyphicon-new-window"></span></a></li>
-                                       </p>
-                                     {% elif Category =='Current projects' %}
-                                       <p>
-                                       <li>{{ article2.shortname }} - {{article2.projtitle}} <a href="{{ SITEURL }}/{{ article2.url }}"><span class="glyphicon glyphicon-new-window"></span></a></li>
-                                       </p>
-                                     {% endif %}
+                                  {% if article2.category == 'projects' and article2.startdate[:4] == article.title%}
+                                    <p>
+                                     <li>{{ article2.shortname }} - {{article2.projtitle}} <a href="{{ SITEURL }}/{{ article2.url }}"><span class="glyphicon glyphicon-new-window"></span></a></li>
+                                    </p>
                                   {% endif %}
                                  {% endfor %}
                                </ul>
                              </ul>
-                          {% endfor %}
+                             {% for article2 in articles %}
+                               {% if article2.category == 'projects' and  article2.enddate[:4] == article.title %}
+                                <h4 style="color:#203864;">Completed projects</h4>
+                                {% break %}
+                               {% endif%}
+                             {% endfor %}
+                             <ul class="list-group">
+                               <ul>
+                                 {% for article2 in articles %}
+                                  {% if article2.category == 'projects' and article2.enddate[:4] == article.title%}
+                                    <p>
+                                     <li>{{ article2.shortname }} - {{article2.projtitle}} <a href="{{ SITEURL }}/{{ article2.url }}"><span class="glyphicon glyphicon-new-window"></span></a></li>
+                                    </p>
+                                  {% endif %}
+                                 {% endfor %}
+                               </ul>
+                             </ul>
                        </div>
                     </div>
                     {% break %}
