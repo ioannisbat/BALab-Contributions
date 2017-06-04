@@ -51,6 +51,7 @@ partner_website9: http://www.praxis.ee/
 eAWARe aims to educate the everyday Internet user about online risks and the 
 steps users can take to protect themselves. eAWARe reaches out to the public 
 through local events across Europe. We will also produce a free guide on how to 
+
 have and host your own event to promote information security awareness. eAWARe 
 is supported by the Directorate General for Research of the European 
 Commission. eAWARe will hold its final international conference during the 

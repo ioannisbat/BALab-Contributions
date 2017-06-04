@@ -47,17 +47,18 @@ allowing content to be automatically and cost effectively adapted
 to any requesting device (PC, smart phones, mobile phones, PDAs, DTV
 set-top-boxes, etc.) seamlessly over any network infrastructure. The
 main objectives of CONTESSA are:
-
-			Develop a content transformation engine that will provide translation
+<ul>
+<li>Develop a content transformation engine that will provide translation
 and integration of content into device-tailored user interfaces through
 alternative communication channels. The system will track and manage
 alternative access devices while providing a personalized environment
 for content deployment based on a standardized XML framework that will
 allow the content to be extracted, converted and integrated, without
-the creator's interference.
-			Validate the system through a number of interactive transactional
+the creator's interference.</li>
+<li>Validate the system through a number of interactive transactional
 services to be delivered over multiple types of networks, to devices
 using different access protocols enabling e-Commerce and e-Business
-widespread application.
+widespread application.</li>
+</ul>
 		
 	

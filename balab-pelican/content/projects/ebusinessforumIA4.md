@@ -28,12 +28,13 @@ partner_shortname2: GRNET - Greek Research and Technology Network
 partner_country2: GR 
 partner_website2: http://www.edet.gr
 
-ISTLab/SENSE members participate actively in E-Business Forum. In particular, working group IA4 focused its attention in the area of "Preliminary Actions for the Establishment of the Greek Computer Emergency Response Team (GR-CERT)". 
+ <p>
+  	ISTLab/SENSE members participate actively in E-Business Forum. In particular, working group IA4 focused its attention in the area of "Preliminary Actions for the Establishment of the Greek Computer Emergency Response Team (GR-CERT)". 
+  	
+  	GR-CERT is an initiative, which aims to provide timely notifications regarding software vulnerabilities, malware epidemics and fraud schemes.
+  	
+  	The IA4 working group focuses on non experts and SMEs not employing technical personnel  and therefore all the necessary information is provided in a simple and understandable manner for the average user.  
 
-GR-CERT is an initiative, which aims to provide timely notifications regarding software vulnerabilities, malware epidemics and fraud schemes.
-
-The IA4 working group focuses on non experts and SMEs not employing technical personnel  and therefore all the necessary information is provided in a simple and understandable manner for the average user.  
-
-Results will be published in the form of reports and will be presented in a workshop.
-
+	Results will be published in the form of reports and will be presented in a workshop.
+</p>
 	

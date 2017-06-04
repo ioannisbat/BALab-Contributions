@@ -55,9 +55,9 @@ enhancing promotional activities and business communications. The mEXPRESS
 project will provide an integrated mediation platform (mEXPRESS Service
 Provider) oriented to exhibition shows and events that will satisfy
 three types of objectives:
-	
-Enhance and facilitate visitors experience in terms of interaction and functionality in an information-rich environment such as an exhibition show.
-Improve business communications and promotions within the exhibition and extend promotional effectiveness during and after the exhibition
-Assist and support exhibition management and operations by offering real-time location information of persons within the exhibition.
-
+<ul>
+	<li>Enhance and facilitate visitors experience in terms of interaction and functionality in an information-rich environment such as an exhibition show.</li>
+	<li>Improve business communications and promotions within the exhibition and extend promotional effectiveness during and after the exhibition</li>
+	<li>Assist and support exhibition management and operations by offering real-time location information of persons within the exhibition.</li>
+</ul>
 

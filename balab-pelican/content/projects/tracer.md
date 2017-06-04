@@ -29,6 +29,7 @@ partner_website2: http://www.ics.forth.gr/
 partner_shortname3: Singular Software S.A. 
 partner_country3: GR 
 partner_website3: http://www.singularsoftware.gr/index.asp
+
 Legacy systems are likely to contain software vulnerabilities that can lead
 to various security breaches. On the other hand, these systems contain valuable
 information about the environment, the creation and the evolution of the
@@ -41,4 +42,3 @@ First, our framework analyzes the source code of the system to identify potentia
 software vulnerabilities and eliminates them. Then, depending on the previous
 analysis the framework proposes solutions to protect
 the system from the most common web-application attacks.
-	

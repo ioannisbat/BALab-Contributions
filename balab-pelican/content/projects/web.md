@@ -21,9 +21,9 @@ project_manager: m_dds
 type: consulting 
 international: yes
 
-The Web site project aims to create a dynamic,
+The <em>Web site</em> project aims to create a dynamic,
 distributed, and maintanable Web site for ISTLab.
-
+<br/>
 Traditionally, the realization of Web sites involves either
 static content developed using web authoring tools like
 Microsoft's Front Page and DreamWeaver, or dynamic
@@ -38,12 +38,12 @@ We believe that our approach and many of the lessons we learned
 can be applied numerous similar situations,
 leading to a lightweight, structured, consistent, and maintainable
 web site building method.
-
+<br/>
 The guiding principles behind our design are:
-
-Openness
-Observability
-Robustness
-Parsimony
-
+<ul>
+<li>Openness</li>
+<li>Observability</li>
+<li>Robustness</li>
+<li>Parsimony</li>
+</ul>
 	

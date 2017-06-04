@@ -29,22 +29,22 @@ partner_website2: http://www.ntua.gr/
 partner_shortname3: UoA 
 partner_country3: GR 
 partner_website3: http://www.uoa.gr/
-		The TEMPO project aims to:
-		
-			
-				Support the Hellenic Organization of Telecommunications national IP network and to address issues regarding it's further upgrading.
-			
-			
-				Utilize the MPLS technology for the provision of Quality of Service (QoS) applications over IP networks
-			
-			
-				Provide and support service level agreements (SLAs)
-			
-			
-				Demonstrate services to customers (pre-sales support) and to present potential scenarios of Classes of Services
-			
-			
-				Support the Hellenic Organization of Telecommunications international IP network and to address issues regarding it's further upgrading
-			
-		
-	
+
+The TEMPO project aims to:
+<ul>
+	<li>
+		Support the Hellenic Organization of Telecommunications national IP network and to address issues regarding it's further upgrading.
+	</li>
+	<li>
+		Utilize the MPLS technology for the provision of Quality of Service (QoS) applications over IP networks
+	</li>
+	<li>
+		Provide and support service level agreements (SLAs)
+	</li>
+	<li>
+		Demonstrate services to customers (pre-sales support) and to present potential scenarios of Classes of Services
+	</li>
+	<li>
+		Support the Hellenic Organization of Telecommunications international IP network and to address issues regarding it's further upgrading
+	</li>
+</ul>

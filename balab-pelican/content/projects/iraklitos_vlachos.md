@@ -23,9 +23,10 @@ international: no
 
 During the last years several worm epidemics have emerged as major threats to critical digital infrastructures.
 To make large-scale networks more resilient against these kind of threats, we evaluate the usage of peer-to-peer architectures whereby each peer is responsible for
-
-Detecting whether a virus or worm is uncontrollably propagating through the network resulting in an epidemic.
-Automatically dispatching warnings and information to other peers of a security-focused group.
-Taking specific precautions for their host by automatically hardening their security measures during the epidemic.  
+<ul>
+<li>Detecting whether a virus or worm is uncontrollably propagating through the network resulting in an epidemic.</li>
+<li>Automatically dispatching warnings and information to other peers of a security-focused group.</li>
+<li>Taking specific precautions for their host by automatically hardening their security measures during the epidemic.</li>  
+</ul> 
 
 	

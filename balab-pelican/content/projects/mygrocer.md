@@ -42,12 +42,13 @@ partner_shortname7: Unisys Belgium
 partner_country7: BE 
 partner_website7: 
 
+<p>
 MyGROCER is a research project
 partially funded by the European Commission (IST Programme). The project
 spanned over two years (from January 2001 to November 2002) and exploited the
 potential of wireless technologies (namely Wireless LANs) and automatic product
 identification techniques (Radio Frequency Identification, RF-ID) to develop
-an innovative business and technological solution for the retail environment. 
+an innovative business and technological solution for the retail environment. <br/><br/>
 
 In effect, MyGROCER implemented
 and field-tested a new and integrated shopping scheme
@@ -57,6 +58,6 @@ while at the same time provide valuable information to the shopper through a dis
 device thus, create a fully interactive shopping trip. The use of the system by
 supermarket shoppers revealed that the new shopping scheme can provide a more
 entertaining and efficient shopping trip compared to the conventional way of
-shopping, and thus generate new shopping experiences. 
-	
+shopping, and thus generate new shopping experiences. <br/><br/>
+</p>
 	
