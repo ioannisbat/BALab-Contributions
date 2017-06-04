@@ -72,10 +72,6 @@ h2 {
   text-align: center;
 }
 
-#px2 ul > a > li {
-  /*color: #203864;*/
-}
-
 #px2 ul > a > .list-group-item:hover {
   background-color: #edeef2;
 }
@@ -196,7 +192,13 @@ h2 {
 }*/
 
 @media print {
-  #print div {
+  #printmenu {
+    display: none;
+  }
+  #printurl a {
+    display: none;
+  }
+  #printphoto a:after {
     display: none;
   }
 }
