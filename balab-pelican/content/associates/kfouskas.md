@@ -2,7 +2,7 @@ Title: Kostas Fouskas
 Givenname: Kostas
 Surname: Fouskas
 Date: 2016-04-30
-Year: 2017
+Year: 2016
 Category: associates
 Photo: m_fouskas.jpg
 office_phone: +30 210 8203466

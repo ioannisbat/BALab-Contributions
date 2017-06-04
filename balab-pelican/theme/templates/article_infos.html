@@ -123,19 +123,40 @@
             <div class="panel-body">
               <p><img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/{{ article.logo }}"  style = "width:200; height:200" /></p>
               <p>
-                Project Code: {{article.project_code}}</br>
-                Funding programme: Electronic Business</br>
-                Funding Agency:General Secretariat of Research and Technology, Ministry of Development</br>
-                Project type: {{article.project_type}}</br>
-                Web site: {{article.web_site}}</br>
-                Starting date: {{article.startdate}}</br>
-                Ending date:{{article.enddate}}</br>
-                ISTLab budget: {{article.our_budget}}</br>
-                Total budget: {{article.total_budget}}</br>
+                <b>Project Code:</b> {{article.project_code}}</br>
+                <b>Funding programme:</b> Electronic Business</br>
+                <b>Funding Agency:</b> General Secretariat of Research and Technology, Ministry of Development</br>
+                <b>Project type:</b> {{article.type}}</br>
+                <b>Web site:</b> {{article.web_site}}</br>
+                <b>Starting date:</b> {{article.startdate}}</br>
+                <b>Ending date:</b> {{article.enddate}}</br>
+                <b>ISTLab budget:</b> {{article.our_budget}}</br>
+                <b>Total budget:</b> {{article.total_budget}}</br>
                 <hr>
-                Scientific coordinator: {{article.scientific_coordinator}}</br>
-                Contact: {{article.contact}}</br>
-                Project manager: {{article.project_manager}}</br>
+                <b>Scientific coordinator:</b>
+                {% for art in articles %}
+                   {% if art.category == 'members' %}
+                     {% if art.id == article.scientific_coordinator %}
+                         {{art.surname}} {{art.givenname}}</br>
+                     {% endif %}
+                   {% endif %}
+                 {% endfor %}
+                <b>Contact:</b>
+                {% for art in articles %}
+                   {% if art.category == 'members' %}
+                     {% if art.id == article.contact %}
+                         {{art.surname}} {{art.givenname}}</br>
+                     {% endif %}
+                   {% endif %}
+                 {% endfor %}
+                <b>Project manager:</b>
+                {% for art in articles %}
+                   {% if art.category == 'members' %}
+                     {% if art.id == article.project_manager%}
+                         {{art.surname}} {{art.givenname}}</br>
+                     {% endif %}
+                   {% endif %}
+                 {% endfor %}
               </p>
             </div>
           </div>
@@ -147,45 +168,89 @@
             <p> {{ article.content }} </p>
             </div>
           </div>
-          <div class="panel panel-default" id="px2">
-            <div class="panel-heading">
-              <h3>Partners</h3>
-            </div>
-            <div class="panel-body">
-              <ul class="list-group">
-                <ul>
-                  {% if article.partner_title1%}
-                  <p><li>{{article.partner_title1}} ({{article.partner_country1}})
-                    {% if article.partner_web_site1%}
-                     <a href="{{article.partner_web_site}}"><span class="glyphicon glyphicon-new-window"></span></a>
-                    {% endif %}
-                  </li></p>
-                  {% endif %}
-                  {% if article.partner_title2%}
-                  <p><li>{{article.partner_title2}} ({{article.partner_country2}})
-                    {% if article.partner_web_site2%}
-                     <a href="{{article.partner_web_site}}"><span class="glyphicon glyphicon-new-window"></span></a>
-                    {% endif %}
-                  </li></p>
-                  {% endif %}
-                  {% if article.partner_title3%}
-                  <p><li>{{article.partner_title3}} ({{article.partner_country3}})
-                    {% if article.partner_web_site3%}
-                     <a href="{{article.partner_web_site}}"><span class="glyphicon glyphicon-new-window"></span></a>
-                    {% endif %}
-                  </li></p>
-                  {% endif %}
-                  {% if article.partner_title4%}
-                  <p><li>{{article.partner_title4}} ({{article.partner_country4}})
-                    {% if article.partner_web_site4%}
-                     <a href="{{article.partner_web_site}}"><span class="glyphicon glyphicon-new-window"></span></a>
-                    {% endif %}
-                  </li></p>
-                  {% endif %}
-                </ul>
-              </ul>
-          </div>
-        </div>
+          {% if article.partner_shortname1%}
+              <div class="panel panel-default" id="px2">
+                <div class="panel-heading">
+                  <h3>Partners</h3>
+                </div>
+                <div class="panel-body">
+                  <ul class="list-group">
+                    <ul>
+                      {% if article.partner_shortname1%}
+                      <p><li>{{article.partner_shortname1}} ({{article.partner_country1}})
+                        {% if article.partner_website1%}
+                         <a href="{{article.partner_website1}}"><span class="glyphicon glyphicon-new-window"></span></a>
+                        {% endif %}
+                      </li></p>
+                      {% endif %}
+                      {% if article.partner_shortname2%}
+                      <p><li>{{article.partner_shortname2}} ({{article.partner_country2}})
+                        {% if article.partner_website2%}
+                         <a href="{{article.partner_website2}}"><span class="glyphicon glyphicon-new-window"></span></a>
+                        {% endif %}
+                      </li></p>
+                      {% endif %}
+                      {% if article.partner_shortname3%}
+                      <p><li>{{article.partner_shortname3}} ({{article.partner_country3}})
+                        {% if article.partner_website3%}
+                         <a href="{{article.partner_website3}}"><span class="glyphicon glyphicon-new-window"></span></a>
+                        {% endif %}
+                      </li></p>
+                      {% endif %}
+                      {% if article.partner_shortname4%}
+                      <p><li>{{article.partner_shortname4}} ({{article.partner_country4}})
+                        {% if article.partner_website4%}
+                         <a href="{{article.partner_website4}}"><span class="glyphicon glyphicon-new-window"></span></a>
+                        {% endif %}
+                      </li></p>
+                      {% endif %}
+                      {% if article.partner_shortname5%}
+                      <p><li>{{article.partner_shortname5}} ({{article.partner_country5}})
+                        {% if article.partner_website5%}
+                         <a href="{{article.partner_website5}}"><span class="glyphicon glyphicon-new-window"></span></a>
+                        {% endif %}
+                      </li></p>
+                      {% endif %}
+                      {% if article.partner_shortname6%}
+                      <p><li>{{article.partner_shortname6}} ({{article.partner_country6}})
+                        {% if article.partner_website6%}
+                         <a href="{{article.partner_website6}}"><span class="glyphicon glyphicon-new-window"></span></a>
+                        {% endif %}
+                      </li></p>
+                      {% endif %}
+                      {% if article.partner_shortname7%}
+                      <p><li>{{article.partner_shortname7}} ({{article.partner_country7}})
+                        {% if article.partner_website7%}
+                         <a href="{{article.partner_website7}}"><span class="glyphicon glyphicon-new-window"></span></a>
+                        {% endif %}
+                      </li></p>
+                      {% endif %}
+                      {% if article.partner_shortname8%}
+                      <p><li>{{article.partner_shortname8}} ({{article.partner_country8}})
+                        {% if article.partner_website8%}
+                         <a href="{{article.partner_website8}}"><span class="glyphicon glyphicon-new-window"></span></a>
+                        {% endif %}
+                      </li></p>
+                      {% endif %}
+                      {% if article.partner_shortname9%}
+                      <p><li>{{article.partner_shortname9}} ({{article.partner_country9}})
+                        {% if article.partner_website9%}
+                         <a href="{{article.partner_website9}}"><span class="glyphicon glyphicon-new-window"></span></a>
+                        {% endif %}
+                      </li></p>
+                      {% endif %}
+                      {% if article.partner_shortname10%}
+                      <p><li>{{article.partner_shortname10}} ({{article.partner_country10}})
+                        {% if article.partner_website10%}
+                         <a href="{{article.partner_website10}}"><span class="glyphicon glyphicon-new-window"></span></a>
+                        {% endif %}
+                      </li></p>
+                      {% endif %}
+                    </ul>
+                  </ul>
+              </div>
+            </div>          
+        {% endif %}
 
     {% endif %}
 
