@@ -1,7 +1,7 @@
 Title: Konstantinos - Stroggylos
 Date: 20051110
 Year: 2005
-Category: members 
+Category: members
 Id: m_kstroggylos
 givenname: Konstantinos
 surname: Stroggylos
@@ -10,8 +10,8 @@ email: kostas@circular.gr
 website: http://www.circular.gr/
 office_phone: +30 2108203370
 fax: +30 2108203370
-office_address: Athens University of Economics and Business Main Building, Derigny ct, 3rd fl 
-postal_address: 76 Patission str, 104 34, Athens, Greece 
+office_address: Athens University of Economics and Business Main Building, Derigny ct, 3rd fl
+postal_address: 76 Patission str, 104 34, Athens, Greece
 photo: m_kstroggylos.jpg
 phd_title: Automated refactoring of legacy source code and its effect on software quality
 phd_supervisor: m_dds

@@ -8,28 +8,32 @@
               <h2> {{article.givenname}} {{article.surname}} </h2>
             </div>
             <div class="panel-body">
-              <div class="media">
-                <div class="media-left">
-                  {% if article.photo %}
-                  <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/{{ article.photo }}" height="200" width="200" class="img-responsive" alt="...">
-                  {% else %}
-                  <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/lamp.png" alt="..." style = "width:200px; height:200px" class="img-responsive">
-                  {% endif %}
-                 </div>
-                 <div class="media-left media-middle">
+              <div class="row">
+                <div class="col-md-2">
+                  <p>
+                    {% if article.photo %}
+                    <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/{{ article.photo }}" height="200" width="200" class="img-responsive center-block" alt="...">
+                    {% else %}
+                    <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/lamp.png" height="200" width="200" class="img-responsive" alt="...">
+                    {% endif %}
+                  </p>
+                </div>
+                <div class="col-md-9">
                 		<!-- <h4 class="media-heading">{{article.name}} {{article.surname}}</h4> -->
               			<p>
-                      {% if article.email %}<span class="glyphicon glyphicon-envelope"></span> E-mail: {{article.email}} </br>{% endif %}
-              			   {% if article.office_phone %}<span class="glyphicon glyphicon-phone-alt"></span> Office phone: {{article.office_phone}} </br>{% endif %}
-                       {% if article.fax %}<span class="glyphicon glyphicon-phone-alt"></span> Fax: {{article.fax}} </br>{% endif %}
-              			   {% if article.office_address %}<span class="glyphicon glyphicon-briefcase"></span> Office address: {{article.office_address}} </br>{% endif %}
-              			   {% if article.postal_address %}<span class="glyphicon glyphicon-inbox"></span> Postal address: {{article.postal_address}} </br>{% endif %}
-                       {% if article.website %}<span class="glyphicon glyphicon-globe"></span> Website: {{article.website}}</br>{% endif %}
-                       {% if article.web_log %}<span class="glyphicon glyphicon-globe"></span> Website: {{article.web_log}}</br>{% endif %}
+                       {% if article.email %}<span class="glyphicon glyphicon-envelope"></span> <b>E-mail:</b> {{article.email}} </br>{% endif %}
+              			   {% if article.office_phone %}<span class="glyphicon glyphicon-phone-alt"></span> <b>Office phone:</b> {{article.office_phone}} </br>{% endif %}
+                       {% if article.mobile_phone %}<span class="glyphicon glyphicon-phone"></span> <b>Mobile phone:</b> {{article.mobile_phone}} </br>{% endif %}
+                       {% if article.fax %}<span class="glyphicon glyphicon-print"></span> <b>Fax:</b> {{article.fax}} </br>{% endif %}
+              			   {% if article.office_address %}<span class="glyphicon glyphicon-briefcase"></span> <b>Office address:</b> {{article.office_address}} </br>{% endif %}
+              			   {% if article.postal_address %}<span class="glyphicon glyphicon-inbox"></span> <b>Postal address:</b> {{article.postal_address}} </br>{% endif %}
+                       {% if article.website %}<span class="glyphicon glyphicon-globe"></span> <b>Website:</b> <a href="{{article.website}}">{{article.website}}</a></br>{% endif %}
+                       {% if article.web_log %}<span class="glyphicon glyphicon-globe"></span> <b>Web Log:</b> <a href="{{article.web_log}}">{{article.web_log}}</a></br>{% endif %}
+                       {% if article.github %}<span class="glyphicon glyphicon-link"></span> <b>Github:</b> {{article.github}}</br>{% endif %}
               			</p>
                     {% if (article.phd_title or article.phd_startdate) and article.phd_completed == '0' %}
                       <h4> Phd Thesis </h4>
-                      <p> <b> Title:</b> {{article.phd_title}} </br>
+                      <b> Title:</b> {{article.phd_title}} </br>
                           <b> Supervisor:</b>
                            {% for art in articles %}
                               {% if art.category == 'members' %}
@@ -38,15 +42,15 @@
                                 {% endif %}
                               {% endif %}
                             {% endfor %}
-                          <b> Starting day:</b> {{article.phd_startdate}} </br>
+                          <b> Starting day:</b> {{article.phd_startdate[6:8]}}/{{article.phd_startdate[4:6]}}/{{article.phd_startdate[0:4]}} </br>
                           <!--<b> summary:</b> {{article.phd_summary}} </br> -->
-                      </p>
                     {% endif %}
           	      </div>
                 </div>
               </div>
             </div>
 
+            {% if article.content %}
             <div class="panel panel-default" id="px2">
               <div class="panel-heading">
                 <h3> Σύντομο βιογραφικό </h3>
@@ -55,6 +59,7 @@
                 {{ article.content }}
               </div>
             </div>
+            {% endif %}
             {% for key, year, text, bibtex, url, XEmember, category in publications %}
              {% if XEmember == article.id %}
                      <div class="row">
@@ -125,37 +130,41 @@
             <div class="panel-body">
               <p><img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/{{ article.logo }}"  style = "width:200; height:200" /></p>
               <p>
-                <b>Project Code:</b> {{article.project_code}}</br>
-                <b>Funding programme:</b> Electronic Business</br>
-                <b>Funding Agency:</b> General Secretariat of Research and Technology, Ministry of Development</br>
-                <b>Project type:</b> {{article.type}}</br>
-                <b>Web site:</b> {{article.web_site}}</br>
-                <b>Starting date:</b> {{article.startdate}}</br>
-                <b>Ending date:</b> {{article.enddate}}</br>
-                <b>ISTLab budget:</b> {{article.our_budget}}</br>
-                <b>Total budget:</b> {{article.total_budget}}</br>
+                {% if article.project_code %}<b>Project Code:</b> {{article.project_code}}</br>{% endif %}
+                {% if article.funding_programme %}<b>Funding programme:</b> {{article.funding_programme}}</br>{% endif %}
+                {% if article.funding_agency %}<b>Funding Agency:</b> {{article.funding_agency}}</br>{% endif %}
+                {% if article.type %}<b>Project type:</b> {{article.type}}</br>{% endif %}
+                {% if article.web_site %}<b>Web site:</b> {{article.web_site}}</br>{% endif %}
+                {% if article.startdate %}<b>Starting date:</b> {{article.startdate[6:8]}}/{{article.startdate[4:6]}}/{{article.startdate[0:4]}}</br>{% endif %}
+                {% if article.enddate %}<b>Ending date:</b> {{article.enddate[6:8]}}/{{article.enddate[4:6]}}/{{article.enddate[0:4]}}</br>{% endif %}
+                {% if article.our_budget %}<b>ISTLab budget:</b> {{article.our_budget}}</br>{% endif %}
+                {% if article.total_budget %}<b>Total budget:</b> {{article.total_budget}}</br>{% endif %}
                 <hr>
-                <b>Scientific coordinator:</b>
                 {% for art in articles %}
                    {% if art.category == 'members' %}
                      {% if art.id == article.scientific_coordinator %}
-                         {{art.surname}} {{art.givenname}}</br>
+                         {% if art.surname %}
+                          <b>Scientific coordinator:</b> {{art.surname}} {{art.givenname}}
+                          <a href="{{ SITEURL }}/{{ art.url }}"><span class="glyphicon glyphicon-new-window"></span></a>
+                         {% endif %}</br>
                      {% endif %}
                    {% endif %}
                  {% endfor %}
-                <b>Contact:</b>
                 {% for art in articles %}
                    {% if art.category == 'members' %}
                      {% if art.id == article.contact %}
-                         {{art.surname}} {{art.givenname}}</br>
+                         {% if art.surname %}<b>Contact:</b> {{art.surname}} {{art.givenname}}
+                          <a href="{{ SITEURL }}/{{ art.url }}"><span class="glyphicon glyphicon-new-window"></span></a>
+                         {% endif %}</br>
                      {% endif %}
                    {% endif %}
                  {% endfor %}
-                <b>Project manager:</b>
                 {% for art in articles %}
                    {% if art.category == 'members' %}
                      {% if art.id == article.project_manager%}
-                         {{art.surname}} {{art.givenname}}</br>
+                         {% if art.surname %}<b>Project manager:</b>{{art.surname}} {{art.givenname}}
+                          <a href="{{ SITEURL }}/{{ art.url }}"><span class="glyphicon glyphicon-new-window"></span></a>
+                         {% endif %}</br>
                      {% endif %}
                    {% endif %}
                  {% endfor %}
@@ -167,7 +176,7 @@
               <h3>Description</h3>
             </div>
             <div class="panel-body">
-            <p> {{ article.content }} </p>
+            {% if article.content %}<p> {{ article.content }} </p>{% endif %}
             </div>
           </div>
           {% if article.partner_shortname1%}
