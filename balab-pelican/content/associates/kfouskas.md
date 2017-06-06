@@ -4,6 +4,7 @@ Surname: Fouskas
 Date: 2016-04-30
 Year: 2016
 Category: associates
+Id: m_kfouskas
 Photo: m_fouskas.jpg
 office_phone: +30 210 8203466
 office_address: Derigny 12, 7th floor

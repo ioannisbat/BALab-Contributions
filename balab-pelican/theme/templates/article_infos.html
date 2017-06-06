@@ -61,7 +61,11 @@
             </div>
             {% endif %}
             {% for key, year, text, bibtex, url, XEmember, category in publications %}
-             {% if XEmember == article.id %}
+              {% if (XEmember.split(' ')[0] == article.id or
+                 XEmember.split(' ')[1] == article.id or
+                 XEmember.split(' ')[2] == article.id or
+                 XEmember.split(' ')[3] == article.id or
+                 XEmember.split(' ')[4] == article.id)  %}
                      <div class="row">
                        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3" id="printmenu">
                          <nav>
@@ -72,8 +76,13 @@
                            <ul class="nav nav-pills nav-stacked">
                              {% for Category in ['Monographs and edited volumes','Journal articles', 'Book chapters', 'Conference publications','White papers','Magazine Articles','Working papers'] %}
                                  {% for key, year, text, bibtex, url, XEmember, category in publications %}
-                                  {% if category == Category and XEmember == article.id %}
-                                   <li><a href="#{{Category.partition(' ')[0]}}">{{Category}}</a></li>
+                                 {% if category == Category and
+                                   (XEmember.split(' ')[0] == article.id or
+                                    XEmember.split(' ')[1] == article.id or
+                                    XEmember.split(' ')[2] == article.id or
+                                    XEmember.split(' ')[3] == article.id or
+                                    XEmember.split(' ')[4] == article.id)  %}
+                                   <li><a href="#{{Category.split(' ')[0]}}">{{Category}}</a></li>
                                  {% break %}
                                 {% endif %}
                                {% endfor %}
@@ -91,7 +100,12 @@
                            <div class="panel-body">
                              {% for Category in ['Monographs and edited volumes','Journal articles', 'Book chapters', 'Conference publications','White papers','Magazine Articles','Working papers'] %}
                                  {% for key, year, text, bibtex, url, XEmember, category in publications %}
-                                  {% if category == Category and XEmember == article.id %}
+                                  {% if category == Category and
+                                    (XEmember.split(' ')[0] == article.id or
+                                     XEmember.split(' ')[1] == article.id or
+                                     XEmember.split(' ')[2] == article.id or
+                                     XEmember.split(' ')[3] == article.id or
+                                     XEmember.split(' ')[4] == article.id)  %}
                                    <h4 style="color:#203864;" id="{{Category.partition(' ')[0]}}">{{Category}}</h4>
                                    {% break %}
                                   {% endif %}
@@ -99,7 +113,12 @@
                                  <ul class="list-group">
                                    <ul>
                                      {% for key, year, text, bibtex, url, XEmember, category in publications %}
-                                      {% if XEmember == article.id and category == Category %}
+                                     {% if category == Category and
+                                       (XEmember.split(' ')[0] == article.id or
+                                        XEmember.split(' ')[1] == article.id or
+                                        XEmember.split(' ')[2] == article.id or
+                                        XEmember.split(' ')[3] == article.id or
+                                        XEmember.split(' ')[4] == article.id)  %}
                                      <p>
                                      <li id="{{ key }}">{{ text }}
                                      </br>
@@ -130,10 +149,10 @@
             <div class="panel-body">
               <p><img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/{{ article.logo }}"  style = "width:200; height:200" /></p>
               <p>
-                {% if article.project_code %}<b>Project Code:</b> {{article.project_code}}</br>{% endif %}
+                {% if article.project_code %}<b>Project Code:</b> {{article.project_code}}{% if article.international %}(International){% endif %}</br>{% endif %}
                 {% if article.funding_programme %}<b>Funding programme:</b> {{article.funding_programme}}</br>{% endif %}
                 {% if article.funding_agency %}<b>Funding Agency:</b> {{article.funding_agency}}</br>{% endif %}
-                {% if article.type %}<b>Project type:</b> {{article.type}}</br>{% endif %}
+                {% if article.type %}<b>Project type:</b> {{article.type.upper()}}</br>{% endif %}
                 {% if article.web_site %}<b>Web site:</b> {{article.web_site}}</br>{% endif %}
                 {% if article.startdate %}<b>Starting date:</b> {{article.startdate[6:8]}}/{{article.startdate[4:6]}}/{{article.startdate[0:4]}}</br>{% endif %}
                 {% if article.enddate %}<b>Ending date:</b> {{article.enddate[6:8]}}/{{article.enddate[4:6]}}/{{article.enddate[0:4]}}</br>{% endif %}
