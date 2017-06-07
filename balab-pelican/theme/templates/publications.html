@@ -28,7 +28,7 @@
 				Search by Category:
 			  </div>
         <ul class="nav nav-pills nav-stacked">
-        {% for Category in ['Monographs and edited volumes','Journal articles', 'Book chapters', 'Conference publications','White papers','Magazine Articles','Working papers'] %}
+        {% for Category in ['Monographs and edited volumes','Journal articles', 'Book chapters', 'Conference publications', 'Technical reports','White papers','Magazine Articles','Working papers'] %}
             {% for key, year, text, bibtex, url, author_id, category in publications %}
              {% if category == Category %}
               <li><a href="#{{Category.partition(' ')[0]}}">{{Category}}</a></li>
@@ -47,7 +47,7 @@
         Search by Category:
         </div>
         <ul class="nav nav-pills nav-stacked">
-        {% for Category in ['Monographs and edited volumes','Journal articles', 'Book chapters', 'Conference publications','White papers','Magazine Articles','Working papers'] %}
+        {% for Category in ['Monographs and edited volumes','Journal articles', 'Book chapters', 'Conference publications', 'Technical reports','White papers','Magazine Articles','Working papers'] %}
             {% for key, year, text, bibtex, url, author_id, category in publications %}
              {% if category == Category %}
               <li><a href="#{{Category.partition(' ')[0]}}">{{Category}}</a></li>
@@ -60,7 +60,7 @@
       </nav>
     </div>
 		<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-9" id="printurl">
-      {% for Category in ['Monographs and edited volumes','Journal articles', 'Book chapters', 'Conference publications','White papers','Magazine Articles','Working papers'] %}
+      {% for Category in ['Monographs and edited volumes','Journal articles', 'Book chapters', 'Conference publications', 'Technical reports','White papers','Magazine Articles','Working papers'] %}
              <div class="panel panel-default" id="px2">
                {% for key, year, text, bibtex, url, author_id, category in publications %}
                 {% if category == Category %}

@@ -74,7 +74,7 @@
                            Publications by Category:
                            </div>
                            <ul class="nav nav-pills nav-stacked">
-                             {% for Category in ['Monographs and edited volumes','Journal articles', 'Book chapters', 'Conference publications','White papers','Magazine Articles','Working papers'] %}
+                             {% for Category in ['Monographs and edited volumes','Journal articles', 'Book chapters', 'Conference publications', 'Technical reports','White papers','Magazine Articles','Working papers'] %}
                                  {% for key, year, text, bibtex, url, XEmember, category in publications %}
                                  {% if category == Category and
                                    (XEmember.split(' ')[0] == article.id or
@@ -98,7 +98,7 @@
                              <h3> Publications</h3>
                            </div>
                            <div class="panel-body">
-                             {% for Category in ['Monographs and edited volumes','Journal articles', 'Book chapters', 'Conference publications','White papers','Magazine Articles','Working papers'] %}
+                             {% for Category in ['Monographs and edited volumes','Journal articles', 'Book chapters', 'Conference publications', 'Technical reports','White papers','Magazine Articles','Working papers'] %}
                                  {% for key, year, text, bibtex, url, XEmember, category in publications %}
                                   {% if category == Category and
                                     (XEmember.split(' ')[0] == article.id or
@@ -357,7 +357,7 @@
                        <h3 id="publications">Publications</h3>
                    </div>
                    <div class="panel-body">
-                     {% for Category in ['Monographs and edited volumes','Journal articles', 'Book chapters', 'Conference publications','White papers','Magazine Articles','Working papers'] %}
+                     {% for Category in ['Monographs and edited volumes','Journal articles', 'Book chapters', 'Conference publications', 'Technical reports','White papers','Magazine Articles','Working papers'] %}
                          {% for key, year, text, bibtex, url, XEmember, category in publications %}
                           {% if category == Category and year == article.title%}
                            <h4 style="color:#203864;">{{Category}}</h4>
