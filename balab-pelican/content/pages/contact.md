@@ -10,7 +10,7 @@ slug: contact
       <div class="row">
         <div class="col-md-2">
           <p>
-            <img src="../theme/images/ba-logo2.png" height="200" width="200" class="img-responsive center-block" alt="...">
+            <img src="../theme/images/ba-logo2.png" height="200" width="200" class="img-responsive" alt="...">
           </p>
         </div>
         <div class="col-md-9">

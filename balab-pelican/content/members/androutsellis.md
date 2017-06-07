@@ -1,7 +1,7 @@
 Title: Stefanos - Androutsellis-Theotokis
 Date: 20031114
 Year: 2003
-Category: members 
+Category: members
 Id: m_androutsellis
 givenname: Stefanos
 surname: Androutsellis-Theotokis

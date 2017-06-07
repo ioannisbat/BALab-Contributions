@@ -14,17 +14,17 @@
                 </div>
               </div>
               {% for article in articles_page.object_list %}
-        				<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2" id="printphoto">
+        				<div class="col-xs-12 col-sm-4 col-md-3 col-lg-3" id="printphoto">
         				  <div class="thumbnail">
                     <a href="{{ SITEURL }}/{{ article.url }}">
                       {% if article.photo %}
-                      <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/{{ article.photo }}" style="max-height:120px" class="img-responsive" alt="...">
+                      <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/{{ article.photo }}" style="height:150px" class="img-responsive" alt="...">
                       {% else %}
-                      <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/lamp.png" alt="..." style="max-height:120px" class="img-responsive">
+                      <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/lamp.png" style="height:150px" class="img-responsive" alt="...">
                       {% endif %}
             					<div id="px1" class="caption">
-                        <h4>{% if article.memb_title %}Dr. {% endif%}{{article.surname}}</h4>
-            					  <h4>{{article.givenname}} <span class="glyphicon glyphicon-new-window pull-right"></span></h4>
+                        <h5>{% if article.memb_title %}Dr. {% endif%}{{article.surname}}</h5>
+            					  <h5>{{article.givenname}} <span class="glyphicon glyphicon-new-window pull-right"></span></h5>
             					</div>
                     </a>
         				  </div>
