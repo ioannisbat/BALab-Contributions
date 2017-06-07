@@ -23,7 +23,7 @@
                       <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/lamp.png" alt="..." style="max-height:120px" class="img-responsive">
                       {% endif %}
             					<div id="px1" class="caption">
-                        <h4>{{article.surname}}</h4>
+                        <h4>{% if article.memb_title %}Dr. {% endif%}{{article.surname}}</h4>
             					  <h4>{{article.givenname}} <span class="glyphicon glyphicon-new-window pull-right"></span></h4>
             					</div>
                     </a>
