@@ -1,6 +1,6 @@
 Title: Vasileios - Vlachos
 Date: 20031114
-Year: 2003
+joined_date: 20031114
 Category: members 
 Id: m_vlachos
 givenname: Vasileios
@@ -15,6 +15,7 @@ photo: m_vlachos.jpg
 phd_title: Security applications of p2p networks
 phd_supervisor: m_dds
 phd_startdate: 20031114
+phd_enddate: 20070820
 phd_completed: 1
 phd_summary: Open networks are often insecure and provide an opportunity for viruses and DDOS activities to spread. To make such networks more resilient against these kind of threats, we propose the use of a peer-to-peer architecture whereby each peer is responsible for: (a) detecting whether a virus or worm is uncontrollably propagating through the network resulting in an epidemic; (b) automatically dispatching warnings and information to other peers of a security-focused group; and (c) taking specific precautions for protecting their host by automatically hardening their security measures during the epidemic. This can lead to auto-adaptive secure operating systems that automatically change the trust level of the services they provide.
 

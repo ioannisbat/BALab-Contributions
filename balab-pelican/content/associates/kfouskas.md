@@ -1,8 +1,8 @@
 Title: Kostas Fouskas
+Date: 20160430
 Givenname: Kostas
 Surname: Fouskas
-Date: 2016-04-30
-Year: 2016
+joined_date: 20160430
 Category: associates
 Id: m_kfouskas
 Photo: m_fouskas.jpg

@@ -1,6 +1,6 @@
 ﻿Title: Vasiliki - Efstathiou
 Date: 20070108
-Year: 2007
+joined_date: 20070108
 Category: members 
 Id: v_efstathiou
 givenname: Vasiliki
@@ -13,6 +13,7 @@ postal_address: 76 Patission str, 104 34, Athens, Greece
 photo: v_efstathiou_rsz.jpg
 phd_title: Algorithms for computational argumentation in artificial intelligence
 phd_startdate: 20070108
+phd_enddate: 20110107
 phd_completed: 1
 phd_summary: Computational logic-based argumentation involves reasoning with uncertainty by making use of logic in order to formalize the presentation of arguments and counter-arguments and deal with conflicting information.  The expressivity of classical propositional logic allows for intricate knowledge to be represented but its computational cost is an issue. This thesis provides a solution to this problem by adapting techniques  based on foundations of logic programming and connection graphs for automated theorem proving.
 

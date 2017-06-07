@@ -28,9 +28,9 @@
 				Search by Category:
 			  </div>
         <ul class="nav nav-pills nav-stacked">
-        {% for Category in ['Monographs and edited volumes','Journal articles', 'Book chapters', 'Conference publications', 'Technical reports','White papers','Magazine Articles','Working papers'] %}
-            {% for key, year, text, bibtex, url, author_id, category in publications %}
-             {% if category == Category %}
+        {% for Category in ['Monographs and Edited Volumes','Journal Articles', 'Book Chapters', 'Conference Publications', 'Technical Reports','White Papers','Magazine Articles','Working Papers'] %}
+            {% for key, year, text, bibtex, url, XEmember, XEcategory in publications %}
+             {% if XEcategory == Category %}
               <li><a href="#{{Category.partition(' ')[0]}}">{{Category}}</a></li>
             {% break %}
            {% endif %}
@@ -47,9 +47,9 @@
         Search by Category:
         </div>
         <ul class="nav nav-pills nav-stacked">
-        {% for Category in ['Monographs and edited volumes','Journal articles', 'Book chapters', 'Conference publications', 'Technical reports','White papers','Magazine Articles','Working papers'] %}
-            {% for key, year, text, bibtex, url, author_id, category in publications %}
-             {% if category == Category %}
+        {% for Category in ['Monographs and Edited Volumes','Journal Articles', 'Book Chapters', 'Conference Publications', 'Technical Reports','White Papers','Magazine Articles','Working Papers'] %}
+            {% for key, year, text, bibtex, url, XEmember, XEcategory in publications %}
+             {% if XEcategory == Category %}
               <li><a href="#{{Category.partition(' ')[0]}}">{{Category}}</a></li>
             {% break %}
            {% endif %}
@@ -60,10 +60,10 @@
       </nav>
     </div>
 		<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-9" id="printurl">
-      {% for Category in ['Monographs and edited volumes','Journal articles', 'Book chapters', 'Conference publications', 'Technical reports','White papers','Magazine Articles','Working papers'] %}
+      {% for Category in ['Monographs and Edited Volumes','Journal Articles', 'Book Chapters', 'Conference Publications', 'Technical Reports','White Papers','Magazine Articles','Working Papers'] %}
              <div class="panel panel-default" id="px2">
-               {% for key, year, text, bibtex, url, author_id, category in publications %}
-                {% if category == Category %}
+               {% for key, year, text, bibtex, url, XEmember, XEcategory in publications %}
+                {% if XEcategory == Category %}
                      <div class="panel-heading">
                        <h3 id="{{Category.partition(' ')[0]}}">{{Category}}</h3>
                      </div>
@@ -72,8 +72,8 @@
                {% endfor %}
                <ul class="list-group">
                  <ul>
-                   {% for key, year, text, bibtex, url, author_id, category in publications %}
-                    {% if category == Category %}
+                   {% for key, year, text, bibtex, url, XEmember, XEcategory in publications %}
+                    {% if XEcategory == Category %}
                        <p>
                        <li id="{{ key }}">{{ text }}
                        {% for label, target in [('<span class="glyphicon glyphicon-new-window"></span>', url)] %}

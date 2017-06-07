@@ -1,6 +1,6 @@
 Title: Christos - Oikonomou
 Date: 20140115
-Year: 2014
+joined_date: 20140115
 Category: members 
 Id: m_chrikon
 givenname: Christos

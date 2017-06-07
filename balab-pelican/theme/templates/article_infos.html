@@ -60,7 +60,7 @@
               </div>
             </div>
             {% endif %}
-            {% for key, year, text, bibtex, url, XEmember, category in publications %}
+            {% for key, year, text, bibtex, url, XEmember, XEcategory in publications %}
               {% if (XEmember.split(' ')[0] == article.id or
                  XEmember.split(' ')[1] == article.id or
                  XEmember.split(' ')[2] == article.id or
@@ -74,9 +74,9 @@
                            Publications by Category:
                            </div>
                            <ul class="nav nav-pills nav-stacked">
-                             {% for Category in ['Monographs and edited volumes','Journal articles', 'Book chapters', 'Conference publications', 'Technical reports','White papers','Magazine Articles','Working papers'] %}
-                                 {% for key, year, text, bibtex, url, XEmember, category in publications %}
-                                 {% if category == Category and
+                             {% for Category in ['Monographs and Edited Volumes','Journal Articles', 'Book Chapters', 'Conference Publications', 'Technical Reports','White Papers','Magazine Articles','Working Papers'] %}
+                                 {% for key, year, text, bibtex, url, XEmember, XEcategory in publications %}
+                                 {% if XEcategory == Category and
                                    (XEmember.split(' ')[0] == article.id or
                                     XEmember.split(' ')[1] == article.id or
                                     XEmember.split(' ')[2] == article.id or
@@ -98,9 +98,9 @@
                              <h3> Publications</h3>
                            </div>
                            <div class="panel-body">
-                             {% for Category in ['Monographs and edited volumes','Journal articles', 'Book chapters', 'Conference publications', 'Technical reports','White papers','Magazine Articles','Working papers'] %}
-                                 {% for key, year, text, bibtex, url, XEmember, category in publications %}
-                                  {% if category == Category and
+                             {% for Category in ['Monographs and Edited Volumes','Journal Articles', 'Book Chapters', 'Conference Publications', 'Technical Reports','White Papers','Magazine Articles','Working Papers'] %}
+                                 {% for key, year, text, bibtex, url, XEmember, XEcategory in publications %}
+                                  {% if XEcategory == Category and
                                     (XEmember.split(' ')[0] == article.id or
                                      XEmember.split(' ')[1] == article.id or
                                      XEmember.split(' ')[2] == article.id or
@@ -112,8 +112,8 @@
                                  {% endfor %}
                                  <ul class="list-group">
                                    <ul>
-                                     {% for key, year, text, bibtex, url, XEmember, category in publications %}
-                                     {% if category == Category and
+                                     {% for key, year, text, bibtex, url, XEmember, XEcategory in publications %}
+                                     {% if XEcategory == Category and
                                        (XEmember.split(' ')[0] == article.id or
                                         XEmember.split(' ')[1] == article.id or
                                         XEmember.split(' ')[2] == article.id or
@@ -298,7 +298,7 @@
                 Search by Category:
                 </div>
                 <ul class="nav nav-pills nav-stacked">
-                  {% for key, year, text, bibtex, url, XEmember, category in publications %}
+                  {% for key, year, text, bibtex, url, XEmember, XEcategory in publications %}
                    {% if year == article.title%}
                     <li><a href="#publications">New publications</a></li>
                     {% break %}
@@ -311,10 +311,20 @@
                       {% endif %}
                   {% endfor %}
                   {% for article2 in articles %}
-                     {% if article2.category == 'members' and article2.year == article.title%}
-                        <li><a href="#members">New Members</a></li>
-                        {% break %}
+                     {% if article2.category == 'members'%}
+                      {% if article2.joined_date[:4] == article.title %}
+                          <li><a href="#members">New Members</a></li>
+                          {% break %}
+                        {% endif %}
                       {% endif %}
+                  {% endfor %}
+                  {% for article2 in articles %}
+                     {% if article2.category == 'members' and article2.phd_enddate%}
+                        {% if article2.phd_enddate[0:4] == article.title %}
+                          <li><a href="#members">Completed PhDs</a></li>
+                          {% break %}
+                        {% endif %}
+                     {% endif %}
                   {% endfor %}
                 </ul>
               </div>
@@ -327,7 +337,7 @@
                 Search by Category:
                 </div>
                 <ul class="nav nav-pills nav-stacked">
-                  {% for key, year, text, bibtex, url, XEmember, category in publications %}
+                  {% for key, year, text, bibtex, url, XEmember, XEcategory in publications %}
                    {% if year == article.title%}
                     <li><a href="#publications">New publications</a></li>
                     {% break %}
@@ -340,10 +350,20 @@
                       {% endif %}
                   {% endfor %}
                   {% for article2 in articles %}
-                     {% if article2.category == 'members' and article2.year == article.title%}
-                        <li><a href="#members">New Members</a></li>
-                        {% break %}
+                    {% if article2.category == 'members' %}
+                     {% if article2.joined_date[:4] == article.title %}
+                          <li><a href="#members">New Members</a></li>
+                          {% break %}
+                        {% endif %}
                       {% endif %}
+                  {% endfor %}
+                  {% for article2 in articles %}
+                     {% if article2.category == 'members' and article2.phd_enddate%}
+                        {% if article2.phd_enddate[0:4] == article.title %}
+                          <li><a href="#members">Completed PhDs</a></li>
+                          {% break %}
+                        {% endif %}
+                     {% endif %}
                   {% endfor %}
                 </ul>
               </div>
@@ -357,17 +377,17 @@
                        <h3 id="publications">Publications</h3>
                    </div>
                    <div class="panel-body">
-                     {% for Category in ['Monographs and edited volumes','Journal articles', 'Book chapters', 'Conference publications', 'Technical reports','White papers','Magazine Articles','Working papers'] %}
-                         {% for key, year, text, bibtex, url, XEmember, category in publications %}
-                          {% if category == Category and year == article.title%}
+                     {% for Category in ['Monographs and Edited Volumes','Journal Articles', 'Book Chapters', 'Conference Publications', 'Technical Reports','White Papers','Magazine Articles','Working Papers'] %}
+                         {% for key, year, text, bibtex, url, XEmember, XEcategory in publications %}
+                          {% if XEcategory == Category and year == article.title%}
                            <h4 style="color:#203864;">{{Category}}</h4>
                            {% break %}
                           {% endif %}
                          {% endfor %}
                          <ul class="list-group">
                            <ul>
-                             {% for key, year, text, bibtex, url, XEmember, category in publications %}
-                              {% if year == article.title and category == Category %}
+                             {% for key, year, text, bibtex, url, XEmember, XEcategory in publications %}
+                              {% if year == article.title and XEcategory == Category %}
                                <p>
                                <li id="{{ key }}">{{ text }}
                                {% for label, target in [('<span class="glyphicon glyphicon-new-window"></span>', url)] %}
@@ -432,7 +452,8 @@
                   {% endif %}
               {% endfor %}
             {% for article2 in articles %}
-               {% if article2.category == 'members' and article2.year == article.title%}
+              {% if article2.category == 'members' %}
+               {% if article2.joined_date[:4] == article.title %}
                    <div class="panel panel-default" id="px2">
                      <div class="panel-heading">
                          <h3 id="members">New members</h3>
@@ -440,19 +461,50 @@
                      <ul class="list-group">
                        <ul>
                         {% for article2 in articles %}
-                        {% if (article2.category == 'members' or article2.category == 'associates') and article2.year == article.title%}
-                        <p>
-                         <li>
-                           {{ article2.givenname }} {{ article2.surname }} {% if article2.phd_title or article2.phd_startdate %}(PhD student){% endif %}
-                           <a href="{{ SITEURL }}/{{ article2.url }}"><span class="glyphicon glyphicon-new-window"></span></a>
-                         </li>
-                        </p>
-                        {% endif%}
+                          {% if article2.category == 'members' %}
+                            {% if article2.joined_date[:4] == article.title %}
+                              <p>
+                               <li>
+                                 {{ article2.givenname }} {{ article2.surname }} {% if article2.phd_title or article2.phd_startdate %}(PhD student){% endif %}
+                                 <a href="{{ SITEURL }}/{{ article2.url }}"><span class="glyphicon glyphicon-new-window"></span></a>
+                               </li>
+                              </p>
+                            {% endif%}
+                          {% endif%}
                         {% endfor %}
                       </ul>
                     </ul>
                   </div>
                   {% break %}
+                {% endif %}
+              {% endif %}
+            {% endfor %}
+            {% for article2 in articles %}
+               {% if article2.category == 'members' and article2.phd_enddate%}
+                  {% if article2.phd_enddate[0:4] == article.title %}
+                     <div class="panel panel-default" id="px2">
+                       <div class="panel-heading">
+                           <h3 id="members">Completed PhDs</h3>
+                       </div>
+                       <ul class="list-group">
+                         <ul>
+                          {% for article2 in articles %}
+                            {% if article2.category == 'members' and article2.phd_enddate %}
+                              {% if article2.phd_enddate[:4] == article.title%}
+                              <p>
+                               <li>
+                                 {{ article2.givenname }} {{ article2.surname }}(PhD student)
+                                 <a href="{{ SITEURL }}/{{ article2.url }}"><span class="glyphicon glyphicon-new-window"></span></a>
+                               </li>
+                              </p>
+                              {% endif%}
+                            {% endif%}
+                          {% endfor %}
+                        </ul>
+                      </ul>
+                    </div>
+                    {% break %}
+                  {% endif %}
                 {% endif %}
             {% endfor %}
 

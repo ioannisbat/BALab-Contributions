@@ -1,6 +1,6 @@
 Title: Thodoris - Sotiropoulos
+joined_date: 20151105
 Date: 20151105
-Year: 2015
 Category: members 
 Id: m_theosot
 givenname: Thodoris

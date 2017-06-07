@@ -1,6 +1,6 @@
 Title: Dimitris - Mitropoulos
 Date: 20070301
-Year: 2007
+joined_date: 20070301
 Category: members 
 Id: m_dimitro
 givenname: Dimitris
@@ -17,6 +17,7 @@ web_log: http://xrds.acm.org/blog/author/dimitrism/
 phd_title: Secure Software Development Technologies 
 phd_supervisor: m_dds
 phd_startdate: 20080915
+phd_enddate: 20140311
 phd_completed: 1
 phd_summary: Code injection attacks are one of the most damaging class of attacks because: they can occur in different layers, like databases, native code, applications, libraries and others; and they span a wide range of security and privacy issues, like viewing sensitive information, destruction or modification of sensitive data, or even stopping the execution of the entire application. Our research attempts to prevent a wide class of such attacks in a novel way. 
 

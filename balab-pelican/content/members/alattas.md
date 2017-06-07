@@ -2,7 +2,7 @@ Title: Alex Lattas
 Givenname: Alex
 Surname: Lattas
 Date: 20160430
-Year: 2017
+joined_date: 20160430
 Category: members
 Photo: lattas.jpg
 Id: a_lattas

@@ -70,7 +70,7 @@ def add_publications(generator):
         key = formatted_entry.key
         entry = bibdata_all.entries[key]
         year = entry.fields.get('year')
-        category = entry.fields.get('category')
+        XEcategory = entry.fields.get('XEcategory')
         XEmember = entry.fields.get('XEmember')
         url = entry.fields.get('XEurl')
 
@@ -86,7 +86,7 @@ def add_publications(generator):
                              bib_buf.getvalue(),
                              url,
                              XEmember,
-                             category
+                             XEcategory
                              ))
 
     generator.context['publications'] = publications

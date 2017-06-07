@@ -1,6 +1,6 @@
 Title: Vitalis - Salis
 Date: 20160715
-Year: 2016
+joined_date: 20160715
 Category: members 
 Id: m_vitsalis
 givenname: Vitalis

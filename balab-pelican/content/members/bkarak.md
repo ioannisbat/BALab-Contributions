@@ -1,6 +1,6 @@
 Title: Vassilios - Karakoidas
 Date: 20031114
-Year: 2003
+joined_date: 20031114
 Category: members 
 Id: m_bkarak
 givenname: Vassilios
@@ -15,6 +15,7 @@ github: https://github.com/bkarak
 phd_title: Integrating Domain-Specific Languages with General-Purpose Languages
 phd_supervisor: m_dds
 phd_startdate: 20031114
+phd_enddate: 20150514
 phd_completed: 1
 phd_summary: Domain-specific languages (DSL) are small, usually declarative languages that focus on o specific problem domain. SQL and regular expressions are two of the most common DSL's. General purpose languages (GPL) such as C, C++ and Java are covering a wider application domain, but lack expressive power when applicable to specific problems. Usually DSL's are implemented as external libraries when used by GPL's and the compiler is unaware of the DSL syntax and data types, creating a series of problems in the software development process. Our approach attempts to fill this scientific gap, and create a compiler framework that will be DSL-aware.
 
