@@ -1,7 +1,7 @@
 Title: Tushar - Sharma
 Date: 20151214
 joined_date: 20151214
-Category: members 
+Category: Members 
 Id: m_tushar
 givenname: Tushar
 surname: Sharma

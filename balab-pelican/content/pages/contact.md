@@ -22,7 +22,14 @@ slug: contact
         </div>
       </div>
     </div>
-
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading" id="px2">
+      <h3> Credits </h3>
+    </div>
+    <div class="panel-body">
+       <b>Logo design: </b> Anastasia Griva<br>
+    </div>
   </div>
   </br>
 </div>

@@ -1,24 +1,24 @@
-Title: EDUPORTAL 
-Date:  20040301 
-Category: projects 
+Title: EDUPORTAL
+Date:  20040301
+Category: Projects
 State: Completed projects
-Id: p_eduportal 
-shortname: EDUPORTAL 
-projtitle: Eduportal 
-startdate: 20040301 
-enddate: 20040301 
-endYear: 2004 
-web_site: http://eduportal.dmst.aueb.gr/ 
-our_budget: 
+Id: p_eduportal
+shortname: EDUPORTAL
+projtitle: Eduportal
+startdate: 20040301
+enddate: 20040301
+endYear: 2004
+web_site: http://eduportal.dmst.aueb.gr/
+our_budget:
 total_budget:  
 funding_agency:  
-funding_programme: EPEAEK 
-project_code: - 
+funding_programme: EPEAEK
+project_code: -
 logo:   
-scientific_coordinator: m_androutsellis 
+scientific_coordinator: m_androutsellis
 contact: m_androutsellis 
-project_manager: m_androutsellis 
-type: consulting 
+project_manager: m_androutsellis
+type: consulting
 international: no
 
 Eduportal is a unified portal allowing access to academic information

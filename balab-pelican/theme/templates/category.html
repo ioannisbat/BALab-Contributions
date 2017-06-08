@@ -23,7 +23,7 @@
                       <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/lamp.png" style="height:150px" class="img-responsive" alt="...">
                       {% endif %}
             					<div id="px1" class="caption">
-                        <h5>{% if article.memb_title %}{{article.memb_title}}{% endif%}{{article.surname}}</h5>
+                        <h5>{% if article.memb_title %}{{article.memb_title}}{% endif%} {{article.surname}}</h5>
             					  <h5>{{article.givenname}} <span class="glyphicon glyphicon-new-window pull-right"></span></h5>
             					</div>
                     </a>
@@ -31,7 +31,7 @@
         				</div>
                 {% endfor %}
 
-        {% elif category == 'yearly_reports'%}
+        {% elif category == 'Yearly Reports'%}
                 <div class="panel panel-default" id="px2">
                   <div class="panel-heading">
                     <h2>Yearly Reports</h2>
@@ -92,7 +92,7 @@
                                  {% for article in articles %}
                                   {% if article.category == 'projects' and article.state == Category%}
                                   <p>
-                                   <li>{{ article.shortname }} - {{article.projtitle}} <a href="{{ SITEURL }}/{{ article.url }}"><span class="glyphicon glyphicon-new-window"></span></a></li>
+                                   <li>{{ article.shortname }} &mdash; {{article.projtitle}} <a href="{{ SITEURL }}/{{ article.url }}"><span class="glyphicon glyphicon-new-window"></span></a></li>
                                   </p>
                                   {% endif %}
                                  {% endfor %}
@@ -107,4 +107,4 @@
   {% endif %}
 {% endblock content %}
 
-{% block title %}{{ category }}{% endblock %}
+{% block title %}{{ SITENAME }} {{ category }}{% endblock %}

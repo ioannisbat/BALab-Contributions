@@ -1,7 +1,7 @@
 Title: Stavros - Trihias
 Date: 20121001
 joined_date: 20121001
-Category: members 
+Category: Members 
 Id: Strihias
 givenname: Stavros
 surname: Trihias

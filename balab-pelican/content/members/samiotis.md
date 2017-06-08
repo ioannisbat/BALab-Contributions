@@ -1,7 +1,7 @@
 Title: Konstantinos - Samiotis
 Date: 20011014
 joined_date: 20011014
-Category: members 
+Category: Members 
 Id: m_samiotis
 givenname: Konstantinos
 surname: Samiotis

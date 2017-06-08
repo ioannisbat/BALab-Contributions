@@ -1,24 +1,24 @@
-Title: Web 
+Title: Web
 Date: 01/01/2001
-Category: projects 
+Category: Projects
 State: Completed projects
-Id: p_web 
-shortname: Web 
-projtitle: The ISTLab Web Site 
+Id: p_web
+shortname: Web
+projtitle: The ISTLab Web Site
 startdate:  
-enddate: 20040401 
-endYear: 2004 
-web_site: http://istlab.dmst.aueb.gr/ 
-our_budget: 
+enddate: 20040401
+endYear: 2004
+web_site: http://istlab.dmst.aueb.gr/
+our_budget:
 total_budget:  
 funding_agency:  
 funding_programme:  
 project_code:  
 logo: p_web.jpg  
-scientific_coordinator: m_dds 
-contact: m_bkarak 
-project_manager: m_dds 
-type: consulting 
+scientific_coordinator: m_dds
+contact: m_bkarak
+project_manager: m_dds
+type: consulting
 international: yes
 
 The <em>Web site</em> project aims to create a dynamic,
@@ -46,4 +46,3 @@ The guiding principles behind our design are:
 <li>Robustness</li>
 <li>Parsimony</li>
 </ul>
-	

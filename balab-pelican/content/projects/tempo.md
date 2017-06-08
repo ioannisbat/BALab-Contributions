@@ -1,32 +1,32 @@
-Title: TEMPO 
-Date:  20020326 
-Category: projects 
+Title: TEMPO
+Date:  20020326
+Category: Projects
 State: Completed projects
-Id: p_tempo 
-shortname: TEMPO 
-projtitle: Technologies and Applications in Multi-Protocol networks 
-startdate: 20020326 
-enddate: 20030509 
-endYear: 2003 
+Id: p_tempo
+shortname: TEMPO
+projtitle: Technologies and Applications in Multi-Protocol networks
+startdate: 20020326
+enddate: 20030509
+endYear: 2003
 web_site:  
 our_budget: 44,000 EUR
-total_budget: 519,442 EUR 
-funding_agency: Hellenic Organization of Telecommunications OTE 
-funding_programme: Private Funding 
-project_code: 1182 
+total_budget: 519,442 EUR
+funding_agency: Hellenic Organization of Telecommunications OTE
+funding_programme: Private Funding
+project_code: 1182
 logo:   
-scientific_coordinator: m_dds 
-contact: m_dds 
+scientific_coordinator: m_dds
+contact: m_dds
 project_manager:  
-type: rtd 
+type: rtd
 international: no
-partner_shortname1: OTE 
-partner_country1: GR 
+partner_shortname1: OTE
+partner_country1: GR
 partner_website1: http://www.ote.gr/
-partner_shortname2: NTUA 
-partner_country2: GR 
+partner_shortname2: NTUA
+partner_country2: GR
 partner_website2: http://www.ntua.gr/
-partner_shortname3: UoA 
+partner_shortname3: UoA
 partner_country3: GR 
 partner_website3: http://www.uoa.gr/
 

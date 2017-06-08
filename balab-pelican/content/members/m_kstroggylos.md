@@ -1,7 +1,7 @@
 Title: Konstantinos - Stroggylos
 Date: 20051110
 joined_date: 20051110
-Category: members
+Category: Members
 Id: m_kstroggylos
 givenname: Konstantinos
 surname: Stroggylos

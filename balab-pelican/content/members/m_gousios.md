@@ -1,7 +1,7 @@
 Title: Georgios - Gousios
 Date: 20041115
 joined_date: 20041115
-Category: members 
+Category: Members 
 Id: m_gousios
 givenname: Georgios
 surname: Gousios

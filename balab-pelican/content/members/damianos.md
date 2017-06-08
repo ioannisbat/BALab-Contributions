@@ -1,7 +1,7 @@
 Title: Damianos - Chatziantoniou
 Date: 20130219
 joined_date: 20130219
-Category: members 
+Category: Members 
 Id: m_damianos
 givenname: Damianos
 surname: Chatziantoniou

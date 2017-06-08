@@ -5,7 +5,7 @@ from __future__ import unicode_literals
 JINJA_EXTENSIONS = ['jinja2.ext.loopcontrols']
 
 AUTHOR = 'sta'
-SITENAME = 'BAlab'
+SITENAME = 'BALab'
 SITEURL = ''
 
 PATH = 'content'

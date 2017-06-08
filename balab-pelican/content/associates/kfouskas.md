@@ -3,7 +3,7 @@ Date: 20160430
 Givenname: Kostas
 Surname: Fouskas
 joined_date: 20160430
-Category: associates
+Category: Associates
 Id: m_kfouskas
 Photo: m_fouskas.jpg
 office_phone: +30 210 8203466

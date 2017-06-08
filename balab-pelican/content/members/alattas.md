@@ -3,7 +3,7 @@ Givenname: Alex
 Surname: Lattas
 Date: 20160430
 joined_date: 20160430
-Category: members
+Category: Members
 Photo: lattas.jpg
 Id: a_lattas
 office_phone: +30 210 8203466

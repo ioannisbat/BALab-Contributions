@@ -1,7 +1,7 @@
 Title: Maria - Kechagia
 Date: 20090907
 joined_date: 20090907
-Category: members 
+Category: Members 
 Id: m_mkehagia
 givenname: Maria
 surname: Kechagia
