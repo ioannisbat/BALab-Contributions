@@ -2,7 +2,9 @@ Title: PhD_achievements
 slug: PhD_achievements
 
 <div class="container">
-
+  <p id="printlogo">
+    <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/ba-logo2.png" height="200" width="200" class="img-responsive" alt="...">
+  </p>
   <div class="panel panel-default" id="achievements">
     <div class="panel-heading">
       <h2>PhD Student Achievements</h2>

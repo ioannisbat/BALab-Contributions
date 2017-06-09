@@ -15,6 +15,9 @@
     }
 </script>
 <div class = "container">
+  <p id="printlogo">
+    <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/ba-logo2.png" height="200" width="200" class="img-responsive" alt="...">
+  </p>
   <div class="panel panel-default">
     <div class="panel-heading">
       <h2>Publications</h2>
@@ -29,7 +32,7 @@
 			  </div>
         <ul class="nav nav-pills nav-stacked">
         {% for Category in ['Monographs and Edited Volumes','Journal Articles', 'Book Chapters', 'Conference Publications', 'Technical Reports','White Papers','Magazine Articles','Working Papers'] %}
-            {% for key, year, text, bibtex, url, XEmember, XEcategory in publications %}
+            {% for key, year, text, url, XEmember, XEcategory, XEProject in publications %}
              {% if XEcategory == Category %}
               <li><a href="#{{Category.partition(' ')[0]}}">{{Category}}</a></li>
             {% break %}
@@ -48,7 +51,7 @@
         </div>
         <ul class="nav nav-pills nav-stacked">
         {% for Category in ['Monographs and Edited Volumes','Journal Articles', 'Book Chapters', 'Conference Publications', 'Technical Reports','White Papers','Magazine Articles','Working Papers'] %}
-            {% for key, year, text, bibtex, url, XEmember, XEcategory in publications %}
+            {% for key, year, text, url, XEmember, XEcategory, XEProject in publications %}
              {% if XEcategory == Category %}
               <li><a href="#{{Category.partition(' ')[0]}}">{{Category}}</a></li>
             {% break %}
@@ -62,7 +65,7 @@
 		<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-9" id="printurl">
       {% for Category in ['Monographs and Edited Volumes','Journal Articles', 'Book Chapters', 'Conference Publications', 'Technical Reports','White Papers','Magazine Articles','Working Papers'] %}
              <div class="panel panel-default" id="px2">
-               {% for key, year, text, bibtex, url, XEmember, XEcategory in publications %}
+               {% for key, year, text, url, XEmember, XEcategory, XEProject in publications %}
                 {% if XEcategory == Category %}
                      <div class="panel-heading">
                        <h3 id="{{Category.partition(' ')[0]}}">{{Category}}</h3>
@@ -70,21 +73,23 @@
                      {% break %}
                 {% endif %}
                {% endfor %}
-               <ul class="list-group">
-                 <ul>
-                   {% for key, year, text, bibtex, url, XEmember, XEcategory in publications %}
-                    {% if XEcategory == Category %}
-                       <p>
-                       <li id="{{ key }}">{{ text }}
-                       {% for label, target in [('<span class="glyphicon glyphicon-new-window"></span>', url)] %}
-                       {{ "&nbsp;<a href=\"%s\">%s</a>&nbsp;" % (target, label) if target }}
-                       {% endfor %}
-                       </p>
-                       </li>
-                    {% endif %}
-                   {% endfor %}
+               <div class="panel-body">
+                 <ul class="list-group">
+                   <ul>
+                     {% for key, year, text, url, XEmember, XEcategory, XEProject in publications %}
+                      {% if XEcategory == Category %}
+                         <p>
+                         <li id="{{ key }}">{{ text }}
+                         {% for label, target in [('<span class="glyphicon glyphicon-new-window"></span>', url)] %}
+                         {{ "&nbsp;<a href=\"%s\">%s</a>&nbsp;" % (target, label) if target }}
+                         {% endfor %}
+                         </li>
+                        </p>
+                      {% endif %}
+                     {% endfor %}
+                   </ul>
                  </ul>
-               </ul>
+               </div>
              </div>
       {% endfor %}
 	 </div>

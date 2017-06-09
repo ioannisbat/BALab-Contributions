@@ -7,7 +7,6 @@ shortname: eAware
 projtitle: e-Awareness for Europe: Digital Awareness and Security for the Citizen in Europe
 startdate: 20020101
 enddate: 20031231
-endYear: 2003
 web_site: http://www.iaac.org.uk/eaware/
 our_budget: 17,160 EUR
 total_budget: 268,800 EUR
@@ -23,7 +22,7 @@ international: yes
 partner_shortname1: RAND Europe
 partner_country1: NL
 partner_website1: http://www.randeurope.org/
-partner_shortname2: Intellect 
+partner_shortname2: Intellect
 partner_country2: UK
 partner_website2: http://www.intellectuk.org/
 partner_shortname3: CLUSIT

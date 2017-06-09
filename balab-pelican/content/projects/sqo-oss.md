@@ -1,13 +1,12 @@
 Title: SQO-OSS
 Date:  20060901
-Category: Projects 
+Category: Projects
 State: Completed projects
 Id: p_sqo-oss
 shortname: SQO-OSS
 projtitle: Source Quality Observatory for Open Source Software
 startdate: 20060901
 enddate: 20081031
-endYear: 2008
 web_site: http://www.sqo-oss.eu/
 our_budget: 378,000
 total_budget: 1,638,800

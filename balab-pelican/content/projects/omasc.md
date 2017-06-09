@@ -7,7 +7,6 @@ shortname: S-OMA SMART CARDS
 projtitle: Security in Open Multi-Application SMART CARDS
 startdate: 20061001
 enddate: 20081001
-endYear: 2008
 web_site:  
 our_budget: 5,250 EUR
 total_budget: 29,904 EUR
@@ -18,7 +17,7 @@ logo:
 scientific_coordinator: m_dds
 contact: m_dds
 project_manager: m_vlachos
-type: rtd 
+type: rtd
 international: yes
 partner_shortname1: Aristotle University of Thessaloniki - Department of Informatics
 partner_country1: GR

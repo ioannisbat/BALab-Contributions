@@ -7,7 +7,6 @@ shortname: Web
 projtitle: The ISTLab Web Site
 startdate:  
 enddate: 20040401
-endYear: 2004
 web_site: http://istlab.dmst.aueb.gr/
 our_budget:
 total_budget:  

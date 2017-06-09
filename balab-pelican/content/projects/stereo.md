@@ -7,7 +7,6 @@ shortname: STEREO
 projtitle: Software research platform on software quality and engineering
 startdate: 20121001
 enddate: 20150930
-endYear: 2015
 web_site:  
 our_budget:
 total_budget: 560,987 euro

@@ -7,7 +7,6 @@ shortname: PENED
 projtitle: Designing a Peer-to-Peer e-Business Transaction Processing System
 startdate: 20050901
 enddate: 20081231
-endYear: 2008
 web_site:  
 our_budget: 125,000 euro
 total_budget: 125,000 euro
@@ -25,7 +24,7 @@ partner_country1: GR
 partner_website1: http://www.singularsoftware.gr/index.asp
 
 On-line business transaction processing systems have so far been based on centralized or client-server architectures. It is our firm belief and
-it has also been recognized by the research and industrial community–that such systems may also be based on the constantly evolving decentralized 
+it has also been recognized by the research and industrial community–that such systems may also be based on the constantly evolving decentralized
 peer-to-peer architectures, as current peer-to-peer technology has evolved to the extent that it is able to fulfill many of these requirements
 to a large extent. The aim of the project is the research and design of eBusiness transaction processing systems based on entirely decentralised
  peer-to-peer architectures, based on a detailed requirements definition and analysis. The proposed design will cover issues such as support

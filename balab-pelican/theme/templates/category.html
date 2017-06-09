@@ -4,6 +4,9 @@
   {% if articles %}
     <div class = "container">
         {% if category == 'members' or category == 'associates'%}
+        <p id="printlogo">
+          <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/ba-logo2.png" height="200" width="200" class="img-responsive" alt="...">
+        </p>
               <div class="panel panel-default">
                 <div class="panel-heading">
                   {% if category == 'members'%}
@@ -13,7 +16,7 @@
                   {% endif %}
                 </div>
               </div>
-              {% for article in articles_page.object_list %}
+              {% for article in articles_page.object_list|sort(attribute='surname') %}
         				<div class="col-xs-12 col-sm-4 col-md-3 col-lg-3" id="printphoto">
         				  <div class="thumbnail">
                     <a href="{{ SITEURL }}/{{ article.url }}">
@@ -38,11 +41,14 @@
                   </div>
                   <ul class="list-group">
                     {% for article in articles_page.object_list %}
-                       <a href="{{ SITEURL }}/{{article.url}}"><li class="list-group-item">Yearly Report {{article.title}}</li></a>
+                       <a href="{{ SITEURL }}/{{article.url}}"><li class="list-group-item">{{article.category}} {{article.title}}</li></a>
                     {% endfor %}
                   </ul>
                 </div>
           {% else %}
+              <p id="printlogo">
+                <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/ba-logo2.png" height="200" width="200" class="img-responsive" alt="...">
+              </p>
                 <div class="panel panel-default">
                   <div class="panel-heading">
                     <h2>Projects</h2>
@@ -87,17 +93,19 @@
                                 {% break %}
                                {% endif%}
                              {% endfor %}
-                             <ul class="list-group">
-                               <ul>
-                                 {% for article in articles %}
-                                  {% if article.category == 'projects' and article.state == Category%}
-                                  <p>
-                                   <li>{{ article.shortname }} &mdash; {{article.projtitle}} <a href="{{ SITEURL }}/{{ article.url }}"><span class="glyphicon glyphicon-new-window"></span></a></li>
-                                  </p>
-                                  {% endif %}
-                                 {% endfor %}
+                             <div class="panel-body">
+                               <ul class="list-group">
+                                 <ul>
+                                   {% for article in articles|sort(attribute='title') %}
+                                    {% if article.category == 'projects' and article.state == Category%}
+                                    <p>
+                                     <li>{{ article.shortname }} &mdash; {{article.projtitle}} <a href="{{ SITEURL }}/{{ article.url }}"><span class="glyphicon glyphicon-new-window"></span></a></li>
+                                    </p>
+                                    {% endif %}
+                                   {% endfor %}
+                                 </ul>
                                </ul>
-                             </ul>
+                             </div>
                            </div>
                        {% endfor %}
               	 </div>

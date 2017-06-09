@@ -7,11 +7,10 @@ shortname: Iraklitos II
 projtitle: Secure Software Development Technologies
 startdate: 20100901
 enddate: 20130901
-endYear: 2013
 web_site: http://irakleitos.aueb.gr/index.php/erevnitikoergo/det/mitropoulos
 our_budget:
 total_budget: 45,000 €
-funding_agency: Ministry of Education 
+funding_agency: Ministry of Education
 funding_programme: Special Management Programme for Education and Lifelong Learning - Action 11.74.11.01 - Iraklitos II research fellowships at the Athens University of Economics and Business
 project_code: 4/15/6
 logo: stereo_espa.png  

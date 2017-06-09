@@ -7,7 +7,7 @@ givenname: Panos (Panagiotis)
 surname: Louridas
 memb_title: Dr.
 email: louridas@aueb.gr
-website: http://www.dmst.aueb.gr/louridas
+web_site: http://www.dmst.aueb.gr/louridas
 office_phone: +30 2107475686
 fax: +30 2107474490
 office_address: Greek Research Technology Network 56 Messogion Ave., 11527 Athens, Greece

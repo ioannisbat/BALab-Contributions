@@ -7,7 +7,6 @@ shortname: TRAINSEE
 projtitle: Training in Information Technologies in South Eastern Europe
 startdate: 20020201
 enddate: 20030801
-endYear: 2003
 web_site: http://laplace.intrasoft-intl.com/TrainSEE/source/home.htm
 our_budget:
 total_budget:  
@@ -16,7 +15,7 @@ funding_programme: FP5 - IST Program under key action II
 project_code: IST-2000-28181
 logo: Trainsee_logo.gif  
 scientific_coordinator: m_akp
-contact: m_akp 
+contact: m_akp
 project_manager: m_akp
 type: rtd
 international: yes

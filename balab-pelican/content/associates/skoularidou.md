@@ -7,7 +7,7 @@ givenname: Victoria
 surname: Skoularidou
 memb_title: Mrs.
 email: vsko@aueb.gr
-website: http://istlab.dmst.aueb.gr/~vsko/
+web_site: http://istlab.dmst.aueb.gr/~vsko/
 office_phone: +30 2104978244
 fax: +30 2108203664
 office_address: 76 Patission Str.

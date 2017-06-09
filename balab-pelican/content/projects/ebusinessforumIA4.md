@@ -7,7 +7,6 @@ shortname: eBusinessForum - Working Group IA4
 projtitle: Greek Computer Emergency Response Team (GR-CERT)
 startdate: 20060910
 enddate: 20070530
-endYear: 2007
 web_site: http://www.ebusinessforum.gr
 
 our_budget:

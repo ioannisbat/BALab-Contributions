@@ -7,7 +7,6 @@ shortname: TRACER
 projtitle: Identifying software vulnerabilities and securing legacy systems
 startdate: 20110418
 enddate: 20141017
-endYear: 2014
 web_site: http://www.tracer-project.gr/
 our_budget: 146020 euro
 total_budget: 546700 euro
@@ -24,7 +23,7 @@ partner_shortname1: PLASE Laboratory of the Department of Informatics of the Ari
 partner_country1: GR
 partner_website1: http://sweng.csd.auth.gr/
 partner_shortname2: Institute of Computer Science (ICS) of the Foundation for Research and Technology - Hellas (FORTH)
-partner_country2: GR 
+partner_country2: GR
 partner_website2: http://www.ics.forth.gr/
 partner_shortname3: Singular Software S.A.
 partner_country3: GR

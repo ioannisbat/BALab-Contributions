@@ -1,16 +1,16 @@
 Title: Christos - Oikonomou
 Date: 20140115
 joined_date: 20140115
-Category: Members 
+Category: Members
 Id: m_chrikon
 givenname: Christos
 surname: Oikonomou
-memb_title: 
+memb_title:
 email: chrikon@dmst.aueb.gr
-website: http://altebaran.dmst.aueb.gr/FS/Students2012/chrikon/inetpub/detfolio/
+web_site: http://altebaran.dmst.aueb.gr/FS/Students2012/chrikon/inetpub/detfolio/
 mobile_phone: +30 6947359872
-fax: 
-office_address: Athens University of Economics and Business Main Building, Derigny ct, 3rd fl 
+fax:
+office_address: Athens University of Economics and Business Main Building, Derigny ct, 3rd fl
 postal_address: Patision 76, GR-104 34 Athens, Greece
 photo: chrikon.jpg
 

@@ -1,13 +1,12 @@
 Title: Action II
 Date:  20141009
-Category: Projects 
+Category: Projects
 State: Completed projects
 Id: p_action_dimitro
 shortname: Action II
 projtitle: Taming Code Injection Attacks Across Multiple Domains
-startdate: 20141009
+startdate:  20141009
 enddate: 20150910
-endYear: 2015
 web_site:  
 our_budget:
 total_budget: 13,000 €

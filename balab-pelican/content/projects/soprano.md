@@ -7,7 +7,6 @@ shortname: SOPRANO
 projtitle: Service-oriented Programmable Smart Environments for Older Europeans
 startdate: 20070101
 enddate: 20100701
-endYear: 2010
 web_site:  
 our_budget: 100,000 euro
 total_budget: 6,999,626 euro

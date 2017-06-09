@@ -7,7 +7,6 @@ shortname: myGrocer
 projtitle: Mobile Shopping of Electronically Referenced Grocery Products
 startdate: 20010101
 enddate: 20021201
-endYear: 2002
 web_site: http://www.eltrun.gr/mygrocer
 our_budget:
 total_budget:  
@@ -26,7 +25,7 @@ partner_website1: http://www.pouliadis.gr
 partner_shortname2: Nokia Corporation
 partner_country2: FIN
 partner_website2: http://www.nokia.com/
-partner_shortname3: Atlantic S.A. 
+partner_shortname3: Atlantic S.A.
 partner_country3: GR
 partner_website3:
 partner_shortname4: Procter &amp; Gamble Hellas S.A.

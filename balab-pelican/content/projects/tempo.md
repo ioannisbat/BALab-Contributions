@@ -7,7 +7,6 @@ shortname: TEMPO
 projtitle: Technologies and Applications in Multi-Protocol networks
 startdate: 20020326
 enddate: 20030509
-endYear: 2003
 web_site:  
 our_budget: 44,000 EUR
 total_budget: 519,442 EUR
@@ -27,7 +26,7 @@ partner_shortname2: NTUA
 partner_country2: GR
 partner_website2: http://www.ntua.gr/
 partner_shortname3: UoA
-partner_country3: GR 
+partner_country3: GR
 partner_website3: http://www.uoa.gr/
 
 The TEMPO project aims to:

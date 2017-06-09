@@ -1,13 +1,13 @@
 Title: Diomidis - Spinellis
 Date: 20020101
 joined_date: 20020101
-Category: Members 
+Category: Members
 Id: m_dds
 givenname: Diomidis
 surname: Spinellis
 memb_title: Dr.
 email: dds@aueb.gr
-website: http://www.dmst.aueb.gr/dds
+web_site: http://www.dmst.aueb.gr/dds
 office_phone: +30 2108203981
 fax: +30 2108203685
 office_address: Troias 2, 4th floor, office 413

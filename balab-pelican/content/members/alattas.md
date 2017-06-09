@@ -1,21 +1,12 @@
-Title: Alex Lattas
-Givenname: Alex
+Title: Alexandros Lattas
+Givenname: Alexandros
 Surname: Lattas
 Date: 20160430
 joined_date: 20160430
 Category: Members
 Photo: lattas.jpg
 Id: a_lattas
-office_phone: +30 210 8203466
-office_address: Derigny 12, 7th floor
-postal_address: 76 Patission str, 104 34, Athens, Greece
 email: alattas@dmst.aueb.gr
-phd_title: software bla bla
-phd_supervisor: m_dds
-phd_startdate: 20161212
-phd_completed: 0
-phd_summary: Code injection attacks are one of the most damaging class of attacks because: they can occur in different layers, like databases, native code, applications, libraries and others; and they span a wide range of security and privacy issues, like viewing sensitive information, destruction or modification of sensitive data, or even stopping the execution of the entire application. Our research attempts to prevent a wide class of such attacks in a novel way.
-
 
 <p>
 <i>Alexandros Lattas</i> is an undergraduate student at the Athens University of Economics and Business

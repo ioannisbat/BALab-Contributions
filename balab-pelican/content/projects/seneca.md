@@ -7,7 +7,6 @@ shortname: SENECA
 projtitle: Software ENgineering in Enterprise Cloud Applications
 startdate: 20150101
 enddate: 20181231
-endYear: 2018
 web_site:  
 our_budget:
 total_budget: 2,236,902 euro

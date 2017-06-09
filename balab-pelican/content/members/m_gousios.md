@@ -1,17 +1,17 @@
 Title: Georgios - Gousios
 Date: 20041115
 joined_date: 20041115
-Category: Members 
+Category: Members
 Id: m_gousios
 givenname: Georgios
 surname: Gousios
 memb_title: Dr.
 email: gousiosg@aueb.gr
-website: http://www.gousios.gr
+web_site: http://www.gousios.gr
 office_phone: +30 210 8203370
 fax: +30 210 8203370
-office_address: Athens University of Economics and Business Main Building, Derigny ct, 3rd fl 
-postal_address: 76 Patission str, 104 34, Athens, Greece 
+office_address: Athens University of Economics and Business Main Building, Derigny ct, 3rd fl
+postal_address: 76 Patission str, 104 34, Athens, Greece
 photo: m_gousios.jpg
 phd_title: Tools and Methods for Large Scale Empirical Software Engineering Research
 phd_supervisor: m_dds

@@ -7,10 +7,9 @@ shortname: Iraklitos
 projtitle: Security Applications for Peer-to-Peer Networks
 startdate: 20021108
 enddate: 20070530
-endYear: 2007
 web_site:  
 our_budget:
-total_budget: 33,009 
+total_budget: 33,009
 funding_agency: Ministry of Education
 funding_programme: Programme for Education and Initial Vocational Training II (EPEAEK II) - Action 2.2.3.b - Iraklitos research fellowships at the Athens University of Economics and Business
 project_code: 19

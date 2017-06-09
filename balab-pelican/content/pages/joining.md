@@ -1,8 +1,10 @@
 Title: Joining the lab
 slug: join_The_Lab
 
-<div class="container">
-
+<div class="container">  
+  <p id="printlogo">
+    <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/ba-logo2.png" height="200" width="200" class="img-responsive" alt="...">
+  </p>
   <div class="panel panel-default">
     <div class="panel-heading">
       <h2>Joining the Lab</h2>

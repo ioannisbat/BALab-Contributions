@@ -7,7 +7,7 @@ givenname: Markos
 surname: Gogoulos
 memb_title: Mr.
 email: markos@istlab.dmst.aueb.gr
-website: http://istlab.dmst.aueb.gr/~markos
+web_site: http://istlab.dmst.aueb.gr/~markos
 office_phone: +30 210 8203370
 fax: +30 210 8203370
 postal_address: Patission 76, Athens

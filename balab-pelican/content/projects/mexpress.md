@@ -7,7 +7,6 @@ shortname: mExpress
 projtitle: mobile in-EXhibition PRovision of Electronic Support Services
 startdate: 20020305
 enddate: 20040401
-endYear: 2004
 web_site: http://mexpress.intranet.gr/
 our_budget: 328,627 EUR
 total_budget: 3,493,834 EUR

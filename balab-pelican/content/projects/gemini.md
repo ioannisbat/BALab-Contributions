@@ -7,7 +7,6 @@ shortname: GEMINI
 projtitle: Global Electronic Medium ConstellatIon for Dynamic CoNtent Integration
 startdate: 20020101
 enddate: 20040430
-endYear: 2004
 web_site:  
 our_budget:
 total_budget:  

@@ -72,6 +72,7 @@ def add_publications(generator):
         year = entry.fields.get('year')
         XEcategory = entry.fields.get('XEcategory')
         XEmember = entry.fields.get('XEmember')
+        XEProject = entry.fields.get('XEProject')
         url = entry.fields.get('XEurl')
 
         #render the bibtex string for the entry
@@ -83,10 +84,10 @@ def add_publications(generator):
         publications.append((key,
                              year,
                              text,
-                             bib_buf.getvalue(),
                              url,
                              XEmember,
-                             XEcategory
+                             XEcategory,
+                             XEProject
                              ))
 
     generator.context['publications'] = publications

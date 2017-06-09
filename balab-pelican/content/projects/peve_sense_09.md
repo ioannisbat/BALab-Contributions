@@ -7,7 +7,6 @@ shortname: PEVE (ΠΕΒΕ)
 projtitle: Funding Programme for Basic Research
 startdate: 20090301
 enddate: 20100901
-endYear: 2010
 web_site:  
 our_budget: 9,400 €
 total_budget: 640,000 €

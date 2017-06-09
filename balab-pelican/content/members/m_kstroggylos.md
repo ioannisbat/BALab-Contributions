@@ -7,7 +7,7 @@ givenname: Konstantinos
 surname: Stroggylos
 memb_title: Mr.
 email: kostas@circular.gr
-website: http://www.circular.gr/
+web_site: http://www.circular.gr/
 office_phone: +30 2108203370
 fax: +30 2108203370
 office_address: Athens University of Economics and Business Main Building, Derigny ct, 3rd fl

@@ -1,13 +1,12 @@
 Title: Action II(2)
 Date:  20161208
-Category: Projects 
+Category: Projects
 State: Current projects
 Id: p_action_dimitro_2
 shortname: Action II
 projtitle: The "Meta-Life" of JavaScript
 startdate: 20161208
 enddate: 20171207
-endYear: 2017
 web_site:  
 our_budget:
 total_budget: 11,250 €

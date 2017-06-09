@@ -7,7 +7,6 @@ shortname: PRAXIS
 projtitle: Interconnection of Applications and conduct of inter-business transactions through the internet
 startdate: 20031001
 enddate: 20051130
-endYear: 2005
 web_site: http://www.praxisnet.gr/
 our_budget: 125,000
 total_budget: 1,713,000
@@ -18,7 +17,7 @@ logo: praxis.jpg
 scientific_coordinator: m_dds
 contact: m_dds
 project_manager:  
-type: rtd 
+type: rtd
 international: no
 partner_shortname1: Delta-Singular
 partner_country1: GR

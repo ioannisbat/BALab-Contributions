@@ -7,7 +7,6 @@ shortname: CONTESSA
 projtitle: Content Transformation Engine Supporting Universal Access
 startdate: 20010615
 enddate: 20030715 
-endYear: 2003
 web_site: http://contessa.intranet.gr/
 our_budget: 302,960 EUR
 total_budget: 4,698,425 EUR
