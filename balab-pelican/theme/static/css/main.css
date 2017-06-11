@@ -163,9 +163,12 @@ h2 {
   color: white;
 }
 
-.footer {
+footer {
   background-color: #203864;
-  color: #fff;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 .footer > .container > .text-muted {
