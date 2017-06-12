@@ -4,9 +4,10 @@ Surname: Lattas
 Date: 20160430
 joined_date: 20160430
 Category: Members
-Photo: lattas.jpg
-Id: a_lattas
+Photo: alattas.jpg
+Id: lattas
 email: alattas@dmst.aueb.gr
+web_site: http://lattas.eu
 
 <p>
 <i>Alexandros Lattas</i> is an undergraduate student at the Athens University of Economics and Business

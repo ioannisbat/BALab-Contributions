@@ -1,12 +1,13 @@
 Title: Vasileios - Vlachos
 Date: 20031114
 joined_date: 20031114
-Category: Members 
+Category: Members
 Id: m_vlachos
 givenname: Vasileios
 surname: Vlachos
 memb_title: Dr.
 email: vbill@aueb.gr
+web_site: http://sites.google.com/site/vsvlachos/
 office_phone: +30 2108203370
 fax: +30 2108203664
 office_address: 76 Patission Str.

@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 JINJA_EXTENSIONS = ['jinja2.ext.loopcontrols']
 
-AUTHOR = 'sta'
+AUTHOR = 'Efstathia Chioteli, John Batas'
 SITENAME = 'BALab'
 SITEURL = ''
 
@@ -23,8 +23,6 @@ AUTHOR_FEED_RSS = None
 
 # Blogroll
 LINKS = None
-#LINKS = (('Github repository', 'http://github.org/nlp-unibuc'),
-#        ('Vlad Niculae', 'http://vene.ro'))
 
 # Social widget
 SOCIAL = ()

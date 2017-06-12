@@ -28,6 +28,7 @@ slug: contact
       <h3> Credits </h3>
     </div>
     <div class="panel-body">
+       <b>Web development: </b> Efstathia Chioteli, John Batas <br>
        <b>Logo design: </b> Anastasia Griva<br>
     </div>
   </div>

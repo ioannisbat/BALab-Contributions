@@ -2,7 +2,6 @@
 {% block title %}{{ SITENAME }} Publications{% endblock %}
 {% block content %}
 
-
 <script type="text/javascript">
     function disp(s) {
         var win;
@@ -80,9 +79,7 @@
                       {% if XEcategory == Category %}
                          <p>
                          <li id="{{ key }}">{{ text }}
-                         {% for label, target in [('<span class="glyphicon glyphicon-new-window"></span>', url)] %}
-                         {{ "&nbsp;<a href=\"%s\">%s</a>&nbsp;" % (target, label) if target }}
-                         {% endfor %}
+                           <a href="{{ url }}"><span class="glyphicon glyphicon-new-window"></span></a>
                          </li>
                         </p>
                       {% endif %}
