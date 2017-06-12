@@ -14,9 +14,9 @@ funding_agency: European Commission
 funding_programme: IST
 project_code: IST-2001-26239
 logo: mygrocer.gif  
-scientific_coordinator: m_giaglis
-contact: m_pkour
-project_manager: m_pkour
+scientific_coordinator_name: Dr. George Giaglis
+contact_name: Dr. Panos Kourouthanassis
+project_manager_name: Dr. Panos Kourouthanassis
 type: rtd
 international: yes
 partner_shortname1: Pouliadis Associates Corporation

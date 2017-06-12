@@ -14,9 +14,9 @@ funding_agency: European Commission
 funding_programme: IST  
 project_code: IST-2001-33400
 logo: p_gemini.jpg  
-scientific_coordinator: m_pouloudi
-contact: m_pouloudi
-project_manager: m_pouloudi
+scientific_coordinator_name: Dr. Nancy Pouloudi
+contact_name: Dr. Nancy Pouloudi
+project_manager_name: Dr. Nancy Pouloudi
 type: rtd
 international: yes
 partner_shortname1: Intracom

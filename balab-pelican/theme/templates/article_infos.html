@@ -27,7 +27,6 @@
                        {% if article.email %}<span class="glyphicon glyphicon-envelope"></span> <b>E-mail:</b> {{article.email}} </br>{% endif %}
               			   {% if article.office_phone %}<span class="glyphicon glyphicon-phone-alt"></span> <b>Office phone:</b> {{article.office_phone}} </br>{% endif %}
                        {% if article.mobile_phone %}<span class="glyphicon glyphicon-phone"></span> <b>Mobile phone:</b> {{article.mobile_phone}} </br>{% endif %}
-                       {% if article.fax %}<span class="glyphicon glyphicon-print"></span> <b>Fax:</b> {{article.fax}} </br>{% endif %}
               			   {% if article.office_address %}<span class="glyphicon glyphicon-briefcase"></span> <b>Office address:</b> {{article.office_address}} </br>{% endif %}
               			   {% if article.postal_address %}<span class="glyphicon glyphicon-inbox"></span> <b>Postal address:</b> {{article.postal_address}} </br>{% endif %}
                        {% if article.web_site %}<span class="glyphicon glyphicon-globe"></span> <b>Web Site:</b> <a href="{{article.web_site}}">{{article.web_site}}</a></br>{% endif %}
@@ -166,10 +165,10 @@
                 {% if article.web_site %}<b>Web site:</b> <a href="{{article.web_site}}">{{article.web_site}}</a></br>{% endif %}
                 {% if article.startdate %}<b>Starting date:</b> {{article.startdate[0:4]}}-{{article.startdate[4:6]}}-{{article.startdate[6:8]}}</br>{% endif %}
                 {% if article.enddate %}<b>Ending date:</b> {{article.enddate[0:4]}}-{{article.enddate[4:6]}}-{{article.enddate[6:8]}}</br>{% endif %}
-                {% if article.our_budget %}<b>ISTLab budget:</b> {{article.our_budget}}</br>{% endif %}
+                {% if article.our_budget %}<b>AUEB budget:</b> {{article.our_budget}}</br>{% endif %}
                 {% if article.total_budget %}<b>Total budget:</b> {{article.total_budget}}</br>{% endif %}
 
-                {% if article.scientific_coordinator or article.project_manager or article.contact %}
+                {% if article.scientific_coordinator or article.project_manager or article.contact or article.project_manager_name %}
                   <hr>
                 {% endif %}
 
@@ -191,7 +190,10 @@
                           </br>
                       {% endif %}
                     {% endif %}
-                  {% endfor %}
+                {% endfor %}
+                {% if article.scientific_coordinator_name %}<b>Scientific coordinator:</b> {{article.scientific_coordinator_name}} <br> {% endif %}
+                {% if article.project_manager_name %}<b>Project manager:</b> {{article.project_manager_name}} <br> {% endif %}
+                {% if article.contact_name %}<b>Contact:</b> {{article.contact_name}} <br> {% endif %}
               </p>
             </div>
           </div>
