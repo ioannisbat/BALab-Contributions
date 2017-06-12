@@ -464,7 +464,7 @@
                               {% if year == article.title and XEcategory == Category %}
                                <p>
                                <li id="{{ key }}">{{ text }}
-                                 <a href="{{ url }}"><span class="glyphicon glyphicon-new-window"></span></a>
+                                 {% if url %}<a href="{{ url }}"><span class="glyphicon glyphicon-new-window"></span></a>{% endif %}
                                </li>
                                </p>
                               {% endif %}

@@ -2,7 +2,7 @@
 {% block title %}{{ SITENAME }} Publications{% endblock %}
 {% block content %}
 
-<script type="text/javascript">
+<!-- <script type="text/javascript">
     function disp(s) {
         var win;
         var doc;
@@ -12,8 +12,8 @@
         doc.write("<pre>" + s + "</pre>");
         doc.close();
     }
-</script>
-<div class = "container">
+</script> -->
+<div class="container">
   <p id="printlogo">
     <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/ba-logo2.png" height="200" width="200" class="img-responsive" alt="...">
   </p>
@@ -25,40 +25,40 @@
 	<div class="row">
 		<div class="hidden-xs hidden-sm col-md-3 col-lg-3 col-xl-3" id="printmenu">
 		  <nav id="myScrollspy" data-spy="affix" data-offset-top="50" style="position: fixed;">
-			<div class="panel panel-default" >
-			  <div class="panel-heading">
-				Search by Category:
-			  </div>
-        <ul class="nav nav-pills nav-stacked">
-        {% for Category in ['Monographs and Edited Volumes','Journal Articles', 'Book Chapters', 'Conference Publications', 'Technical Reports','White Papers','Magazine Articles','Working Papers'] %}
-            {% for key, year, text, url, XEmember, XEcategory, XEProject in publications %}
-             {% if XEcategory == Category %}
-              <li><a href="#{{Category.partition(' ')[0]}}">{{Category}}</a></li>
-            {% break %}
-           {% endif %}
+  			<div class="panel panel-default" >
+  			  <div class="panel-heading">
+  				Search by Category:
+  			  </div>
+          <ul class="nav nav-pills nav-stacked">
+          {% for Category in ['Monographs and Edited Volumes','Journal Articles', 'Book Chapters', 'Conference Publications', 'Technical Reports','White Papers','Magazine Articles','Working Papers'] %}
+              {% for key, year, text, url, XEmember, XEcategory, XEProject in publications %}
+               {% if XEcategory == Category %}
+                <li><a href="#{{Category.partition(' ')[0]}}">{{Category}}</a></li>
+              {% break %}
+             {% endif %}
+            {% endfor %}
           {% endfor %}
-        {% endfor %}
-        </ul>
-			</div>
+          </ul>
+  			</div>
 		  </nav>
 		</div>
     <div class="col-xs-12 col-sm-12 hidden-md hidden-lg hidden-xl" id="printmenu">
       <nav>
-      <div class="panel panel-default" >
-        <div class="panel-heading">
-        Search by Category:
-        </div>
-        <ul class="nav nav-pills nav-stacked">
-        {% for Category in ['Monographs and Edited Volumes','Journal Articles', 'Book Chapters', 'Conference Publications', 'Technical Reports','White Papers','Magazine Articles','Working Papers'] %}
-            {% for key, year, text, url, XEmember, XEcategory, XEProject in publications %}
-             {% if XEcategory == Category %}
-              <li><a href="#{{Category.partition(' ')[0]}}">{{Category}}</a></li>
-            {% break %}
-           {% endif %}
+        <div class="panel panel-default" >
+          <div class="panel-heading">
+          Search by Category:
+          </div>
+          <ul class="nav nav-pills nav-stacked">
+          {% for Category in ['Monographs and Edited Volumes','Journal Articles', 'Book Chapters', 'Conference Publications', 'Technical Reports','White Papers','Magazine Articles','Working Papers'] %}
+              {% for key, year, text, url, XEmember, XEcategory, XEProject in publications %}
+               {% if XEcategory == Category %}
+                <li><a href="#{{Category.partition(' ')[0]}}">{{Category}}</a></li>
+              {% break %}
+             {% endif %}
+            {% endfor %}
           {% endfor %}
-        {% endfor %}
-        </ul>
-      </div>
+          </ul>
+        </div>
       </nav>
     </div>
 		<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-9" id="printurl">
@@ -78,9 +78,7 @@
                      {% for key, year, text, url, XEmember, XEcategory, XEProject in publications %}
                       {% if XEcategory == Category %}
                          <p>
-                         <li id="{{ key }}">{{ text }}
-                           <a href="{{ url }}"><span class="glyphicon glyphicon-new-window"></span></a>
-                         </li>
+                         <li id="{{ key }}">{{ text }} {% if url %} <a href="{{ url }}"><span class="glyphicon glyphicon-new-window"></span></a> {% endif %} </li>
                         </p>
                       {% endif %}
                      {% endfor %}

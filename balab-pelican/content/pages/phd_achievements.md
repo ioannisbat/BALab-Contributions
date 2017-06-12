@@ -9,15 +9,16 @@ slug: PhD_achievements
     <div class="panel-heading">
       <h2>PhD Student Achievements</h2>
     </div>
-    <div class="panel-body">
-      <div class = "col-md-8">
 
+    <div class="panel-body">
+      <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
         <h3>July 2016</h3>
         <p>
           <b>Georgios Gousios</b> gets hired as an assistant professor
           at the Web Information Systems group of the Faculty of Engineering,
           Mathematics and Computer Science (EEMCS/EWI), Delft University of Technology.
-        <p>
+        </p>
 
         <h3>January 2016</h3>
         <p>
@@ -30,13 +31,13 @@ slug: PhD_achievements
           "<a href="http://ec.europa.eu/research/mariecurieactions/about/innovative-training-networks_en">European Industrial Doctorates</a>"
         Marie Curie action through the
         <a href="http://senecaproject.github.io/">SENECA</a> project.
-        <p>
+        </p>
 
         <h3>April 2015</h3>
         <p>
         <img src="../theme/images/phd.png" border="0" align="right" alt="PhD logo">
         <b>Vassilios Karakoidas</b> successfully defends his PhD thesis.
-        <p>
+        </p>
 
         <h3>December 2015</h3>
         <p>
@@ -45,27 +46,27 @@ slug: PhD_achievements
             Charting the API minefield using software telemetry data
           </a>.
           <cite>Empirical Software Engineering</cite>, 2015.
-        <p>
+        </p>
 
         <h3>September 2014</h3>
         <p>
         <b>Dimitris Mitropoulos</b> gets hired as a postdoctoral researcher
           at the Computer Science Department of Columbia University in the City
           of New York.
-        <p>
+        </p>
 
         <h3>April 2014</h3>
         <p>
         <b>Marios Fragkoulis</b> publishes a paper in a high-rated conference:
         Relational access to Unix kernel data structures.
         Proceedings of the Ninth European Conference on Computer Systems (Eurosys '14).
-        <p>
+        </p>
 
         <h3>March 2014</h3>
         <p>
-        <img src="../theme/images/phd.png" border="0" align="right" alt="PhD logo">
+        <img src="../theme/images/phd.png" class="img-responsive" border="0" align="right" alt="PhD logo">
         <b>Dimitris Mitropoulos</b> successfully defends his PhD thesis.
-        <p>
+        </p>
 
         <h3>September 2013</h3>
         <p>
@@ -76,7 +77,7 @@ slug: PhD_achievements
         The committee makes available to students a limited number of scholarships to participate
         in the workshop and present their work (covering registration fee,
         travel costs and others).
-        <p>
+        </p>
 
         <h3>April 2012</h3>
         <p>
@@ -91,7 +92,7 @@ slug: PhD_achievements
         The award was given by the journal's editorial board to three papers
         as part of the
         "Literati Network Awards for Excellence 2012".
-        <p>
+        </p>
 
         <h3>December 2011</h3>
         <p>
@@ -106,40 +107,40 @@ slug: PhD_achievements
         Economic Studies, Athens University of
         Economics and Business.
         <br>
-        <img src="../theme/images/algoTrading.png" align="right" alt="2011 Algorithmic trading Competition">
-        <p>
+        <img src="../theme/images/algoTrading.png" class="img-responsive" align="right" alt="2011 Algorithmic trading Competition">
+        </p>
 
         <h3>September 2010</h3>
         <p>
         <b>Marios Fragkoulis</b> is awarded a PhD research
         scholarship funded by the Propondis foundation.
         <br>
-        <img src="../theme/images/propontis.jpg" align="right" alt="Propontis logo">
-        <p>
+        <img src="../theme/images/propontis.jpg" class="img-responsive" align="right" alt="Propontis logo">
+        </p>
 
         <h3>September 2010</h3>
         <p>
         <b>Dimitris Mitropoulos</b> is awarded a scholarship co-funded by the European Social Fund and National Resources -
         IRAKLITOS II Fellowships for research of Athens University of Economics and Business.
         <br>
-        <img src="../theme/images/irakleitos2.jpeg" alt="EPEAEK logo">
-        <p>
+        <img src="../theme/images/irakleitos2.jpeg" class="img-responsive" alt="EPEAEK logo">
+        </p>
 
         <h3>July 2009</h3>
         <p>
-        <img src="../theme/images/phd.png" border="0" align="right" alt="PhD logo">
+        <img src="../theme/images/phd.png" class="img-responsive" border="0" align="right" alt="PhD logo">
         <b>Stephanos Androutsellis</b> successfully defends his PhD thesis.
-        <p>
+        </p>
 
         <h3>July 2009</h3>
         <p>
-        <img src="../theme/images/phd.png" border="0" align="right" alt="PhD logo">
+        <img src="../theme/images/phd.png" class="img-responsive" border="0" align="right" alt="PhD logo">
         <b>Georgios Gousios</b> successfully defends his PhD thesis.
-        <p>
+        </p>
 
         <h3>February 2009</h3>
         <p>
-        <a href="http://oreilly.com/catalog/9780596517984/"><img src="../theme/images/ba-cover-sm.jpg" border="0" align="right" alt="Book cover of Beautiful Architecture"></a>
+        <a href="http://oreilly.com/catalog/9780596517984/"><img src="../theme/images/ba-cover-sm.jpg" class="img-responsive" border="0" align="right" alt="Book cover of Beautiful Architecture"></a>
         The book
         <a href="http://oreilly.com/catalog/9780596517984/">Beautiful Architecture: Leading Thinkers Reveal the Hidden Beauty in Software Design</a>
         (O'Reilly, 2008,
@@ -149,14 +150,14 @@ slug: PhD_achievements
         The book's royalties are donated to the
         international humanitarian aid organisation
         <a href="http://www.msf.org/">Médecins Sans Frontières</a>.
-        <p>
+        </p>
 
         <h3>February 2009</h3>
         <p>
-        <img src="../theme/images/peve_logo.jpg" border="0" align="right" alt="PEVE logo">
+        <img src="../theme/images/peve_logo.jpg" class="img-responsive" border="0" align="right" alt="PEVE logo">
         <b>Vassilios Karakoidas</b> is awarded funding for his research through
         AUEB's Funding Programme for Basic Research (PEVE).
-        <p>
+        </p>
 
         <h3>January 2009</h3>
         <p>
@@ -164,7 +165,7 @@ slug: PhD_achievements
         <a href="http://www.dmst.aueb.grps/pubs/jrnl/2009-CompSec-SQLIA/html/sqlia.html">SDriver: Location-specific signatures prevent SQL injection
         attacks</a>.
         <cite>Computers and Security</cite>, 2009.
-        <p>
+        </p>
 
         <h3>October 2008</h3>
         <p>
@@ -172,7 +173,7 @@ slug: PhD_achievements
         Department of Computer Science and Telecommunications
         at the Technological Educational Institution of Larissa.
         The subject of his post is the Development and Security of Internet Applications.
-        <p>
+        </p>
 
         <h3>September 2008</h3>
         <p>
@@ -182,11 +183,11 @@ slug: PhD_achievements
         <cite>ACM Transactions on Software Engineering and Methodology</cite>,
         18(1):1-26, September 2008.
         Article 2.
-        <p>
+        </p>
 
         <h3>June 2008</h3>
         <p>
-        <img src="../theme/images/literati-2008.jpg" border="0" align="right" alt="Highly Commended Paper distinction.">
+        <img src="../theme/images/literati-2008.jpg" class="img-responsive" border="0" align="right" alt="Highly Commended Paper distinction.">
         The paper
         <a href="http://www.dmst.aueb.grps/pubs/jrnl/2007-IMCS-Promise/html/VS07.html">A PRoactive
         Malware Identification System based on the Computer Hygiene Principles</a>
@@ -200,7 +201,7 @@ slug: PhD_achievements
         The award was given by the journal's editorial board to three papers
         as part of the
         "Literati Network Awards for Excellence 2008".
-        <p>
+        </p>
 
         <h3>May 2008</h3>
         <p>
@@ -208,20 +209,20 @@ slug: PhD_achievements
         <a href="http://www.dmst.aueb.grps/pubs/jrnl/2007-SPANDE-FIRE/html/KS07.html">FIRE/J - optimizing regular expression searches with generative
         programming</a>.
         <cite>Software: Practice &amp; Experience</cite>, 38(6):557-573, May 2008.
-        <p>
+        </p>
 
         <h3>November 2007</h3>
         <p>
-        <img src="../theme/images/ionian.png" border="0" align="right" alt="Ionian University logo">
+        <img src="../theme/images/ionian.png" class="img-responsive" border="0" align="right" alt="Ionian University logo">
         <b>Konstantinos Chorianopoulos</b> is elected Lecturer in the
         Department of Informatics at the Ionian University.
-        <p>
+        </p>
 
         <h3>July 2007</h3>
         <p>
-        <img src="../theme/images/phd.png" border="0" align="right" alt="PhD logo">
+        <img src="../theme/images/phd.png" class="img-responsive" border="0" align="right" alt="PhD logo">
         <b>Vasileios Vlachos</b> successfully defends his PhD thesis.
-        <p>
+        </p>
 
         <h3>April 2006</h3>
         <p>
@@ -233,14 +234,14 @@ slug: PhD_achievements
         obtained the top yearly download rank in the ACM's digital library
         popular magazine and computing surveys articles category.
         <br>
-        <img src="../theme/images/acmcs-y1.jpg" alt="ACM Digital Library download ranks"> <br>
+        <img src="../theme/images/acmcs-y1.jpg" class="img-responsive" alt="ACM Digital Library download ranks"> <br>
         Table from the
         <em>Communications of the ACM</em> Volume 49, Number 4 (2006), Pages 29-30.
-        <p>
+        </p>
 
         <h3>January 2006</h3>
         <p>
-        <img src="../theme/images/pened-2003.jpg" border="0" align="right" alt="PENED-2003 logo">
+        <img src="../theme/images/pened-2003.jpg" class="img-responsive" border="0" align="right" alt="PENED-2003 logo">
         <b>Stephanos Androutsellis Theotokis</b>,
         <b>Georgios Gousios</b>, and
         <b>Konstantinos Stroggylos</b>
@@ -248,7 +249,7 @@ slug: PhD_achievements
         framework of the "Reinforcement Programme of Human Research Manpower"
         (PENED) co-financed by National and Community Funds
         (25% from the Greek Ministry of Development-General Secretariat of Research and Technology and 75% from E.U.-European Social Fund).
-        <p>
+        </p>
 
         <h3>December 2004</h3>
         <p>
@@ -256,7 +257,7 @@ slug: PhD_achievements
         <a href="http://www.dmst.aueb.grps/pubs/jrnl/2004-ACMCS-p2p/html/AS04.html">A
         survey of peer-to-peer content distribution technologies</a>.
         <cite>ACM Computing Surveys</cite>, 36(4):335-371, December 2004.
-        <p>
+        </p>
 
         <h3>July 2004</h3>
         <p>
@@ -264,21 +265,21 @@ slug: PhD_achievements
         co-funded by the European Social Fund and National Resources - EPEAEK II -
         IRAKLITOS Fellowships for research of
         Athens University of Economics and Business.
-        <img src="../theme/images/epeaek.jpg" alt="EPEAEK logo">
-        <p>
+        <img src="../theme/images/epeaek.jpg" class="img-responsive" alt="EPEAEK logo">
+        </p>
 
         <h3>June 2004</h3>
         <p>
         <b>Vasileios Vlachos</b> and <b>Stefanos Androutsellis Theotokis</b> publish a paper in a high-impact journal:
         <a href="http://www.dmst.aueb.grps/pubs/jrnl/2004-CompSec-p2pav/html/VAS04.html">Security applications of peer-to-peer networks</a>.
         <cite>Computer Networks</cite>, 45(2):195-205, June 2004.
-        <p>
+        </p>
 
         <h3>May 2004</h3>
         <p>
-        <img src="../theme/images/phd.png" border="0" align="right" alt="PhD logo">
+        <img src="../theme/images/phd.png" class="img-responsive" border="0" align="right" alt="PhD logo">
         <b>Konstantinos Chorianopoulos</b> successfully defends his PhD thesis.
-        <p>
+        </p>
 
         <h3>May 2004</h3>
         <p>
@@ -287,14 +288,14 @@ slug: PhD_achievements
         interface development for interactive television: Extending a commercial
         h3V platform to the virtual channel API</a>.
         <cite>Computers &amp; Graphics</cite>, 28(2):157-166, April 2004.
-        <p>
+        </p>
 
         <h3>April 2004</h3>
         <p>
-        <img src="../theme/images/icup.jpg" border="0" align="right" alt="Imagine Cup logo">
+        <img src="../theme/images/icup.jpg" class="img-responsive" border="0" align="right" alt="Imagine Cup logo">
         <b>Vasileios Vlachos</b> coordinated the student team that won the third place
         in the national phase of the Microsoft Imagine Cup 2004 competition.
-        <p>
+        </p>
 
         <h3>December 2004</h3>
         <p>
@@ -306,33 +307,34 @@ slug: PhD_achievements
         obtained the top monthly download rank in the ACM's digital library
         popular magazine and computing surveys articles category.
         <br>
-        <img src="../theme/images/acmcs-m1.jpg" alt="ACM Digital Library download ranks"> <br>
+        <img src="../theme/images/acmcs-m1.jpg" class="img-responsive" alt="ACM Digital Library download ranks"> <br>
         Table from the
         <em>Communications of the ACM</em> Volume 48, Number 9 (2005), Pages 29-30.
-        <p>
+        </p>
 
         <h3>June 2002</h3>
         <p>
-        <img src="../theme/images/phd.png" border="0" align="right" alt="PhD logo">
+        <img src="../theme/images/phd.png" class="img-responsive" border="0" align="right" alt="PhD logo">
         <b>Konstantinos Raptis</b> successfully defends his PhD thesis.
-        <p>
+        </p>
 
         <h3>May 2002</h3>
         <p>
-        <img src="../theme/images/sane2002.jpg" border="0" align="right" alt="SANE 2002">
+        <img src="../theme/images/sane2002.jpg" class="img-responsive" border="0" align="right" alt="SANE 2002">
         Best refereed paper award for the paper: Giorgos Gousios and Diomidis Spinellis. A comparison of portable dynamic web content
         technologies for the apache web server. In <i>Proceedings of the 3rd International
         System Administration and Networking Conference</i> SANE 2002, pages 103–119, May 2002.
 
-        <p>
+        </p>
 
         <h3>June 2000</h3>
         <p>
         <b>Konstantinos Raptis</b> publishes a paper in a high-impact journal:
         <a href="http://www.dmst.aueb.grps/pubs/Old/jrnl/2000-IST-Components/html/comp.html">Component mining: A process and its pattern language</a>.
         <cite>Information and Software Technology</cite>, 42(9):609-617, June 2000.
-        <p>
+        </p>
 
+      </div>
       </div>
     </div>
   </div>
