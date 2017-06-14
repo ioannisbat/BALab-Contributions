@@ -1,7 +1,7 @@
 Title: PENED
 Date:  20050901
 Category: Projects
-State: Completed projects
+Completed: 1
 Id: p_pened_b2b
 shortname: PENED
 projtitle: Designing a Peer-to-Peer e-Business Transaction Processing System

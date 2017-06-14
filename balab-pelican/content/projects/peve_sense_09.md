@@ -1,7 +1,7 @@
 Title: PEVE (ΠΕΒΕ)
 Date:  20090301
 Category: Projects
-State: Completed projects
+Completed: 1
 Id: p_peve_sense_09
 shortname: PEVE (ΠΕΒΕ)
 projtitle: Funding Programme for Basic Research

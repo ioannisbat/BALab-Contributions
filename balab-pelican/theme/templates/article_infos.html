@@ -124,9 +124,7 @@
                                         XEmember.split(' ')[4] == article.id)  %}
                                         <p>
                                         <li id="{{ key }}">{{ text }}
-                                        {% for label, target in [('<span class="glyphicon glyphicon-new-window"></span>', url)] %}
-                                        {{ "&nbsp;<a href=\"%s\">%s</a>&nbsp;" % (target, label) if target }}
-                                        {% endfor %}
+                                          {% if url %}<a href="{{ url }}"><span class="glyphicon glyphicon-new-window"></span></a>{% endif %}
                                         </li>
                                        </p>
                                       {% endif %}
@@ -336,7 +334,7 @@
                                     {% if XEProject == article.id %}
                                       <p>
                                         <li id="{{ key }}">{{ text }}
-                                          <a href="{{ url }}"><span class="glyphicon glyphicon-new-window"></span></a>
+                                          {% if url %}<a href="{{ url }}"><span class="glyphicon glyphicon-new-window"></span></a>{% endif %}
                                         </li>
                                      </p>
                                      {% endif %}

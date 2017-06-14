@@ -1,7 +1,7 @@
 Title: SOPRANO
 Date:  20070101
 Category: Projects
-State: Completed projects
+Completed: 1
 Id: soprano
 shortname: SOPRANO
 projtitle: Service-oriented Programmable Smart Environments for Older Europeans

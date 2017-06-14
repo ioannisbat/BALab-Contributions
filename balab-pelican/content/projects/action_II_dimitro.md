@@ -1,7 +1,7 @@
 Title: Action II
 Date:  20141009
 Category: Projects
-State: Completed projects
+Completed: 1
 Id: p_action_dimitro
 shortname: Action II
 projtitle: Taming Code Injection Attacks Across Multiple Domains

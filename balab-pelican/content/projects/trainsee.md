@@ -1,7 +1,7 @@
 Title: TRAINSEE
 Date:  20020201
 Category: Projects
-State: Completed projects
+Completed: 1
 Id: p_trainsee
 shortname: TRAINSEE
 projtitle: Training in Information Technologies in South Eastern Europe

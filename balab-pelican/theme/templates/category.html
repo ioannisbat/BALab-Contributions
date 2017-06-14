@@ -83,21 +83,22 @@
                   </div>
 
               		<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-9" id="printurl">
-                       {% for Category in ['Current projects', 'Completed projects'] %}
+                       {% for i in range(2) %}
                             <div class="panel panel-default" id="px2">
-                             {% for article in articles %}
-                               {% if article.category == 'projects'%}
+                               {% if loop.first %}
                                  <div class="panel-heading">
-                                   <h3 id="{{Category.partition(' ')[0]}}">{{Category}}</h3>
+                                   <h3 id="Current">Current projects</h3>
                                  </div>
-                                {% break %}
+                               {% else %}
+                               <div class="panel-heading">
+                                 <h3 id="Completed">Completed projects</h3>
+                               </div>
                                {% endif%}
-                             {% endfor %}
                              <div class="panel-body">
                                <ul class="list-group">
                                  <ul>
                                    {% for article in articles|sort(attribute='title') %}
-                                    {% if article.category == 'projects' and article.state == Category%}
+                                    {% if article.category == 'projects' and article.completed == i|string %}
                                     <p>
                                      <li>{{ article.shortname }} &mdash; {{article.projtitle}} <a href="{{ SITEURL }}/{{ article.url }}"><span class="glyphicon glyphicon-new-window"></span></a></li>
                                     </p>

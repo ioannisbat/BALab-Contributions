@@ -1,7 +1,7 @@
 Title: SQO-OSS
 Date:  20060901
 Category: Projects
-State: Completed projects
+Completed: 1
 Id: p_sqo-oss
 shortname: SQO-OSS
 projtitle: Source Quality Observatory for Open Source Software

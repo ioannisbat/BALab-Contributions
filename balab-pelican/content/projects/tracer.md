@@ -1,7 +1,7 @@
 Title: TRACER
 Date:  20110418
 Category: Projects
-State: Completed projects
+Completed: 1
 Id: p_tracer
 shortname: TRACER
 projtitle: Identifying software vulnerabilities and securing legacy systems

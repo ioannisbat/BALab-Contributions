@@ -1,7 +1,7 @@
 Title: myGrocer
 Date:  20010101
 Category: Projects
-State: Completed projects
+Completed: 1
 Id: p_mygrocer
 shortname: myGrocer
 projtitle: Mobile Shopping of Electronically Referenced Grocery Products

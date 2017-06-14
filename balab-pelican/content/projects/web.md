@@ -1,7 +1,7 @@
 Title: Web
 Date: 01/01/2001
 Category: Projects
-State: Completed projects
+Completed: 1
 Id: p_web
 shortname: Web
 projtitle: The ISTLab Web Site
