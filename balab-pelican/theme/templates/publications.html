@@ -2,17 +2,8 @@
 {% block title %}{{ SITENAME }} Publications{% endblock %}
 {% block content %}
 
-<!-- <script type="text/javascript">
-    function disp(s) {
-        var win;
-        var doc;
-        win = window.open("", "WINDOWID");
-        doc = win.document;
-        doc.open("text/html");
-        doc.write("<pre>" + s + "</pre>");
-        doc.close();
-    }
-</script> -->
+{% set publication_categories = ['Monographs and Edited Volumes','Journal Articles', 'Book Chapters', 'Conference Publications', 'Technical Reports','White Papers','Magazine Articles','Working Papers'] %}
+
 <div class="container">
   <p id="printlogo">
     <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/ba-logo2.png" height="200" width="200" class="img-responsive" alt="...">
@@ -30,7 +21,7 @@
   				Search by Category:
   			  </div>
           <ul class="nav nav-pills nav-stacked">
-          {% for Category in ['Monographs and Edited Volumes','Journal Articles', 'Book Chapters', 'Conference Publications', 'Technical Reports','White Papers','Magazine Articles','Working Papers'] %}
+          {% for Category in publication_categories %}
               {% for key, year, text, url, XEmember, XEcategory, XEProject in publications %}
                {% if XEcategory == Category %}
                 <li><a href="#{{Category.partition(' ')[0]}}">{{Category}}</a></li>
@@ -49,7 +40,7 @@
           Search by Category:
           </div>
           <ul class="nav nav-pills nav-stacked">
-          {% for Category in ['Monographs and Edited Volumes','Journal Articles', 'Book Chapters', 'Conference Publications', 'Technical Reports','White Papers','Magazine Articles','Working Papers'] %}
+          {% for Category in publication_categories %}
               {% for key, year, text, url, XEmember, XEcategory, XEProject in publications %}
                {% if XEcategory == Category %}
                 <li><a href="#{{Category.partition(' ')[0]}}">{{Category}}</a></li>
@@ -62,7 +53,7 @@
       </nav>
     </div>
 		<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-9" id="printurl">
-      {% for Category in ['Monographs and Edited Volumes','Journal Articles', 'Book Chapters', 'Conference Publications', 'Technical Reports','White Papers','Magazine Articles','Working Papers'] %}
+      {% for Category in publication_categories %}
              <div class="panel panel-default" id="px2">
                {% for key, year, text, url, XEmember, XEcategory, XEProject in publications %}
                 {% if XEcategory == Category %}
