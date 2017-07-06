@@ -1,10 +1,10 @@
-Title: TRACER
-Date:  20110418
-Category: projects
-Completed: 1
-Id: p_tracer
+title: TRACER
+date:  20110418
+category: projects
+completed: 1
+id: p_tracer
 shortname: TRACER
-projtitle: Identifying software vulnerabilities and securing legacy systems
+projtitle: identifying software vulnerabilities and securing legacy systems
 startdate: 20110418
 enddate: 20141017
 web_site: http://www.tracer-project.gr/

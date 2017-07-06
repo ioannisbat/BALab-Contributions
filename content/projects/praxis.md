@@ -1,8 +1,8 @@
-Title: PRAXIS
-Date:  20031001
-Category: projects
-Completed: 1
-Id: p_praxis
+title: PRAXIS
+date:  20031001
+category: projects
+completed: 1
+id: p_praxis
 shortname: PRAXIS
 projtitle: Interconnection of Applications and conduct of inter-business transactions through the internet
 startdate: 20031001

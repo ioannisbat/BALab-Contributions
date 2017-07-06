@@ -1,8 +1,8 @@
-Title: SOPRANO
-Date:  20070101
-Category: projects
-Completed: 1
-Id: soprano
+title: SOPRANO
+date:  20070101
+category: projects
+completed: 1
+id: soprano
 shortname: SOPRANO
 projtitle: Service-oriented Programmable Smart Environments for Older Europeans
 startdate: 20070101
@@ -40,7 +40,7 @@ partner_website6: http://www.fzi.de/
 partner_shortname7: Robotiker Tecnalia
 partner_country7: ES
 partner_website7: http://www.robotiker.com/robotiker/index.jsp
-partner_shortname8: Dialoc ID
+partner_shortname8: Dialoc id
 partner_country8: NL
 partner_website8: http://www.dialocid.com/
 partner_shortname9: and others

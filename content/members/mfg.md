@@ -1,8 +1,8 @@
-Title: Marios - Fragkoulis
-Date: 20091101
+title: Marios - Fragkoulis
+date: 20091101
 joined_date: 20091101
-Category: members 
-Id: m_mfrag
+category: members 
+id: m_mfrag
 givenname: Marios
 surname: Fragkoulis
 memb_title: Dr.

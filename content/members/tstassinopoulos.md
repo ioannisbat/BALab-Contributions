@@ -1,8 +1,8 @@
-Title: Theodore - Stassinopoulos
-Date: 20170428
+title: Theodore - Stassinopoulos
+date: 20170428
 joined_date: 20170428
-Category: members
-Id: tstassinopoulos
+category: members
+id: tstassinopoulos
 givenname: Theodore
 surname: Stassinopoulos
 memb_title: Mr.

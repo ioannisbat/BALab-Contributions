@@ -1,8 +1,8 @@
-Title: Stefanos - Georgiou
-Date: 20151216
+title: Stefanos - Georgiou
+date: 20151216
 joined_date: 20151216
-Category: members 
-Id: sgeorgiou
+category: members 
+id: sgeorgiou
 givenname: Stefanos
 surname: Georgiou
 memb_title: Mr.
@@ -14,7 +14,7 @@ phd_startdate: 20160104
 phd_completed: 0
 
 _Stefanos Georgiou_ is a PhD Candidate in SENECA (Software ENineering in Enterprise Cloud Applications) project.  
-In the context of his European Industrial Doctorate (EID) he is expected to conduct his research at  
+In the context of his European Industrial Doctorate (Eid) he is expected to conduct his research at  
 AUEB (Athens University of Economics and Business) and TU Deflt (Delft University) as academic partners  
 and with SLG (Singular Logic) as industrial partner.  
 He holds a BSc in Networks and Systems Programming from University of Cyprus and a MSc in PERCCOM  

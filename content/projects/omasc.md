@@ -1,8 +1,8 @@
-Title: S-OMA SMART CARDS
-Date:  20061001
-Category: projects
-Completed: 1
-Id: p_omasc
+title: S-OMA SMART CARDS
+date:  20061001
+category: projects
+completed: 1
+id: p_omasc
 shortname: S-OMA SMART CARDS
 projtitle: Security in Open Multi-Application SMART CARDS
 startdate: 20061001

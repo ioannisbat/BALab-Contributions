@@ -1,8 +1,8 @@
-Title: Nikiforos - Botis
-Date: 2016
+title: Nikiforos - Botis
+date: 2016
 joined_date: 2016
-Category: members
-Id: botisn
+category: members
+id: botisn
 givenname: Nikiforos
 surname: Botis
 memb_title: Mr.

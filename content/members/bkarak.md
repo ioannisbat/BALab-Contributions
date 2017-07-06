@@ -1,8 +1,8 @@
-Title: Vassilios - Karakoidas
-Date: 20031114
+title: Vassilios - Karakoidas
+date: 20031114
 joined_date: 20031114
-Category: members
-Id: m_bkarak
+category: members
+id: m_bkarak
 givenname: Vassilios
 surname: Karakoidas
 memb_title: Dr.

@@ -1,8 +1,8 @@
-Title: CONTESSA
-Date:  20010615
-Category: projects
-Completed: 1
-Id: p_contessa
+title: CONTESSA
+date:  20010615
+category: projects
+completed: 1
+id: p_contessa
 shortname: CONTESSA
 projtitle: Content Transformation Engine Supporting Universal Access
 startdate: 20010615

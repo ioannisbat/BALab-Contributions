@@ -1,8 +1,8 @@
-Title: Stefanos - Androutsellis-Theotokis
-Date: 20031114
+title: Stefanos - Androutsellis-Theotokis
+date: 20031114
 joined_date: 20031114
-Category: members
-Id: m_androutsellis
+category: members
+id: m_androutsellis
 givenname: Stefanos
 surname: Androutsellis-Theotokis
 memb_title: Dr.

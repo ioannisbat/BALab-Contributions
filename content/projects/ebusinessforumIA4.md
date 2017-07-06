@@ -1,8 +1,8 @@
-Title: eBusinessForum - Working Group IA4
-Date:  20060910
-Category: projects
-Completed: 1
-Id: p_ebusinessforumIA4
+title: eBusinessForum - Working Group IA4
+date:  20060910
+category: projects
+completed: 1
+id: p_ebusinessforumIA4
 shortname: eBusinessForum - Working Group IA4
 projtitle: Greek Computer Emergency Response Team (GR-CERT)
 startdate: 20060910

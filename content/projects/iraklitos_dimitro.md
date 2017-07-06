@@ -1,8 +1,8 @@
-Title: Iraklitos II
-Date:  20100901
-Category: projects
-Completed: 1
-Id: p_iraklitos_dimitro
+title: Iraklitos II
+date:  20100901
+category: projects
+completed: 1
+id: p_iraklitos_dimitro
 shortname: Iraklitos II
 projtitle: Secure Software Development Technologies
 startdate: 20100901

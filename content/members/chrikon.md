@@ -1,8 +1,8 @@
-Title: Christos - Oikonomou
-Date: 20140115
+title: Christos - Oikonomou
+date: 20140115
 joined_date: 20140115
-Category: members
-Id: m_chrikon
+category: members
+id: m_chrikon
 givenname: Christos
 surname: Oikonomou
 memb_title:

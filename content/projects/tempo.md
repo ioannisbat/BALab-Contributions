@@ -1,8 +1,8 @@
-Title: TEMPO
-Date:  20020326
-Category: projects
-Completed: 1
-Id: p_tempo
+title: TEMPO
+date:  20020326
+category: projects
+completed: 1
+id: p_tempo
 shortname: TEMPO
 projtitle: Technologies and Applications in Multi-Protocol networks
 startdate: 20020326

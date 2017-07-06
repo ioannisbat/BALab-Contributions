@@ -1,8 +1,8 @@
-﻿Title: Vasiliki - Efstathiou
-Date: 20070108
+﻿title: Vasiliki - Efstathiou
+date: 20070108
 joined_date: 20070108
-Category: members 
-Id: v_efstathiou
+category: members 
+id: v_efstathiou
 givenname: Vasiliki
 surname: Efstathiou
 memb_title: Dr.

@@ -1,11 +1,11 @@
-Title: Alexandros Lattas
+title: Alexandros Lattas
 Givenname: Alexandros
 Surname: Lattas
-Date: 20160430
+date: 20160430
 joined_date: 20160430
-Category: members
+category: members
 Photo: alattas.jpg
-Id: lattas
+id: lattas
 email: alattas@dmst.aueb.gr
 web_site: http://lattas.eu
 

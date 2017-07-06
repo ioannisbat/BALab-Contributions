@@ -1,8 +1,8 @@
-Title: Markos - Gogoulos
-Date: 20060901
+title: Markos - Gogoulos
+date: 20060901
 joined_date: 20060901
-Category: associates
-Id: m_markos
+category: associates
+id: m_markos
 givenname: Markos
 surname: Gogoulos
 memb_title: Mr.

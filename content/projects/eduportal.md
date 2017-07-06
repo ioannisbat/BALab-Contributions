@@ -1,8 +1,8 @@
-Title: EDUPORTAL
-Date:  20040301
-Category: projects
-Completed: 1
-Id: p_eduportal
+title: EDUPORTAL
+date:  20040301
+category: projects
+completed: 1
+id: p_eduportal
 shortname: EDUPORTAL
 projtitle: Eduportal
 startdate: 20040301

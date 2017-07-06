@@ -1,8 +1,8 @@
-Title: mExpress
-Date:  20020305
-Category: projects
-Completed: 1
-Id: p_mexpress
+title: mExpress
+date:  20020305
+category: projects
+completed: 1
+id: p_mexpress
 shortname: mExpress
 projtitle: mobile in-EXhibition PRovision of Electronic Support Services
 startdate: 20020305

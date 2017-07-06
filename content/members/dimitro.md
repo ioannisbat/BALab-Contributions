@@ -1,8 +1,8 @@
-Title: Dimitris - Mitropoulos
-Date: 20070301
+title: Dimitris - Mitropoulos
+date: 20070301
 joined_date: 20070301
-Category: members
-Id: m_dimitro
+category: members
+id: m_dimitro
 givenname: Dimitris
 surname: Mitropoulos
 memb_title: Dr.

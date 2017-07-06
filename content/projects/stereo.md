@@ -1,8 +1,8 @@
-Title: STEREO
-Date:  20121001
-Category: projects
-Completed: 1
-Id: p_stereo
+title: STEREO
+date:  20121001
+category: projects
+completed: 1
+id: p_stereo
 shortname: STEREO
 projtitle: Software research platform on software quality and engineering
 startdate: 20121001

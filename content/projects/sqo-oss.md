@@ -1,8 +1,8 @@
-Title: SQO-OSS
-Date:  20060901
-Category: projects
-Completed: 1
-Id: p_sqo-oss
+title: SQO-OSS
+date:  20060901
+category: projects
+completed: 1
+id: p_sqo-oss
 shortname: SQO-OSS
 projtitle: Source Quality Observatory for Open Source Software
 startdate: 20060901
@@ -51,7 +51,7 @@ create a set of metrics that can be applied automatically to a software project�
 order to extract quantifiable measurements of its quality.  The project will deliver:
 
 
-A plug-in based quality assessment platform, featuring a web and an IDE front-end.
+A plug-in based quality assessment platform, featuring a web and an idE front-end.
 An enhanced set of software metrics that will take into account quality indicators from data that is present in a project’s repository, but not yet used for quality assessment.
 A publicly available league of open source software applications, categorised by their quality characteristics.
 A methodology that will allow European SMEs to leverage the availability of quality-assessed open source software in the development of horizontal and vertical applications and the provision of value-added services.

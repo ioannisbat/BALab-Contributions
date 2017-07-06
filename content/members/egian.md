@@ -1,8 +1,8 @@
-Title: Vaggelis - Giannikas
-Date: 20090904
+title: Vaggelis - Giannikas
+date: 20090904
 joined_date: 20090904
-Category: members 
-Id: m_egian
+category: members 
+id: m_egian
 givenname: Vaggelis
 surname: Giannikas
 memb_title: Mr.

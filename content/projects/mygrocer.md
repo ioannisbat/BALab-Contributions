@@ -1,8 +1,8 @@
-Title: myGrocer
-Date:  20010101
-Category: projects
-Completed: 1
-Id: p_mygrocer
+title: myGrocer
+date:  20010101
+category: projects
+completed: 1
+id: p_mygrocer
 shortname: myGrocer
 projtitle: Mobile Shopping of Electronically Referenced Grocery Products
 startdate: 20010101
@@ -46,7 +46,7 @@ MyGROCER is a research project
 partially funded by the European Commission (IST Programme). The project
 spanned over two years (from January 2001 to November 2002) and exploited the
 potential of wireless technologies (namely Wireless LANs) and automatic product
-identification techniques (Radio Frequency Identification, RF-ID) to develop
+identification techniques (Radio Frequency identification, RF-id) to develop
 an innovative business and technological solution for the retail environment. <br/><br/>
 
 In effect, MyGROCER implemented

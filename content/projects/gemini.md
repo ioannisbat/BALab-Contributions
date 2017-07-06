@@ -1,8 +1,8 @@
-Title: GEMINI
-Date:  20020101
-Category: projects
-Completed: 1
-Id: p_gemini
+title: GEMINI
+date:  20020101
+category: projects
+completed: 1
+id: p_gemini
 shortname: GEMINI
 projtitle: Global Electronic Medium ConstellatIon for Dynamic CoNtent Integration
 startdate: 20020101

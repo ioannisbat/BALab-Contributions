@@ -1,8 +1,8 @@
-Title: eAware
-Date:  20020101
-Category: projects
-Completed: 1
-Id: p_eAware
+title: eAware
+date:  20020101
+category: projects
+completed: 1
+id: p_eAware
 shortname: eAware
 projtitle: e-Awareness for Europe: Digital Awareness and Security for the Citizen in Europe
 startdate: 20020101

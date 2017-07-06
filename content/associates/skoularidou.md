@@ -1,8 +1,8 @@
-Title: Victoria - Skoularidou
-Date: 20020101
+title: Victoria - Skoularidou
+date: 20020101
 joined_date: 20020101
-Category: associates
-Id: m_skoularidou
+category: associates
+id: m_skoularidou
 givenname: Victoria
 surname: Skoularidou
 memb_title: Mrs.

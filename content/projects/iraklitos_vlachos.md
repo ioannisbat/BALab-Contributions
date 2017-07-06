@@ -1,8 +1,8 @@
-Title: Iraklitos
-Date:  20021108
-Category: projects
-Completed: 1
-Id: p_iraklitos_vlachos
+title: Iraklitos
+date:  20021108
+category: projects
+completed: 1
+id: p_iraklitos_vlachos
 shortname: Iraklitos
 projtitle: Security Applications for Peer-to-Peer Networks
 startdate: 20021108
