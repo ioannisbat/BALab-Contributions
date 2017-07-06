@@ -3,14 +3,6 @@
 {% block content %}
   {% if articles %}
     <div class = "container">
-      {% for article in articles %}
-      {{article.title}}
-
-      {% endfor %}
-      {% if 'members' == 'members'%}
-      {{category}}
-      {% endif %}
-      -{{category}}-
         {% if category == 'members' or category == 'associates'%}
         <p id="printlogo">
           <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/ba-logo2.png" height="200" width="200" class="img-responsive" alt="...">
@@ -104,10 +96,8 @@
                                {% endif%}
                              <div class="panel-body">
                                <ul class="list-group">
-                                 {{category}}2
                                  <ul>
                                    {% for article in articles|sort(attribute='title') %}
-                                   {{category}}2
                                     {% if article.category == 'projects' and article.completed == i|string %}
                                     <p>
                                      <li>{{ article.shortname }} &mdash; {{article.projtitle}} <a href="{{ SITEURL }}/{{ article.url }}"><span class="glyphicon glyphicon-new-window"></span></a></li>
