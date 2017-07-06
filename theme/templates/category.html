@@ -3,6 +3,9 @@
 {% block content %}
   {% if articles %}
     <div class = "container">
+      {% for article in articles %}
+      {article.title}
+      {% enfor %}
       {% if 'members' == 'members'%}
       {{category}}
       {% endif %}
