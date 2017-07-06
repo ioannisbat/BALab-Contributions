@@ -4,12 +4,13 @@
   {% if articles %}
     <div class = "container">
       {% for article in articles %}
-      {article.title}
+      {{article.title}}
+
       {% endfor %}
       {% if 'members' == 'members'%}
       {{category}}
       {% endif %}
-      {{category}}2
+      -{{category}}-
         {% if category == 'members' or category == 'associates'%}
         <p id="printlogo">
           <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/ba-logo2.png" height="200" width="200" class="img-responsive" alt="...">
