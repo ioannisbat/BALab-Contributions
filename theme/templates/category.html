@@ -1,10 +1,12 @@
 {% extends "base.html" %}
 {% block content_title %}{% endblock %}
 {% block content %}
+{% set members = 'members' %}
+
   {% if articles %}
     <div class = "container">
       {{category}}
-        {% if category == 'members' or category == 'associates'%}
+        {% if category == members%}
 
         <p id="printlogo">
           <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/ba-logo2.png" height="200" width="200" class="img-responsive" alt="...">
