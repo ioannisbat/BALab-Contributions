@@ -1,0 +1,6 @@
+#!/bin/sh
+#
+# Refresh the site's content
+#
+
+pelican content/ --output=/home/dds/web/balab/

@@ -19,12 +19,11 @@ To install Pelican you need:
 * `pelican` : pip install pelican
 * `markdown` : pip install Markdown
 * `typogrify` : pip install typogrify
-* `bibtex`:  pip install pybtex
+* `pybtex`:  pip install pybtex
 
-To run the changes you need:
------------
-* `pelican content/` 
-
+## Creating the site
+* Locally: `pelican content/`
+* To update the web site on the server: `bin/update/`
 
 Quick HOWTO
 -----------
