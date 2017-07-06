@@ -1,7 +1,7 @@
 Title: Panos (Panagiotis) - Louridas
 Date: 20050101
 joined_date: 20050101
-Category: Members
+Category: members
 Id: m_louridas
 givenname: Panos (Panagiotis)
 surname: Louridas

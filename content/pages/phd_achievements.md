@@ -1,5 +1,5 @@
-Title: PhD_achievements
-slug: PhD_achievements
+Title: phd_achievements
+slug: phd_achievements
 
 <div class="container">
   <p id="printlogo">

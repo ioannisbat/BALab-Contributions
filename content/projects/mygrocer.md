@@ -1,6 +1,6 @@
 Title: myGrocer
 Date:  20010101
-Category: Projects
+Category: projects
 Completed: 1
 Id: p_mygrocer
 shortname: myGrocer

@@ -1,7 +1,7 @@
 Title: Marios - Fragkoulis
 Date: 20091101
 joined_date: 20091101
-Category: Members 
+Category: members 
 Id: m_mfrag
 givenname: Marios
 surname: Fragkoulis

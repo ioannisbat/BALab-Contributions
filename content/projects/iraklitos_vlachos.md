@@ -1,6 +1,6 @@
 Title: Iraklitos
 Date:  20021108
-Category: Projects
+Category: projects
 Completed: 1
 Id: p_iraklitos_vlachos
 shortname: Iraklitos

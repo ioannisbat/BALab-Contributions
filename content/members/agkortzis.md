@@ -1,7 +1,7 @@
 Title: Antonios - Gkortzis
 Date: 20151220
 joined_date: 20151220
-Category: Members 
+Category: members 
 Id: m_agkortzis
 givenname: Antonios
 surname: Gkortzis

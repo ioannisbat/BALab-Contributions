@@ -1,6 +1,6 @@
 Title: Web
 Date: 01/01/2001
-Category: Projects
+Category: projects
 Completed: 1
 Id: p_web
 shortname: Web

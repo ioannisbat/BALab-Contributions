@@ -1,6 +1,6 @@
 Title: S-OMA SMART CARDS
 Date:  20061001
-Category: Projects
+Category: projects
 Completed: 1
 Id: p_omasc
 shortname: S-OMA SMART CARDS

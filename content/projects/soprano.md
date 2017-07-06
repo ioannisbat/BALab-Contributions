@@ -1,6 +1,6 @@
 Title: SOPRANO
 Date:  20070101
-Category: Projects
+Category: projects
 Completed: 1
 Id: soprano
 shortname: SOPRANO

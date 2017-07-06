@@ -1,7 +1,7 @@
 Title: Giorgos - Zervas
 Date: 20040101
 joined_date: 20040101
-Category: Associates
+Category: associates
 Id: m_gzervas
 givenname: Giorgos
 surname: Zervas

@@ -1,6 +1,6 @@
 Title: PENED
 Date:  20050901
-Category: Projects
+Category: projects
 Completed: 1
 Id: p_pened_b2b
 shortname: PENED

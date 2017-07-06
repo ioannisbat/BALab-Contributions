@@ -1,6 +1,6 @@
 Title: TRACER
 Date:  20110418
-Category: Projects
+Category: projects
 Completed: 1
 Id: p_tracer
 shortname: TRACER

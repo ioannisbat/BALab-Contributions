@@ -1,6 +1,6 @@
 Title: EDUPORTAL
 Date:  20040301
-Category: Projects
+Category: projects
 Completed: 1
 Id: p_eduportal
 shortname: EDUPORTAL

@@ -3,7 +3,7 @@ Givenname: Alexandros
 Surname: Lattas
 Date: 20160430
 joined_date: 20160430
-Category: Members
+Category: members
 Photo: alattas.jpg
 Id: lattas
 email: alattas@dmst.aueb.gr

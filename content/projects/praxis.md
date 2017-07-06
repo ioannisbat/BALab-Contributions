@@ -1,6 +1,6 @@
 Title: PRAXIS
 Date:  20031001
-Category: Projects
+Category: projects
 Completed: 1
 Id: p_praxis
 shortname: PRAXIS

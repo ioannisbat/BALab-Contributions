@@ -1,7 +1,7 @@
 Title: Vasileios - Vlachos
 Date: 20031114
 joined_date: 20031114
-Category: Members
+Category: members
 Id: m_vlachos
 givenname: Vasileios
 surname: Vlachos

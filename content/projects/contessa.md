@@ -1,6 +1,6 @@
 Title: CONTESSA
 Date:  20010615
-Category: Projects
+Category: projects
 Completed: 1
 Id: p_contessa
 shortname: CONTESSA

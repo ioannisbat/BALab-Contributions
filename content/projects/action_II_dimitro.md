@@ -1,6 +1,6 @@
 Title: Action II
 Date:  20141009
-Category: Projects
+Category: projects
 Completed: 1
 Id: p_action_dimitro
 shortname: Action II
