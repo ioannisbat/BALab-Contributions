@@ -1,7 +1,7 @@
 Title: Dimitris - Mitropoulos
 Date: 20070301
 joined_date: 20070301
-Category: Members
+Category: members
 Id: m_dimitro
 givenname: Dimitris
 surname: Mitropoulos
@@ -22,4 +22,4 @@ phd_completed: 1
 phd_summary: Code injection attacks are one of the most damaging class of attacks because: they can occur in different layers, like databases, native code, applications, libraries and others; and they span a wide range of security and privacy issues, like viewing sensitive information, destruction or modification of sensitive data, or even stopping the execution of the entire application. Our research attempts to prevent a wide class of such attacks in a novel way.
 
 
-_Dimitris Mitropoulos_ is a software and security engineer at the [Greek Research and Technology Network (GRNET)](https://grnet.gr/). Dr. Mitropoulos holds a BSc in Informatics and Telecommunications from the National and Kapodistrian University of Athens, an MSc in Information Systems from the Athens University of Economics and Business and a PhD in Cyber Security from the Athens University of Economics and Business. He has also been a Postdoctoral researcher at the [Network Security Laboratory (NSL)](http://nsl.cs.columbia.edu/index.html) of Columbia University in the City of New York. He has worked in the industry as a software engineer and has been involved in several EU and US funded R&D projects. His research interests include application security, systems security, software evolution and software engineering. He is a member of ACM, IEEE, [SysSec](http://www.syssec-project.eu/community/Members/), [OWASP](http://www.owasp.org/index.php/Greece), and an official writer for the [XRDS:Crossroads](http://xrds.acm.org/blog/?author=8) blog of ACM.
+_Dimitris Mitropoulos_ is a software and security engineer at the [Greek Research and Technology Network (GRNET)](https://grnet.gr/). Dr. Mitropoulos holds a BSc in Informatics and Telecommunications from the National and Kapodistrian University of Athens, an MSc in Information Systems from the Athens University of Economics and Business and a PhD in Cyber Security from the Athens University of Economics and Business. He has also been a Postdoctoral researcher at the [Network Security Laboratory (NSL)](http://nsl.cs.columbia.edu/index.html) of Columbia University in the City of New York. He has worked in the industry as a software engineer and has been involved in several EU and US funded R&D projects. His research interests include application security, systems security, software evolution and software engineering. He is a member of ACM, IEEE, [SysSec](http://www.syssec-project.eu/community/members/), [OWASP](http://www.owasp.org/index.php/Greece), and an official writer for the [XRDS:Crossroads](http://xrds.acm.org/blog/?author=8) blog of ACM.

@@ -1,7 +1,7 @@
 Title: Vassilios - Karakoidas
 Date: 20031114
 joined_date: 20031114
-Category: Members
+Category: members
 Id: m_bkarak
 givenname: Vassilios
 surname: Karakoidas

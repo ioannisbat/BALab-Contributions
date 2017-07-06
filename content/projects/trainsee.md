@@ -1,6 +1,6 @@
 Title: TRAINSEE
 Date:  20020201
-Category: Projects
+Category: projects
 Completed: 1
 Id: p_trainsee
 shortname: TRAINSEE

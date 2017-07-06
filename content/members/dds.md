@@ -1,7 +1,7 @@
 Title: Diomidis - Spinellis
 Date: 20020101
 joined_date: 20020101
-Category: Members
+Category: members
 Id: m_dds
 givenname: Diomidis
 surname: Spinellis

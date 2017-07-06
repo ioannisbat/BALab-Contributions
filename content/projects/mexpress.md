@@ -1,6 +1,6 @@
 Title: mExpress
 Date:  20020305
-Category: Projects
+Category: projects
 Completed: 1
 Id: p_mexpress
 shortname: mExpress

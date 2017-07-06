@@ -1,6 +1,6 @@
 Title: eAware
 Date:  20020101
-Category: Projects
+Category: projects
 Completed: 1
 Id: p_eAware
 shortname: eAware

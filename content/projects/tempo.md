@@ -1,6 +1,6 @@
 Title: TEMPO
 Date:  20020326
-Category: Projects
+Category: projects
 Completed: 1
 Id: p_tempo
 shortname: TEMPO

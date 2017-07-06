@@ -5,7 +5,7 @@
 {% set publication_categories = ['Monographs and Edited Volumes','Journal Articles', 'Book Chapters', 'Conference Publications', 'Technical Reports','White Papers','Magazine Articles','Working Papers'] %}
 
   <div class="container">
-    {% if article.category == 'Members' or  article.category == 'Associates' %}
+    {% if article.category == 'members' or  article.category == 'associates' %}
           <p id="printlogo">
             <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/ba-logo2.png" height="200" width="200" class="img-responsive" alt="...">
           </p>
@@ -352,7 +352,7 @@
         {% endfor %}
     {% endif %}
 
-    {% if article.category == 'Yearly Reports' %}
+    {% if article.category == 'yearly reports' %}
           <p id="printlogo">
             <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/ba-logo2.png" height="200" width="200" class="img-responsive" alt="...">
           </p>
@@ -381,13 +381,13 @@
                         {% break %}
                       {% endif %}
                   {% endfor %}
-                  {% for member in articles if member.category == 'Members' %}
+                  {% for member in articles if member.category == 'members' %}
                       {% if member.joined_date[:4] == article.title %}
-                          <li><a href="#Members">New Members</a></li>
+                          <li><a href="#members">New Members</a></li>
                           {% break %}
                         {% endif %}
                   {% endfor %}
-                  {% for member in articles if member.category == 'Members' %}
+                  {% for member in articles if member.category == 'members' %}
                      {% if  member.phd_enddate%}
                         {% if member.phd_enddate[0:4] == article.title %}
                           <li><a href="#PhDs">Completed PhDs</a></li>
@@ -418,13 +418,13 @@
                         {% break %}
                       {% endif %}
                   {% endfor %}
-                  {% for member in articles if member.category == 'Members' %}
+                  {% for member in articles if member.category == 'members' %}
                      {% if member.joined_date[:4] == article.title %}
-                          <li><a href="#Members">New Members</a></li>
+                          <li><a href="#members">New Members</a></li>
                           {% break %}
                       {% endif %}
                   {% endfor %}
-                  {% for member in articles if member.category == 'Members' %}
+                  {% for member in articles if member.category == 'members' %}
                      {% if  member.phd_enddate%}
                         {% if member.phd_enddate[0:4] == article.title %}
                           <li><a href="#PhDs">Completed PhDs</a></li>
@@ -525,7 +525,7 @@
                      <ul class="list-group">
                        <ul>
                         {% for member in articles %}
-                          {% if member.category == 'Members' %}
+                          {% if member.category == 'members' %}
                             {% if member.joined_date[:4] == article.title %}
                               <p>
                                <li>
@@ -542,7 +542,7 @@
                   {% break %}
                {% endif %}
               {% endfor %}
-              {% for member in articles if member.category == 'Members' %}
+              {% for member in articles if member.category == 'members' %}
                 {% if  member.phd_enddate%}
                   {% if member.phd_enddate[0:4] == article.title %}
                      <div class="panel panel-default" id="px2">
@@ -551,7 +551,7 @@
                        </div>
                        <ul class="list-group">
                          <ul>
-                          {% for member in articles if member.category == 'Members' %}
+                          {% for member in articles if member.category == 'members' %}
                             {% if member.phd_enddate %}
                               {% if member.phd_enddate[:4] == article.title%}
                               <p>

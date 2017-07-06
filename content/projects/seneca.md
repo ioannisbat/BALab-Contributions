@@ -1,6 +1,6 @@
 Title: SENECA
 Date:  20150101
-Category: Projects
+Category: projects
 Completed: 0
 Id: p_seneca
 shortname: SENECA

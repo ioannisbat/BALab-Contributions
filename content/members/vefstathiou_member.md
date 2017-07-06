@@ -1,7 +1,7 @@
 ﻿Title: Vasiliki - Efstathiou
 Date: 20070108
 joined_date: 20070108
-Category: Members 
+Category: members 
 Id: v_efstathiou
 givenname: Vasiliki
 surname: Efstathiou

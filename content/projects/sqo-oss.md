@@ -1,6 +1,6 @@
 Title: SQO-OSS
 Date:  20060901
-Category: Projects
+Category: projects
 Completed: 1
 Id: p_sqo-oss
 shortname: SQO-OSS
@@ -41,7 +41,7 @@ What do we know about the quality of the software you are using?  A well-known 
 in software engineering is that external quality characteristics are correlated to internal quality 
 characteristics and thus the measurement of source code provides useful data for the 
 assessment of its quality. Uniquely, open source software allows us to examine the actual 
-code and perform white box testing and analysis of it. In most open source Projects we can 
+code and perform white box testing and analysis of it. In most open source projects we can 
 also access their version control system, mailing lists and issue databases.  We can use these 
 data sources to extract quality indicators through techniques, such as data mining. 
 SQO-OSS aims to increase the competitiveness of European software development SMEs 
