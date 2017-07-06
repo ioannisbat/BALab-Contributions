@@ -15,9 +15,9 @@ slug: contact
         </div>
         <div class="col-md-9">
           <p>
-            <b>Email: </b> info@istlab.dmst.aueb.gr<br>
-            <!-- <b>Web: </b> <a href="istlab.dmst.aueb.gr">istlab.dmst.aueb.gr</a><br> -->
-            <b>Post: </b> Poulymenakou Angeliki, Information Systems Technology Laboratory, Athens University of Economics and Business, Patision 76. GR-104 34 Athens, GREECE
+            <b>Email: </b> info@balab.aueb.gr<br>
+            <!-- <b>Web: </b> <a href="http://balab.aueb.gr">istlab.dmst.aueb.gr</a><br> -->
+            <b>Post: </b> Diomidis Spinellis, Athens University of Economics and Business, Patision 76, GR-104 34 Athens, GREECE
           </p>
         </div>
       </div>
@@ -28,8 +28,8 @@ slug: contact
       <h3> Credits </h3>
     </div>
     <div class="panel-body">
-       <b>Web development: </b> Chioteli Efstathia, Batas Ioannis <br>
-       <b>Logo design: </b> Griva Anastasia<br>
+       <b>Web development: </b> Efstathia Chioteli, Ioannis  Batas <br>
+       <b>Logo design: </b> Anastasia Griva<br>
     </div>
   </div>
   </br>
