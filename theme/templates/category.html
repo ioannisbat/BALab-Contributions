@@ -2,9 +2,10 @@
 {% block content_title %}{% endblock %}
 {% block content %}
   {% if articles %}
-  {% set cat = 'members' %}
+  {% set cat = category %}
     <div class = "container">
-      ds{{category}}xx
+      ds{{category}}xx <br>
+      {{cat}}
         {% if category == 'members' or category == 'associates'%}
         <p id="printlogo">
           <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/ba-logo2.png" height="200" width="200" class="img-responsive" alt="...">
