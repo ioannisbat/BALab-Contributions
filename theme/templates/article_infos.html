@@ -375,19 +375,19 @@
                     {% break %}
                    {% endif %}
                   {% endfor %}
-                  {% for project in articles if project.category == 'projects' %}
+                  {% for project in articles if project.category|string() == 'projects' %}
                      {% if project.startdate[:4] == article.title or project.enddate[:4] == article.title %}
                         <li><a href="#projects">Projects</a></li>
                         {% break %}
                       {% endif %}
                   {% endfor %}
-                  {% for member in articles if member.category == 'members' %}
+                  {% for member in articles if member.category|string() == 'members' %}
                       {% if member.joined_date[:4] == article.title %}
                           <li><a href="#members">New Members</a></li>
                           {% break %}
                         {% endif %}
                   {% endfor %}
-                  {% for member in articles if member.category == 'members' %}
+                  {% for member in articles if member.category|string() == 'members' %}
                      {% if  member.phd_enddate%}
                         {% if member.phd_enddate[0:4] == article.title %}
                           <li><a href="#PhDs">Completed PhDs</a></li>
@@ -412,19 +412,19 @@
                     {% break %}
                    {% endif %}
                   {% endfor %}
-                  {% for project in articles if project.category == 'projects' %}
+                  {% for project in articles if project.category|string() == 'projects' %}
                      {% if project.startdate[:4] == article.title or project.enddate[:4] == article.title %}
                         <li><a href="#projects">Projects</a></li>
                         {% break %}
                       {% endif %}
                   {% endfor %}
-                  {% for member in articles if member.category == 'members' %}
+                  {% for member in articles if member.category|string() == 'members' %}
                      {% if member.joined_date[:4] == article.title %}
                           <li><a href="#members">New Members</a></li>
                           {% break %}
                       {% endif %}
                   {% endfor %}
-                  {% for member in articles if member.category == 'members' %}
+                  {% for member in articles if member.category|string() == 'members' %}
                      {% if  member.phd_enddate%}
                         {% if member.phd_enddate[0:4] == article.title %}
                           <li><a href="#PhDs">Completed PhDs</a></li>
@@ -470,7 +470,7 @@
                 {% break %}
                {% endif %}
               {% endfor %}
-              {% for project in articles  if project.category == 'projects' %}
+              {% for project in articles  if project.category|string() == 'projects' %}
                  {% if  project.startdate[:4] == article.title or project.enddate[:4] == article.title %}
                      <div class="panel panel-default" id="px2">
                        <div class="panel-heading">
@@ -478,7 +478,7 @@
                        </div>
                        <div class="panel-body">
                              {% for project in articles %}
-                               {% if project.category == 'projects' and  project.startdate[:4] == article.title %}
+                               {% if project.category|string() == 'projects' and  project.startdate[:4] == article.title %}
                                 <h4 style="color:#203864;">New projects</h4>
                                 {% break %}
                                {% endif%}
@@ -486,7 +486,7 @@
                              <ul class="list-group">
                                <ul>
                                  {% for project in articles %}
-                                  {% if project.category == 'projects' and project.startdate[:4] == article.title%}
+                                  {% if project.category|string() == 'projects' and project.startdate[:4] == article.title%}
                                     <p>
                                      <li>{{ project.shortname }} - {{project.projtitle}} <a href="{{ SITEURL }}/{{ project.url }}"><span class="glyphicon glyphicon-new-window"></span></a></li>
                                     </p>
@@ -495,7 +495,7 @@
                                </ul>
                              </ul>
                              {% for project in articles %}
-                               {% if project.category == 'projects' and  project.enddate[:4] == article.title %}
+                               {% if project.category|string() == 'projects' and  project.enddate[:4] == article.title %}
                                 <h4 style="color:#203864;">Completed projects</h4>
                                 {% break %}
                                {% endif%}
@@ -503,7 +503,7 @@
                              <ul class="list-group">
                                <ul>
                                  {% for project in articles %}
-                                  {% if project.category == 'projects' and project.enddate[:4] == article.title%}
+                                  {% if project.category|string() == 'projects' and project.enddate[:4] == article.title%}
                                     <p>
                                      <li>{{ project.shortname }} - {{project.projtitle}} <a href="{{ SITEURL }}/{{ project.url }}"><span class="glyphicon glyphicon-new-window"></span></a></li>
                                     </p>
@@ -516,7 +516,7 @@
                     {% break %}
                   {% endif %}
               {% endfor %}
-              {% for member in articles if member.category == 'Members' %}
+              {% for member in articles if member.category|string() == 'Members' %}
                {% if member.joined_date[:4] == article.title %}
                    <div class="panel panel-default" id="px2">
                      <div class="panel-heading">
@@ -525,7 +525,7 @@
                      <ul class="list-group">
                        <ul>
                         {% for member in articles %}
-                          {% if member.category == 'members' %}
+                          {% if member.category|string() == 'members' %}
                             {% if member.joined_date[:4] == article.title %}
                               <p>
                                <li>
@@ -542,7 +542,7 @@
                   {% break %}
                {% endif %}
               {% endfor %}
-              {% for member in articles if member.category == 'members' %}
+              {% for member in articles if member.category|string() == 'members' %}
                 {% if  member.phd_enddate%}
                   {% if member.phd_enddate[0:4] == article.title %}
                      <div class="panel panel-default" id="px2">
@@ -551,7 +551,7 @@
                        </div>
                        <ul class="list-group">
                          <ul>
-                          {% for member in articles if member.category == 'members' %}
+                          {% for member in articles if member.category|string() == 'members' %}
                             {% if member.phd_enddate %}
                               {% if member.phd_enddate[:4] == article.title%}
                               <p>

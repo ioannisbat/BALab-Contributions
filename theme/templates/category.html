@@ -98,7 +98,7 @@
                                <ul class="list-group">
                                  <ul>
                                    {% for article in articles|sort(attribute='title') %}
-                                    {% if article.category == 'projects' and article.completed == i|string %}
+                                    {% if article.category|string() == 'projects' and article.completed == i|string %}
                                     <p>
                                      <li>{{ article.shortname }} &mdash; {{article.projtitle}} <a href="{{ SITEURL }}/{{ article.url }}"><span class="glyphicon glyphicon-new-window"></span></a></li>
                                     </p>
