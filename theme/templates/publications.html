@@ -3,11 +3,16 @@
 {% block content %}
 
 {% set publication_categories = ['Monographs and Edited Volumes','Journal Articles', 'Book Chapters', 'Conference Publications', 'Technical Reports','White Papers','Magazine Articles','Working Papers'] %}
-{% for article in articles %}
-  {% if article.category == 'members' %}
-    {{article.category}},,,
-    {% endif %}
+{% set categories = ['members','projects'] %}
+
+{% for Category in categories %}
+    {% for article in articles %}
+      {{article.category}}
+     {% if article.category == Category %}
+          {{article.title}}kk
+   {% endif %}
   {% endfor %}
+{% endfor %}
 
 <div class="container">
   <p id="printlogo">
@@ -23,7 +28,7 @@
 		  <nav id="myScrollspy" data-spy="affix" data-offset-top="50" style="position: fixed;">
   			<div class="panel panel-default" >
   			  <div class="panel-heading">
-  				Search by Category:
+  				Search by Category:cd
   			  </div>
           <ul class="nav nav-pills nav-stacked">
           {% for Category in publication_categories %}
