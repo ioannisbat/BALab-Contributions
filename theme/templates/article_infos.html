@@ -171,7 +171,9 @@
                   <hr>
                 {% endif %}
                 {% for member in articles %}
-                  {{member.title}}
+                   {% if article.category|string() == 'members' %}
+                    {{member.title}}
+                  {% endif %}
                 {% endfor %}
                 {% for member in articles if article.category|string() == 'members'  %}
                      {% if member.id == article.scientific_coordinator %}
