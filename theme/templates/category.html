@@ -2,12 +2,8 @@
 {% block content_title %}{% endblock %}
 {% block content %}
   {% if articles %}
-  {% set cat1 = 'members' %}
-  {% set cat2 = 'associates' %}
-  {% set cat3 = 'yearly reports' %}
     <div class = "container">
-      ds{{category}}xx <br>
-        {% if category == cat1 or category == cat2 %}
+        {% if category|string() == 'members'|string() or category|string() == 'associates'|string()%}
         <p id="printlogo">
           <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/ba-logo2.png" height="200" width="200" class="img-responsive" alt="...">
         </p>
@@ -38,7 +34,7 @@
         				</div>
                 {% endfor %}
 
-        {% elif category == cat3 %}
+        {% elif category == 'yearly reports'%}
                 <div class="panel panel-default" id="px2">
                   <div class="panel-heading">
                     <h2>yearly reports</h2>
