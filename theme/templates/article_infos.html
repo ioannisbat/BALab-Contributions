@@ -5,143 +5,6 @@
 {% set publication_categories = ['Monographs and Edited Volumes','Journal Articles', 'Book Chapters', 'Conference Publications', 'Technical Reports','White Papers','Magazine Articles','Working Papers'] %}
 
   <div class="container">
-    {% if article.category|string() == 'members' or  article.category|string() == 'associates' %}
-          <p id="printlogo">
-            <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/ba-logo2.png" height="200" width="200" class="img-responsive" alt="...">
-          </p>
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h2> {{article.givenname}} {{article.surname}} </h2>
-            </div>
-            <div class="panel-body">
-              <div class="row">
-                <div class="col-md-2">
-                  <p>
-                    {% if article.photo %}
-                    <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/{{ article.photo }}" height="200" width="200" class="img-responsive" alt="...">
-                    {% else %}
-                    <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/lamp.png" height="200" width="200" class="img-responsive" alt="...">
-                    {% endif %}
-                  </p>
-                </div>
-                <div class="col-md-9">
-                		<!-- <h4 class="media-heading">{{article.name}} {{article.surname}}</h4> -->
-              			<p>
-                       {% if article.email %}<span class="glyphicon glyphicon-envelope"></span> <b>E-mail:</b> {{article.email}} </br>{% endif %}
-              			   {% if article.office_phone %}<span class="glyphicon glyphicon-phone-alt"></span> <b>Office phone:</b> {{article.office_phone}} </br>{% endif %}
-                       {% if article.mobile_phone %}<span class="glyphicon glyphicon-phone"></span> <b>Mobile phone:</b> {{article.mobile_phone}} </br>{% endif %}
-              			   {% if article.office_address %}<span class="glyphicon glyphicon-briefcase"></span> <b>Office address:</b> {{article.office_address}} </br>{% endif %}
-              			   {% if article.postal_address %}<span class="glyphicon glyphicon-inbox"></span> <b>Postal address:</b> {{article.postal_address}} </br>{% endif %}
-                       {% if article.web_site %}<span class="glyphicon glyphicon-globe"></span> <b>Web Site:</b> <a href="{{article.web_site}}">{{article.web_site}}</a></br>{% endif %}
-                       {% if article.web_log %}<span class="glyphicon glyphicon-globe"></span> <b>Web Log:</b> <a href="{{article.web_log}}">{{article.web_log}}</a></br>{% endif %}
-                       {% if article.github %}<span class="glyphicon glyphicon-link"></span> <b>Github:</b> {{article.github}}</br>{% endif %}
-              			</p>
-                    {% if (article.phd_title or article.phd_startdate) and article.phd_completed == '0' %}
-                      <h4> Phd Thesis </h4>
-                      {% if article.phd_title %}<b> Title:</b> {{article.phd_title}} </br>{% endif%}
-                      {% if article.phd_supervisor %}
-                        <b> Supervisor:</b>
-                         {% for member in articles if article.category|string() == 'members'  %}
-                              {% if member.id == article.phd_supervisor %}
-                                  {% if member.memb_title %}{{member.memb_title}}{% endif%} {{member.surname}} {{member.givenname}}
-                                  <a href="{{ SITEURL }}/{{ member.url }}"><span class="glyphicon glyphicon-new-window"></span></a> </br>
-                              {% endif %}
-                          {% endfor %}
-                      {% endif %}
-                      {% if article.phd_startdate %}<b> Starting date:</b> {{article.phd_startdate[0:4]}}-{{article.phd_startdate[4:6]}}-{{article.phd_startdate[6:8]}} </br>{% endif %}
-                    {% endif %}
-          	      </div>
-                </div>
-              </div>
-            </div>
-
-            {% if article.content %}
-              <div class="panel panel-default" id="px2">
-                <div class="panel-heading">
-                  <h3> Summary </h3>
-                </div>
-                <div class="panel-body">
-                  {{ article.content }}
-                </div>
-              </div>
-            {% endif %}
-            {% for key, year, text, url, XEmember, XEcategory, XEProject in publications %}
-              {% if (XEmember.split(' ')[0] == article.id or
-                 XEmember.split(' ')[1] == article.id or
-                 XEmember.split(' ')[2] == article.id or
-                 XEmember.split(' ')[3] == article.id or
-                 XEmember.split(' ')[4] == article.id)  %}
-                     <div class="row">
-                       <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3" id="printmenu">
-                         <nav>
-                           <div class="panel panel-default" >
-                             <div class="panel-heading">
-                             Publications by Category:
-                             </div>
-                             <ul class="nav nav-pills nav-stacked">
-                               {% for Category in publication_categories %}
-                                   {% for key, year, text, url, XEmember, XEcategory, XEProject in publications %}
-                                   {% if XEcategory == Category and
-                                     (XEmember.split(' ')[0] == article.id or
-                                      XEmember.split(' ')[1] == article.id or
-                                      XEmember.split(' ')[2] == article.id or
-                                      XEmember.split(' ')[3] == article.id or
-                                      XEmember.split(' ')[4] == article.id)  %}
-                                     <li><a href="#{{Category.split(' ')[0]}}">{{Category}}</a></li>
-                                   {% break %}
-                                  {% endif %}
-                                 {% endfor %}
-                               {% endfor %}
-                             </ul>
-                           </div>
-                         </nav>
-                       </div>
-                       <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-9">
-                         <div class="panel panel-default" id="px2">
-                           <div class="panel-heading">
-                             <h3> Publications</h3>
-                           </div>
-                           <div class="panel-body">
-                             {% for Category in publication_categories %}
-                                 {% for key, year, text, url, XEmember, XEcategory, XEProject in publications %}
-                                  {% if XEcategory == Category and
-                                    (XEmember.split(' ')[0] == article.id or
-                                     XEmember.split(' ')[1] == article.id or
-                                     XEmember.split(' ')[2] == article.id or
-                                     XEmember.split(' ')[3] == article.id or
-                                     XEmember.split(' ')[4] == article.id)  %}
-                                   <h4 style="color:#203864;" id="{{Category.partition(' ')[0]}}">{{Category}}</h4>
-                                   {% break %}
-                                  {% endif %}
-                                 {% endfor %}
-                                 <ul class="list-group">
-                                   <ul>
-                                     {% for key, year, text, url, XEmember, XEcategory, XEProject in publications %}
-                                     {% if XEcategory == Category and
-                                       (XEmember.split(' ')[0] == article.id or
-                                        XEmember.split(' ')[1] == article.id or
-                                        XEmember.split(' ')[2] == article.id or
-                                        XEmember.split(' ')[3] == article.id or
-                                        XEmember.split(' ')[4] == article.id)  %}
-                                        <p>
-                                        <li id="{{ key }}">{{ text }}
-                                          {% if url %}<a href="{{ url }}"><span class="glyphicon glyphicon-new-window"></span></a>{% endif %}
-                                        </li>
-                                       </p>
-                                      {% endif %}
-                                     {% endfor %}
-                                   </ul>
-                                 </ul>
-                               {% endfor %}
-                           </div>
-                         </div>
-                       </div>
-                     </div>
-                     {% break %}
-               {% endif %}
-              {% endfor %}
-        {% endif %}
-
     {% if article.category|string() == 'projects' %}
           <p id="printlogo">
             <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/ba-logo2.png" height="200" width="200" class="img-responsive" alt="...">
@@ -171,10 +34,10 @@
                   <hr>
                 {% endif %}
 
-                {% for member2 in articles if article.category|string() == 'members'  %}
-                     {% if member2.id == article.scientific_coordinator %}
-                        <b>Scientific coordinator:</b> {% if member2.memb_title %}{{member2.memb_title}}{% endif%} {{member2.surname}} {{member2.givenname}}
-                        <a href="{{ SITEURL }}/{{ member2.url }}"><span class="glyphicon glyphicon-new-window"></span></a>
+                {% for member in articles if article.category|string() == 'members'  %}
+                     {% if member.id == article.scientific_coordinator %}
+                        <b>Scientific coordinator:</b> {% if member.memb_title %}{{member.memb_title}}{% endif%} {{member.surname}} {{member.givenname}}
+                        <a href="{{ SITEURL }}/{{ member.url }}"><span class="glyphicon glyphicon-new-window"></span></a>
                         </br>
                      {% endif %}
                      {% if member.id == article.project_manager%}
@@ -351,6 +214,143 @@
            {% endif %}
         {% endfor %}
     {% endif %}
+    
+    {% if article.category|string() == 'members' or  article.category|string() == 'associates' %}
+          <p id="printlogo">
+            <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/ba-logo2.png" height="200" width="200" class="img-responsive" alt="...">
+          </p>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h2> {{article.givenname}} {{article.surname}} </h2>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-md-2">
+                  <p>
+                    {% if article.photo %}
+                    <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/{{ article.photo }}" height="200" width="200" class="img-responsive" alt="...">
+                    {% else %}
+                    <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/lamp.png" height="200" width="200" class="img-responsive" alt="...">
+                    {% endif %}
+                  </p>
+                </div>
+                <div class="col-md-9">
+                		<!-- <h4 class="media-heading">{{article.name}} {{article.surname}}</h4> -->
+              			<p>
+                       {% if article.email %}<span class="glyphicon glyphicon-envelope"></span> <b>E-mail:</b> {{article.email}} </br>{% endif %}
+              			   {% if article.office_phone %}<span class="glyphicon glyphicon-phone-alt"></span> <b>Office phone:</b> {{article.office_phone}} </br>{% endif %}
+                       {% if article.mobile_phone %}<span class="glyphicon glyphicon-phone"></span> <b>Mobile phone:</b> {{article.mobile_phone}} </br>{% endif %}
+              			   {% if article.office_address %}<span class="glyphicon glyphicon-briefcase"></span> <b>Office address:</b> {{article.office_address}} </br>{% endif %}
+              			   {% if article.postal_address %}<span class="glyphicon glyphicon-inbox"></span> <b>Postal address:</b> {{article.postal_address}} </br>{% endif %}
+                       {% if article.web_site %}<span class="glyphicon glyphicon-globe"></span> <b>Web Site:</b> <a href="{{article.web_site}}">{{article.web_site}}</a></br>{% endif %}
+                       {% if article.web_log %}<span class="glyphicon glyphicon-globe"></span> <b>Web Log:</b> <a href="{{article.web_log}}">{{article.web_log}}</a></br>{% endif %}
+                       {% if article.github %}<span class="glyphicon glyphicon-link"></span> <b>Github:</b> {{article.github}}</br>{% endif %}
+              			</p>
+                    {% if (article.phd_title or article.phd_startdate) and article.phd_completed == '0' %}
+                      <h4> Phd Thesis </h4>
+                      {% if article.phd_title %}<b> Title:</b> {{article.phd_title}} </br>{% endif%}
+                      {% if article.phd_supervisor %}
+                        <b> Supervisor:</b>
+                         {% for member in articles if article.category|string() == 'members'  %}
+                              {% if member.id == article.phd_supervisor %}
+                                  {% if member.memb_title %}{{member.memb_title}}{% endif%} {{member.surname}} {{member.givenname}}
+                                  <a href="{{ SITEURL }}/{{ member.url }}"><span class="glyphicon glyphicon-new-window"></span></a> </br>
+                              {% endif %}
+                          {% endfor %}
+                      {% endif %}
+                      {% if article.phd_startdate %}<b> Starting date:</b> {{article.phd_startdate[0:4]}}-{{article.phd_startdate[4:6]}}-{{article.phd_startdate[6:8]}} </br>{% endif %}
+                    {% endif %}
+          	      </div>
+                </div>
+              </div>
+            </div>
+
+            {% if article.content %}
+              <div class="panel panel-default" id="px2">
+                <div class="panel-heading">
+                  <h3> Summary </h3>
+                </div>
+                <div class="panel-body">
+                  {{ article.content }}
+                </div>
+              </div>
+            {% endif %}
+            {% for key, year, text, url, XEmember, XEcategory, XEProject in publications %}
+              {% if (XEmember.split(' ')[0] == article.id or
+                 XEmember.split(' ')[1] == article.id or
+                 XEmember.split(' ')[2] == article.id or
+                 XEmember.split(' ')[3] == article.id or
+                 XEmember.split(' ')[4] == article.id)  %}
+                     <div class="row">
+                       <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3" id="printmenu">
+                         <nav>
+                           <div class="panel panel-default" >
+                             <div class="panel-heading">
+                             Publications by Category:
+                             </div>
+                             <ul class="nav nav-pills nav-stacked">
+                               {% for Category in publication_categories %}
+                                   {% for key, year, text, url, XEmember, XEcategory, XEProject in publications %}
+                                   {% if XEcategory == Category and
+                                     (XEmember.split(' ')[0] == article.id or
+                                      XEmember.split(' ')[1] == article.id or
+                                      XEmember.split(' ')[2] == article.id or
+                                      XEmember.split(' ')[3] == article.id or
+                                      XEmember.split(' ')[4] == article.id)  %}
+                                     <li><a href="#{{Category.split(' ')[0]}}">{{Category}}</a></li>
+                                   {% break %}
+                                  {% endif %}
+                                 {% endfor %}
+                               {% endfor %}
+                             </ul>
+                           </div>
+                         </nav>
+                       </div>
+                       <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-9">
+                         <div class="panel panel-default" id="px2">
+                           <div class="panel-heading">
+                             <h3> Publications</h3>
+                           </div>
+                           <div class="panel-body">
+                             {% for Category in publication_categories %}
+                                 {% for key, year, text, url, XEmember, XEcategory, XEProject in publications %}
+                                  {% if XEcategory == Category and
+                                    (XEmember.split(' ')[0] == article.id or
+                                     XEmember.split(' ')[1] == article.id or
+                                     XEmember.split(' ')[2] == article.id or
+                                     XEmember.split(' ')[3] == article.id or
+                                     XEmember.split(' ')[4] == article.id)  %}
+                                   <h4 style="color:#203864;" id="{{Category.partition(' ')[0]}}">{{Category}}</h4>
+                                   {% break %}
+                                  {% endif %}
+                                 {% endfor %}
+                                 <ul class="list-group">
+                                   <ul>
+                                     {% for key, year, text, url, XEmember, XEcategory, XEProject in publications %}
+                                     {% if XEcategory == Category and
+                                       (XEmember.split(' ')[0] == article.id or
+                                        XEmember.split(' ')[1] == article.id or
+                                        XEmember.split(' ')[2] == article.id or
+                                        XEmember.split(' ')[3] == article.id or
+                                        XEmember.split(' ')[4] == article.id)  %}
+                                        <p>
+                                        <li id="{{ key }}">{{ text }}
+                                          {% if url %}<a href="{{ url }}"><span class="glyphicon glyphicon-new-window"></span></a>{% endif %}
+                                        </li>
+                                       </p>
+                                      {% endif %}
+                                     {% endfor %}
+                                   </ul>
+                                 </ul>
+                               {% endfor %}
+                           </div>
+                         </div>
+                       </div>
+                     </div>
+                     {% break %}
+               {% endif %}
+              {% endfor %}
+        {% endif %}
 
     {% if article.category|string() == 'yearly reports' %}
           <p id="printlogo">
