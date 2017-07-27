@@ -143,6 +143,42 @@
         {% endif %}
 
     {% if article.category|string() == 'projects' %}
+    {% for member in articles if article.category|string() == 'members'  %}
+    {{member.id}}
+         {% if member.id == article.scientific_coordinator %}
+            <b>Scientific coordinator:</b> {% if member.memb_title %}{{member.memb_title}}{% endif%} {{member.surname}} {{member.givenname}}
+            <a href="{{ SITEURL }}/{{ member.url }}"><span class="glyphicon glyphicon-new-window"></span></a>
+            </br>
+         {% endif %}
+         {% if member.id == article.project_manager%}
+             <b>Project manager:</b> {% if member.memb_title %}{{member.memb_title}}{% endif%}{{member.surname}} {{member.givenname}}
+             <a href="{{ SITEURL }}/{{ member.url }}"><span class="glyphicon glyphicon-new-window"></span></a>
+             </br>
+         {% endif %}
+         {% if member.id == article.contact %}
+              <b>Contact:</b> {% if member.memb_title %}{{member.memb_title}}{% endif%} {{member.surname}} {{member.givenname}}
+               <a href="{{ SITEURL }}/{{ member.url }}"><span class="glyphicon glyphicon-new-window"></span></a>
+              </br>
+          {% endif %}
+    {% endfor %}
+    {% for member in articles if article.category == 'members'  %}
+    {{member.id}}
+         {% if member.id == article.scientific_coordinator %}
+            <b>Scientific coordinator:</b> {% if member.memb_title %}{{member.memb_title}}{% endif%} {{member.surname}} {{member.givenname}}
+            <a href="{{ SITEURL }}/{{ member.url }}"><span class="glyphicon glyphicon-new-window"></span></a>
+            </br>
+         {% endif %}
+         {% if member.id == article.project_manager%}
+             <b>Project manager:</b> {% if member.memb_title %}{{member.memb_title}}{% endif%}{{member.surname}} {{member.givenname}}
+             <a href="{{ SITEURL }}/{{ member.url }}"><span class="glyphicon glyphicon-new-window"></span></a>
+             </br>
+         {% endif %}
+         {% if member.id == article.contact %}
+              <b>Contact:</b> {% if member.memb_title %}{{member.memb_title}}{% endif%} {{member.surname}} {{member.givenname}}
+               <a href="{{ SITEURL }}/{{ member.url }}"><span class="glyphicon glyphicon-new-window"></span></a>
+              </br>
+          {% endif %}
+    {% endfor %}
           <p id="printlogo">
             <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/ba-logo2.png" height="200" width="200" class="img-responsive" alt="...">
           </p>
@@ -170,11 +206,7 @@
                 {% if article.scientific_coordinator or article.project_manager or article.contact or article.project_manager_name %}
                   <hr>
                 {% endif %}
-                {% for member in articles %}
-                   {% if article.category|string() == 'members' %}
-                    {{member.title}}
-                  {% endif %}
-                {% endfor %}
+
                 {% for member in articles if article.category|string() == 'members'  %}
                      {% if member.id == article.scientific_coordinator %}
                         <b>Scientific coordinator:</b> {% if member.memb_title %}{{member.memb_title}}{% endif%} {{member.surname}} {{member.givenname}}
