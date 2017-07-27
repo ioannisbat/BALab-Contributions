@@ -5,7 +5,7 @@
 {% set publication_categories = ['Monographs and Edited Volumes','Journal Articles', 'Book Chapters', 'Conference Publications', 'Technical Reports','White Papers','Magazine Articles','Working Papers'] %}
 
   <div class="container">
-    {% if article.category == 'members' or  article.category == 'associates' %}
+    {% if article.category|string() == 'members' or  article.category|string() == 'associates' %}
           <p id="printlogo">
             <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/ba-logo2.png" height="200" width="200" class="img-responsive" alt="...">
           </p>
@@ -41,7 +41,7 @@
                       {% if article.phd_title %}<b> Title:</b> {{article.phd_title}} </br>{% endif%}
                           {% if article.phd_supervisor %}
                             <b> Supervisor:</b>
-                             {% for member in articles if article.category == 'members'  %}
+                             {% for member in articles if article.category|string() == 'members'  %}
                                   {% if member.id == article.phd_supervisor %}
                                       {% if member.memb_title %}{{member.memb_title}}{% endif%} {{member.surname}} {{member.givenname}}
                                       <a href="{{ SITEURL }}/{{ member.url }}"><span class="glyphicon glyphicon-new-window"></span></a> </br>
@@ -142,7 +142,7 @@
               {% endfor %}
         {% endif %}
 
-    {% if article.category == 'projects' %}
+    {% if article.category|string() == 'projects' %}
           <p id="printlogo">
             <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/ba-logo2.png" height="200" width="200" class="img-responsive" alt="...">
           </p>
@@ -171,7 +171,7 @@
                   <hr>
                 {% endif %}
 
-                {% for member in articles if article.category == 'members' %}
+                {% for member in articles if article.category|string() == 'members' %}
                      {% if member.id == article.scientific_coordinator %}
                         <b>Scientific coordinator:</b> {% if member.memb_title %}{{member.memb_title}}{% endif%} {{member.surname}} {{member.givenname}}
                         <a href="{{ SITEURL }}/{{ member.url }}"><span class="glyphicon glyphicon-new-window"></span></a>
@@ -352,7 +352,7 @@
         {% endfor %}
     {% endif %}
 
-    {% if article.category == 'yearly reports' %}
+    {% if article.category|string() == 'yearly reports' %}
           <p id="printlogo">
             <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/ba-logo2.png" height="200" width="200" class="img-responsive" alt="...">
           </p>

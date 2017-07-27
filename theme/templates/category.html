@@ -3,13 +3,13 @@
 {% block content %}
   {% if articles %}
     <div class = "container">
-        {% if category|string() == 'members'|string() or category|string() == 'associates'|string()%}
+        {% if category|string() == 'members' or category|string() == 'associates' %}
         <p id="printlogo">
           <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/ba-logo2.png" height="200" width="200" class="img-responsive" alt="...">
         </p>
               <div class="panel panel-default">
                 <div class="panel-heading">
-                  {% if category == 'members'%}
+                  {% if category|string() == 'members'%}
                     <h2>Members</h2>
                   {% else %}
                     <h2>Associates</h2>
@@ -34,7 +34,7 @@
         				</div>
                 {% endfor %}
 
-        {% elif category == 'yearly reports'%}
+        {% elif category|string() == 'yearly reports'%}
                 <div class="panel panel-default" id="px2">
                   <div class="panel-heading">
                     <h2>yearly reports</h2>
