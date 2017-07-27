@@ -171,8 +171,17 @@
                   <hr>
                 {% endif %}
 
-                {% for member in articles if article.category|string() == 'members'|string() %}
-                  {{member.id}}
+                {% if article.scientific_coordinator %}
+                  <b>Scientific coordinator:</b>
+                   {% for member in articles if article.category|string() == 'members'  %}
+                        {% if member.id == article.scientific_coordinator %}
+                            {% if member.memb_title %}{{member.memb_title}}{% endif%} {{member.surname}} {{member.givenname}}
+                            <a href="{{ SITEURL }}/{{ member.url }}"><span class="glyphicon glyphicon-new-window"></span></a> </br>
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
+
+                {% for member in articles if article.category|string() == 'members'  %}
                      {% if member.id == article.scientific_coordinator %}
                         <b>Scientific coordinator:</b> {% if member.memb_title %}{{member.memb_title}}{% endif%} {{member.surname}} {{member.givenname}}
                         <a href="{{ SITEURL }}/{{ member.url }}"><span class="glyphicon glyphicon-new-window"></span></a>
