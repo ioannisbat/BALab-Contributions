@@ -39,16 +39,16 @@
                     {% if (article.phd_title or article.phd_startdate) and article.phd_completed == '0' %}
                       <h4> Phd Thesis </h4>
                       {% if article.phd_title %}<b> Title:</b> {{article.phd_title}} </br>{% endif%}
-                          {% if article.phd_supervisor %}
-                            <b> Supervisor:</b>
-                             {% for member in articles if article.category|string() == 'members'  %}
-                                  {% if member.id == article.phd_supervisor %}
-                                      {% if member.memb_title %}{{member.memb_title}}{% endif%} {{member.surname}} {{member.givenname}}
-                                      <a href="{{ SITEURL }}/{{ member.url }}"><span class="glyphicon glyphicon-new-window"></span></a> </br>
-                                  {% endif %}
-                              {% endfor %}
-                          {% endif %}
-                          {% if article.phd_startdate %}<b> Starting date:</b> {{article.phd_startdate[0:4]}}-{{article.phd_startdate[4:6]}}-{{article.phd_startdate[6:8]}} </br>{% endif %}
+                      {% if article.phd_supervisor %}
+                        <b> Supervisor:</b>
+                         {% for member in articles if article.category|string() == 'members'  %}
+                              {% if member.id == article.phd_supervisor %}
+                                  {% if member.memb_title %}{{member.memb_title}}{% endif%} {{member.surname}} {{member.givenname}}
+                                  <a href="{{ SITEURL }}/{{ member.url }}"><span class="glyphicon glyphicon-new-window"></span></a> </br>
+                              {% endif %}
+                          {% endfor %}
+                      {% endif %}
+                      {% if article.phd_startdate %}<b> Starting date:</b> {{article.phd_startdate[0:4]}}-{{article.phd_startdate[4:6]}}-{{article.phd_startdate[6:8]}} </br>{% endif %}
                     {% endif %}
           	      </div>
                 </div>
@@ -170,17 +170,9 @@
                 {% if article.scientific_coordinator or article.project_manager or article.contact or article.project_manager_name %}
                   <hr>
                 {% endif %}
-
-                {% if article.scientific_coordinator %}
-                  <b>Scientific coordinator:</b>
-                   {% for member in articles if article.category|string() == 'members'  %}
-                        {% if member.id == article.scientific_coordinator %}
-                            {% if member.memb_title %}{{member.memb_title}}{% endif%} {{member.surname}} {{member.givenname}}
-                            <a href="{{ SITEURL }}/{{ member.url }}"><span class="glyphicon glyphicon-new-window"></span></a> </br>
-                        {% endif %}
-                    {% endfor %}
-                {% endif %}
-
+                {% for member in articles %}
+                  {{member.title}}
+                {% endfor %}
                 {% for member in articles if article.category|string() == 'members'  %}
                      {% if member.id == article.scientific_coordinator %}
                         <b>Scientific coordinator:</b> {% if member.memb_title %}{{member.memb_title}}{% endif%} {{member.surname}} {{member.givenname}}
