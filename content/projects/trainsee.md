@@ -13,7 +13,7 @@ total_budget:
 funding_agency: European Commission
 funding_programme: FP5 - IST Program under key action II
 project_code: IST-2000-28181
-logo: Trainsee_logo.gif  
+logo: trainsee_logo.gif  
 scientific_coordinator_name: Angeliki Poulymenakou
 contact_name: Angeliki Poulymenakou
 project_manager_name: Angeliki Poulymenakou

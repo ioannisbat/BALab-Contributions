@@ -172,17 +172,18 @@
                 {% endif %}
 
                 {% for member in articles if article.category|string() == 'members' %}
-                     {% if member.id == article.scientific_coordinator %}
+                sss
+                     {% if member.id|string() == article.scientific_coordinator|string() %}
                         <b>Scientific coordinator:</b> {% if member.memb_title %}{{member.memb_title}}{% endif%} {{member.surname}} {{member.givenname}}
                         <a href="{{ SITEURL }}/{{ member.url }}"><span class="glyphicon glyphicon-new-window"></span></a>
                         </br>
                      {% endif %}
-                     {% if member.id == article.project_manager%}
+                     {% if member.id|string() == article.project_manager|string()%}
                          <b>Project manager:</b> {% if member.memb_title %}{{member.memb_title}}{% endif%}{{member.surname}} {{member.givenname}}
                          <a href="{{ SITEURL }}/{{ member.url }}"><span class="glyphicon glyphicon-new-window"></span></a>
                          </br>
                      {% endif %}
-                     {% if member.id == article.contact %}
+                     {% if member.id|string() == article.contact %}
                           <b>Contact:</b> {% if member.memb_title %}{{member.memb_title}}{% endif%} {{member.surname}} {{member.givenname}}
                            <a href="{{ SITEURL }}/{{ member.url }}"><span class="glyphicon glyphicon-new-window"></span></a>
                           </br>
