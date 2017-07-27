@@ -171,10 +171,10 @@
                   <hr>
                 {% endif %}
 
-                {% for member in articles if article.category|string() == 'members'  %}
-                     {% if member.id == article.scientific_coordinator %}
-                        <b>Scientific coordinator:</b> {% if member.memb_title %}{{member.memb_title}}{% endif%} {{member.surname}} {{member.givenname}}
-                        <a href="{{ SITEURL }}/{{ member.url }}"><span class="glyphicon glyphicon-new-window"></span></a>
+                {% for member2 in articles if article.category|string() == 'members'  %}
+                     {% if member2.id == article.scientific_coordinator %}
+                        <b>Scientific coordinator:</b> {% if member2.memb_title %}{{member2.memb_title}}{% endif%} {{member2.surname}} {{member2.givenname}}
+                        <a href="{{ SITEURL }}/{{ member2.url }}"><span class="glyphicon glyphicon-new-window"></span></a>
                         </br>
                      {% endif %}
                      {% if member.id == article.project_manager%}
