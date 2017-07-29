@@ -11,7 +11,7 @@
           </p>
           <div class="panel panel-default">
             <div class="panel-heading">
-              <h2> {{article.surname}} {{article.givenname}} </h2>
+              <h2> {{article.givenname}} {{article.surname}} </h2>
             </div>
             <div class="panel-body">
               <div class="row">
@@ -43,7 +43,7 @@
                         <b> Supervisor:</b>
                          {% for member in articles if article.category|string() == 'members'  %}
                               {% if member.id == article.phd_supervisor %}
-                                  {% if member.memb_title %}{{member.memb_title}}{% endif%} {{member.givenname}} {{member.surname}}
+                                  {% if member.memb_title %}{{member.memb_title}}{% endif%} {{member.surname}} {{member.givenname}}
                                   <a href="{{ SITEURL }}/{{ member.url }}"><span class="glyphicon glyphicon-new-window"></span></a> </br>
                               {% endif %}
                           {% endfor %}
@@ -171,19 +171,19 @@
                   <hr>
                 {% endif %}
 
-                {% for member in articles if article.category|string() == 'members'  %}
+                {% for member in articles if member.category == 'members' %}
                      {% if member.id == article.scientific_coordinator %}
-                        <b>Scientific coordinator:</b> {% if member.memb_title %}{{member.memb_title}}{% endif%} {{member.givenname}} {{member.surname}}
+                        <b>Scientific coordinator:</b> {% if member.memb_title %}{{member.memb_title}}{% endif%} {{member.surname}} {{member.givenname}}
                         <a href="{{ SITEURL }}/{{ member.url }}"><span class="glyphicon glyphicon-new-window"></span></a>
                         </br>
                      {% endif %}
                      {% if member.id == article.project_manager%}
-                         <b>Project manager:</b> {% if member.memb_title %}{{member.memb_title}}{% endif%} {{member.givenname}} {{member.surname}}
+                         <b>Project manager:</b> {% if member.memb_title %}{{member.memb_title}}{% endif%}{{member.surname}} {{member.givenname}}
                          <a href="{{ SITEURL }}/{{ member.url }}"><span class="glyphicon glyphicon-new-window"></span></a>
                          </br>
                      {% endif %}
                      {% if member.id == article.contact %}
-                          <b>Contact:</b> {% if member.memb_title %}{{member.memb_title}}{% endif%} {{member.givenname}} {{member.surname}}
+                          <b>Contact:</b> {% if member.memb_title %}{{member.memb_title}}{% endif%} {{member.surname}} {{member.givenname}}
                            <a href="{{ SITEURL }}/{{ member.url }}"><span class="glyphicon glyphicon-new-window"></span></a>
                           </br>
                       {% endif %}
