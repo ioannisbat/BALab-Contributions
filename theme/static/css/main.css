@@ -20,6 +20,14 @@ body {
   overflow-wrap: break-word;
 }
 
+*[id]:before { 
+  display: block;
+  content: " ";
+  margin-top: -75px;
+  height: 75px;
+  visibility: hidden;
+}
+
 h2 {
   text-align: center;
 }

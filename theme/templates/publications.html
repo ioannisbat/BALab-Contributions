@@ -69,7 +69,7 @@
                      {% for key, year, text, url, XEmember, XEcategory, XEProject in publications %}
                       {% if XEcategory == Category %}
                          <p>
-                         <li id="{{ key }}">{{ text }} {% if url %} <a href="{{ url }}"><span class="glyphicon glyphicon-new-window"></span></a> {% endif %} </li>
+                         <li>{{ text }} {% if url %} <a href="{{ url }}"><span class="glyphicon glyphicon-new-window"></span></a> {% endif %} </li>
                         </p>
                       {% endif %}
                      {% endfor %}

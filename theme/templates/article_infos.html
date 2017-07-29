@@ -124,7 +124,7 @@
                                         XEmember.split(' ')[3] == article.id or
                                         XEmember.split(' ')[4] == article.id)  %}
                                         <p>
-                                        <li id="{{ key }}">{{ text }}
+                                        <li>{{ text }}
                                           {% if url %}<a href="{{ url }}"><span class="glyphicon glyphicon-new-window"></span></a>{% endif %}
                                         </li>
                                        </p>
@@ -332,7 +332,7 @@
                                   {% if XEcategory == Category and XEProject %}
                                     {% if XEProject == article.id %}
                                       <p>
-                                        <li id="{{ key }}">{{ text }}
+                                        <li>{{ text }}
                                           {% if url %}<a href="{{ url }}"><span class="glyphicon glyphicon-new-window"></span></a>{% endif %}
                                         </li>
                                      </p>
@@ -456,7 +456,7 @@
                              {% for key, year, text, url, XEmember, XEcategory, XEProject in publications %}
                               {% if year == article.title and XEcategory == Category %}
                                <p>
-                               <li id="{{ key }}">{{ text }}
+                               <li>{{ text }}
                                  {% if url %}<a href="{{ url }}"><span class="glyphicon glyphicon-new-window"></span></a>{% endif %}
                                </li>
                                </p>
