@@ -3,4 +3,5 @@
 # Refresh the site's content
 #
 
+umask 0002
 pelican content/ --output=/home/dds/web/balab/
