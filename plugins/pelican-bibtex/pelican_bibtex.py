@@ -81,14 +81,21 @@ def add_publications(generator):
         Writer().write_stream(bibdata_this, bib_buf)
         text = formatted_entry.text.render(html_backend)
 
-        publications.append((key,
-                             year,
-                             text,
-                             url,
-                             XEmember,
-                             XEcategory,
-                             XEProject
-                             ))
+        # publications.append((key,
+        #                      year,
+        #                      text,
+        #                      url,
+        #                      XEmember,
+        #                      XEcategory,
+        #                      XEProject
+        #                      ))
+        publications.append({'key'    : key,
+                             'year'   : year,
+                             'text'   : text,
+                             'url'    : url,
+                             'XEmember' : XEmember,
+                             'XEcategory' : XEcategory,
+                             'XEProject' : XEProject})
 
     generator.context['publications'] = publications
 
