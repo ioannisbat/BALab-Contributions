@@ -65,12 +65,12 @@
                 </div>
               </div>
             {% endif %}
-            {% for key, year, text, url, XEmember, XEcategory, XEProject in publications %}
-              {% if (XEmember.split(' ')[0] == article.id or
-                 XEmember.split(' ')[1] == article.id or
-                 XEmember.split(' ')[2] == article.id or
-                 XEmember.split(' ')[3] == article.id or
-                 XEmember.split(' ')[4] == article.id)  %}
+            {% for publication in publications %}
+              {% if (publication.XEmember.split(' ')[0] == article.id or
+                 publication.XEmember.split(' ')[1] == article.id or
+                 publication.XEmember.split(' ')[2] == article.id or
+                 publication.XEmember.split(' ')[3] == article.id or
+                 publication.XEmember.split(' ')[4] == article.id)  %}
                      <div class="row">
                        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3" id="printmenu">
                          <nav>
@@ -80,13 +80,13 @@
                              </div>
                              <ul class="nav nav-pills nav-stacked">
                                {% for Category in publication_categories %}
-                                   {% for key, year, text, url, XEmember, XEcategory, XEProject in publications %}
-                                   {% if XEcategory == Category and
-                                     (XEmember.split(' ')[0] == article.id or
-                                      XEmember.split(' ')[1] == article.id or
-                                      XEmember.split(' ')[2] == article.id or
-                                      XEmember.split(' ')[3] == article.id or
-                                      XEmember.split(' ')[4] == article.id)  %}
+                                   {% for publication in publications %}
+                                   {% if publication.XEcategory == Category and
+                                     (publication.XEmember.split(' ')[0] == article.id or
+                                      publication.XEmember.split(' ')[1] == article.id or
+                                      publication.XEmember.split(' ')[2] == article.id or
+                                      publication.XEmember.split(' ')[3] == article.id or
+                                      publication.XEmember.split(' ')[4] == article.id)  %}
                                      <li><a href="#{{Category.split(' ')[0]}}">{{Category}}</a></li>
                                    {% break %}
                                   {% endif %}
@@ -103,32 +103,34 @@
                            </div>
                            <div class="panel-body">
                              {% for Category in publication_categories %}
-                                 {% for key, year, text, url, XEmember, XEcategory, XEProject in publications %}
-                                  {% if XEcategory == Category and
-                                    (XEmember.split(' ')[0] == article.id or
-                                     XEmember.split(' ')[1] == article.id or
-                                     XEmember.split(' ')[2] == article.id or
-                                     XEmember.split(' ')[3] == article.id or
-                                     XEmember.split(' ')[4] == article.id)  %}
+                                 {% for publication in publications %}
+                                  {% if publication.XEcategory == Category and
+                                    (publication.XEmember.split(' ')[0] == article.id or
+                                     publication.XEmember.split(' ')[1] == article.id or
+                                     publication.XEmember.split(' ')[2] == article.id or
+                                     publication.XEmember.split(' ')[3] == article.id or
+                                     publication.XEmember.split(' ')[4] == article.id)  %}
                                    <h4 style="color:#203864;" id="{{Category.partition(' ')[0]}}">{{Category}}</h4>
                                    {% break %}
                                   {% endif %}
                                  {% endfor %}
                                  <ul class="list-group">
                                    <ul>
-                                     {% for key, year, text, url, XEmember, XEcategory, XEProject in publications %}
-                                     {% if XEcategory == Category and
-                                       (XEmember.split(' ')[0] == article.id or
-                                        XEmember.split(' ')[1] == article.id or
-                                        XEmember.split(' ')[2] == article.id or
-                                        XEmember.split(' ')[3] == article.id or
-                                        XEmember.split(' ')[4] == article.id)  %}
+                                     {% for group in publications|groupby('XEcategory') %}
+                                      {% for publication in group.list|sort(attribute='year')|reverse %}
+                                     {% if publication.XEcategory == Category and
+                                       (publication.XEmember.split(' ')[0] == article.id or
+                                        publication.XEmember.split(' ')[1] == article.id or
+                                        publication.XEmember.split(' ')[2] == article.id or
+                                        publication.XEmember.split(' ')[3] == article.id or
+                                        publication.XEmember.split(' ')[4] == article.id)  %}
                                         <p>
-                                        <li>{{ text }}
-                                          {% if url %}<a href="{{ url }}"><span class="glyphicon glyphicon-new-window"></span></a>{% endif %}
+                                        <li>{{ publication.text }}
+                                          {% if publication.url %}<a href="{{ publication.url }}"><span class="glyphicon glyphicon-new-window"></span></a>{% endif %}
                                         </li>
                                        </p>
                                       {% endif %}
+                                     {% endfor %}
                                      {% endfor %}
                                    </ul>
                                  </ul>
@@ -173,17 +175,17 @@
 
                 {% for member in articles if member.category|string() == 'members'  %}
                      {% if member.id == article.scientific_coordinator %}
-                        <b>Scientific coordinator:</b> {% if member.memb_title %}{{member.memb_title}}{% endif%} {{member.surname}} {{member.givenname}}
+                        <b>Scientific coordinator:</b> {% if member.memb_title %}{{member.memb_title}}{% endif%} {{member.givenname}} {{member.surname}}
                         <a href="{{ SITEURL }}/{{ member.url }}"><span class="glyphicon glyphicon-new-window"></span></a>
                         </br>
                      {% endif %}
                      {% if member.id == article.project_manager%}
-                         <b>Project manager:</b> {% if member.memb_title %}{{member.memb_title}}{% endif%}{{member.surname}} {{member.givenname}}
+                         <b>Project manager:</b> {% if member.memb_title %}{{member.memb_title}}{% endif%} {{member.givenname}} {{member.surname}}
                          <a href="{{ SITEURL }}/{{ member.url }}"><span class="glyphicon glyphicon-new-window"></span></a>
                          </br>
                      {% endif %}
                      {% if member.id == article.contact %}
-                          <b>Contact:</b> {% if member.memb_title %}{{member.memb_title}}{% endif%} {{member.surname}} {{member.givenname}}
+                          <b>Contact:</b> {% if member.memb_title %}{{member.memb_title}}{% endif%} {{member.givenname}} {{member.surname}}
                            <a href="{{ SITEURL }}/{{ member.url }}"><span class="glyphicon glyphicon-new-window"></span></a>
                           </br>
                       {% endif %}
@@ -285,9 +287,9 @@
               </div>
             </div>
         {% endif %}
-        {% for key, year, text, url, XEmember, XEcategory, XEProject in publications %}
-          {% if XEProject %}
-            {% if XEProject == article.id %}
+        {% for publication in publications %}
+          {% if publication.XEProject %}
+            {% if publication.XEProject == article.id %}
                  <div class="row">
                    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3" id="printmenu">
                      <nav>
@@ -297,9 +299,9 @@
                          </div>
                          <ul class="nav nav-pills nav-stacked">
                            {% for Category in publication_categories %}
-                               {% for key, year, text, url, XEmember, XEcategory, XEProject in publications %}
-                               {% if XEcategory == Category and XEProject %}
-                                {% if XEProject == article.id %}
+                               {% for publication in publications %}
+                               {% if publication.XEcategory == Category and publication.XEProject %}
+                                {% if publication.XEProject == article.id %}
                                  <li><a href="#{{Category.split(' ')[0]}}">{{Category}}</a></li>
                                {% break %}
                                {% endif %}
@@ -318,9 +320,9 @@
                        </div>
                        <div class="panel-body">
                          {% for Category in publication_categories %}
-                             {% for key, year, text, url, XEmember, XEcategory, XEProject in publications %}
-                              {% if XEcategory == Category and XEProject %}
-                                {% if XEProject == article.id %}
+                             {% for publication in publications %}
+                              {% if publication.XEcategory == Category and publication.XEProject %}
+                                {% if publication.XEProject == article.id %}
                                   <h4 style="color:#203864;" id="{{Category.partition(' ')[0]}}">{{Category}}</h4>
                                   {% break %}
                                 {% endif %}
@@ -328,16 +330,18 @@
                              {% endfor %}
                              <ul class="list-group">
                                <ul>
-                                 {% for key, year, text, url, XEmember, XEcategory, XEProject in publications %}
-                                  {% if XEcategory == Category and XEProject %}
-                                    {% if XEProject == article.id %}
+                                 {% for Category in publication_categories %}
+                                  {% for group in publications|groupby('XEcategory') %}
+                                  {% if publication.XEcategory == Category and publication.XEProject %}
+                                    {% if publication.XEProject == article.id %}
                                       <p>
-                                        <li>{{ text }}
-                                          {% if url %}<a href="{{ url }}"><span class="glyphicon glyphicon-new-window"></span></a>{% endif %}
+                                        <li>{{ publication.text }}
+                                          {% if publication.url %}<a href="{{ publication.url }}"><span class="glyphicon glyphicon-new-window"></span></a>{% endif %}
                                         </li>
                                      </p>
                                      {% endif %}
                                   {% endif %}
+                                 {% endfor %}
                                  {% endfor %}
                                </ul>
                              </ul>
@@ -369,11 +373,11 @@
                 Search by Category:
                 </div>
                 <ul class="nav nav-pills nav-stacked">
-                  {% for key, year, text, url, XEmember, XEcategory, XEProject in publications %}
-                   {% if year == article.title%}
-                    <li><a href="#publications">New publications</a></li>
-                    {% break %}
-                   {% endif %}
+                  {% for publication in publications %}
+                    {% if publication.year == article.title %}
+                     <li><a href="#publications">New publications{{find}}</a></li>
+                     {% break %}
+                    {% endif %}
                   {% endfor %}
                   {% for project in articles if project.category|string() == 'projects' %}
                      {% if project.startdate[:4] == article.title or project.enddate[:4] == article.title %}
@@ -406,9 +410,9 @@
                 Search by Category:
                 </div>
                 <ul class="nav nav-pills nav-stacked">
-                  {% for key, year, text, url, XEmember, XEcategory, XEProject in publications %}
-                   {% if year == article.title%}
-                    <li><a href="#publications">New publications</a></li>
+                  {% for publication in publications %}
+                   {% if publication.year == article.title%}
+                    <li><a href="#publications">Publications</a></li>
                     {% break %}
                    {% endif %}
                   {% endfor %}
@@ -437,30 +441,32 @@
               </nav>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-9" id="printurl">
-              {% for key, year, text, url, XEmember, XEcategory, XEProject in publications %}
-               {% if year == article.title%}
+              {% for publication in publications %}
+               {% if publication.year == article.title%}
                  <div class="panel panel-default" id="px2">
                    <div class="panel-heading">
                        <h3 id="publications">Publications</h3>
                    </div>
                    <div class="panel-body">
                      {% for Category in publication_categories %}
-                         {% for key, year, text, url, XEmember, XEcategory, XEProject in publications %}
-                          {% if XEcategory == Category and year == article.title%}
+                         {% for publication in publications %}
+                          {% if publication.XEcategory == Category and publication.year == article.title%}
                            <h4 style="color:#203864;">{{Category}}</h4>
                            {% break %}
                           {% endif %}
                          {% endfor %}
                          <ul class="list-group">
                            <ul>
-                             {% for key, year, text, url, XEmember, XEcategory, XEProject in publications %}
-                              {% if year == article.title and XEcategory == Category %}
+                             {% for group in publications|groupby('XEcategory') %}
+                              {% for publication in group.list|sort(attribute='year')|reverse %}
+                              {% if publication.year == article.title and publication.XEcategory == Category %}
                                <p>
-                               <li>{{ text }}
-                                 {% if url %}<a href="{{ url }}"><span class="glyphicon glyphicon-new-window"></span></a>{% endif %}
+                               <li>{{ publication.text }}
+                                 {% if publication.url %}<a href="{{ publication.url }}"><span class="glyphicon glyphicon-new-window"></span></a>{% endif %}
                                </li>
                                </p>
                               {% endif %}
+                             {% endfor %}
                              {% endfor %}
                            </ul>
                          </ul>

@@ -21,14 +21,14 @@
   				Search by Category:
   			  </div>
           <ul class="nav nav-pills nav-stacked">
-          {% for Category in publication_categories %}
-              {% for key, year, text, url, XEmember, XEcategory, XEProject in publications %}
-               {% if XEcategory == Category %}
-                <li><a href="#{{Category.partition(' ')[0]}}">{{Category}}</a></li>
-              {% break %}
-             {% endif %}
+            {% for Category in publication_categories %}
+              {% for publication in publications %}
+                 {% if publication.XEcategory == Category %}
+                  <li><a href="#{{Category.partition(' ')[0]}}">{{Category}}</a></li>
+                  {% break %}
+                 {% endif %}
+              {% endfor %}
             {% endfor %}
-          {% endfor %}
           </ul>
   			</div>
 		  </nav>
@@ -41,11 +41,11 @@
           </div>
           <ul class="nav nav-pills nav-stacked">
           {% for Category in publication_categories %}
-              {% for key, year, text, url, XEmember, XEcategory, XEProject in publications %}
-               {% if XEcategory == Category %}
+            {% for publication in publications %}
+               {% if publication.XEcategory == Category %}
                 <li><a href="#{{Category.partition(' ')[0]}}">{{Category}}</a></li>
-              {% break %}
-             {% endif %}
+                {% break %}
+               {% endif %}
             {% endfor %}
           {% endfor %}
           </ul>
@@ -55,24 +55,26 @@
 		<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-9" id="printurl">
       {% for Category in publication_categories %}
              <div class="panel panel-default" id="px2">
-               {% for key, year, text, url, XEmember, XEcategory, XEProject in publications %}
-                {% if XEcategory == Category %}
+               {% for publication in publications %}
+                 {% if publication.XEcategory == Category %}
                      <div class="panel-heading">
                        <h3 id="{{Category.partition(' ')[0]}}">{{Category}}</h3>
                      </div>
                      {% break %}
                 {% endif %}
-               {% endfor %}
+              {% endfor %}
                <div class="panel-body">
                  <ul class="list-group">
                    <ul>
-                     {% for key, year, text, url, XEmember, XEcategory, XEProject in publications %}
-                      {% if XEcategory == Category %}
+                    {% for group in publications|groupby('XEcategory') %}
+                     {% for publication in group.list|sort(attribute='year')|reverse %}
+                      {% if  publication.XEcategory == Category %}
                          <p>
-                         <li>{{ text }} {% if url %} <a href="{{ url }}"><span class="glyphicon glyphicon-new-window"></span></a> {% endif %} </li>
+                         <li>{{ publication.text }} {% if  publication.url %} <a href="{{  publication.url }}"><span class="glyphicon glyphicon-new-window"></span></a> {% endif %} </li>
                         </p>
                       {% endif %}
                      {% endfor %}
+                    {% endfor %}
                    </ul>
                  </ul>
                </div>
