@@ -289,7 +289,11 @@
         {% endif %}
         {% for publication in publications %}
           {% if publication.XEProject %}
-            {% if publication.XEProject == article.id %}
+            {% if (publication.XEProject.split(' ')[0] == article.id or
+               publication.XEProject.split(' ')[1] == article.id or
+               publication.XEProject.split(' ')[2] == article.id or
+               publication.XEProject.split(' ')[3] == article.id or
+               publication.XEProject.split(' ')[4] == article.id) %}
                  <div class="row">
                    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3" id="printmenu">
                      <nav>
@@ -301,7 +305,11 @@
                            {% for Category in publication_categories %}
                                {% for publication in publications %}
                                {% if publication.XEcategory == Category and publication.XEProject %}
-                                {% if publication.XEProject == article.id %}
+                               {% if (publication.XEProject.split(' ')[0] == article.id or
+                                  publication.XEProject.split(' ')[1] == article.id or
+                                  publication.XEProject.split(' ')[2] == article.id or
+                                  publication.XEProject.split(' ')[3] == article.id or
+                                  publication.XEProject.split(' ')[4] == article.id) %}
                                  <li><a href="#{{Category.split(' ')[0]}}">{{Category}}</a></li>
                                {% break %}
                                {% endif %}
@@ -322,7 +330,11 @@
                          {% for Category in publication_categories %}
                              {% for publication in publications %}
                               {% if publication.XEcategory == Category and publication.XEProject %}
-                                {% if publication.XEProject == article.id %}
+                              {% if (publication.XEProject.split(' ')[0] == article.id or
+                                 publication.XEProject.split(' ')[1] == article.id or
+                                 publication.XEProject.split(' ')[2] == article.id or
+                                 publication.XEProject.split(' ')[3] == article.id or
+                                 publication.XEProject.split(' ')[4] == article.id) %}
                                   <h4 style="color:#203864;" id="{{Category.partition(' ')[0]}}">{{Category}}</h4>
                                   {% break %}
                                 {% endif %}
@@ -330,10 +342,14 @@
                              {% endfor %}
                              <ul class="list-group">
                                <ul>
-                                 {% for Category in publication_categories %}
-                                  {% for group in publications|groupby('XEcategory') %}
+                                 {% for group in publications|groupby('XEcategory') %}
+                                  {% for publication in group.list|sort(attribute='year')|reverse %}
                                   {% if publication.XEcategory == Category and publication.XEProject %}
-                                    {% if publication.XEProject == article.id %}
+                                  {% if (publication.XEProject.split(' ')[0] == article.id or
+                                     publication.XEProject.split(' ')[1] == article.id or
+                                     publication.XEProject.split(' ')[2] == article.id or
+                                     publication.XEProject.split(' ')[3] == article.id or
+                                     publication.XEProject.split(' ')[4] == article.id) %}
                                       <p>
                                         <li>{{ publication.text }}
                                           {% if publication.url %}<a href="{{ publication.url }}"><span class="glyphicon glyphicon-new-window"></span></a>{% endif %}
