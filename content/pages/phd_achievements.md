@@ -1,4 +1,4 @@
-Title: phd_achievements
+Title: phd achievements
 slug: phd_achievements
 
 <div class="container">

@@ -4,8 +4,8 @@ from __future__ import unicode_literals
 
 JINJA_EXTENSIONS = ['jinja2.ext.loopcontrols']
 
-AUTHOR = 'Efstathia Chioteli, John Batas'
-SITENAME = 'Business Analytics Lab'
+AUTHOR = 'Efstathia Chioteli, Ioannis Batas'
+SITENAME = 'BALab'
 SITEURL = ''
 
 PATH = 'content'

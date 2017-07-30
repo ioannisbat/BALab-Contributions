@@ -1,4 +1,4 @@
-Title: Joining the lab
+Title: joining the lab
 slug: join_The_Lab
 
 <div class="container">  

@@ -1,4 +1,4 @@
-Title: Contact
+Title: contact
 slug: contact
 
 <div class="container">
