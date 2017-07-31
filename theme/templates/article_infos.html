@@ -386,12 +386,12 @@
               <nav id="myScrollspy" data-spy="affix" data-offset-top="50" style="position: fixed;">
               <div class="panel panel-default" >
                 <div class="panel-heading">
-                Search by Category:
+                Contents
                 </div>
                 <ul class="nav nav-pills nav-stacked">
                   {% for publication in publications %}
                     {% if publication.year == article.title %}
-                     <li><a href="#publications">New publications{{find}}</a></li>
+                     <li><a href="#publications">New Publications{{find}}</a></li>
                      {% break %}
                     {% endif %}
                   {% endfor %}
@@ -423,7 +423,7 @@
               <nav>
               <div class="panel panel-default" >
                 <div class="panel-heading">
-                Search by Category:
+                Contents
                 </div>
                 <ul class="nav nav-pills nav-stacked">
                   {% for publication in publications %}
@@ -501,7 +501,7 @@
                        <div class="panel-body">
                              {% for project in articles %}
                                {% if project.category|string() == 'projects' and  project.startdate[:4] == article.title %}
-                                <h4 style="color:#203864;">New projects</h4>
+                                <h4 style="color:#203864;">New Projects</h4>
                                 {% break %}
                                {% endif%}
                              {% endfor %}
@@ -518,7 +518,7 @@
                              </ul>
                              {% for project in articles %}
                                {% if project.category|string() == 'projects' and  project.enddate[:4] == article.title %}
-                                <h4 style="color:#203864;">Completed projects</h4>
+                                <h4 style="color:#203864;">Projects</h4>
                                 {% break %}
                                {% endif%}
                              {% endfor %}
