@@ -1,7 +1,7 @@
 Title: GivenName - Surname (Required)
 Date: YYYYMMDD !write the date that you joined (Required)
 joined_date: YYYYMMDD !write the date that you joined (Required)
-Category: Members (if member) or Associates (if associate) BE CAREFUL: write it exactly as you see it
+Category: Members (if member) or Alumni (if alumni) BE CAREFUL: write it exactly as you see it
 Id: (Required)
 givenname: (Required)
 surname: (Required)

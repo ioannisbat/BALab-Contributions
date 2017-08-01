@@ -1,7 +1,7 @@
 title: Victoria - Skoularidou
 date: 20020101
 joined_date: 20020101
-category: associates
+category: alumni
 id: m_skoularidou
 givenname: Victoria
 surname: Skoularidou

@@ -3,7 +3,7 @@ BALab-Web
 
 This is the repository for the [BALab](http://istlab.dmst.aueb.gr/) web site. This system is used to create and maintain the website. The system manages information regarding
 
-* group members and associates
+* group members and alumni
 * research projects
 * publications
 
@@ -11,11 +11,11 @@ This is a responsive website (mobile, tablets and computers); using HTML, CSS & 
 
 The technologies that are used are Pelican, Markdown & BiBTeX
 
-Data are kept in MARKDOWN form (members, associates, projects) and for the publications BiBTeX is used. Data are transformed into static HTML pages by Pelican.
+Data are kept in MARKDOWN form (members, alumni, projects) and for the publications BiBTeX is used. Data are transformed into static HTML pages by Pelican.
 
 To install Pelican you need:
 -----------
-* `python` 
+* `python`
 * `pelican` : pip install pelican
 * `markdown` : pip install Markdown
 * `typogrify` : pip install typogrify
@@ -27,12 +27,12 @@ To install Pelican you need:
 
 Quick HOWTO
 -----------
-* To add a new publication edit the file in `content/pubs.bib` 
+* To add a new publication edit the file in `content/pubs.bib`
 You can use a BibTeX entry exported from a digital library.
 However, you need to add the  `XEmember` and `XEcategory` fields and change url field to XEurl field and doi to XEdoi;
 look at existing entries for examples. (`XEcategory` = 'Monographs and Edited Volumes','Journal Articles', 'Book Chapters', 'Conference Publications', 'Technical Reports','White Papers','Magazine Articles','Working Papers')
 * To add a new member, add a file under `content/members`;
-* To add a new associate, add a file under `content/associates`;
+* To add a new associate, add a file under `content/alumni`;
 * to add a new project, add a file under `content/projects`;
 * To update a static page (ex. PhD Student Achievements), go to `pages`, follow the existing stracture and use class="img-responsive" for images;
 * To modify an existing one, edit the corresponding file.
@@ -44,19 +44,19 @@ Project Structure
 -----------------
 * `content` : MD and bibtex user data
   * `members` : Members' information (MD)
-  * `associates` : Associates' information (MD)
+  * `alumni` : Alumni' information (MD)
   * `projects` : Project information (MD)
   * `pubs.bib` : publications - Bibliographic data (Bibtex)
-  * `pages` : Rogue HTML pages, which are assigned to the site. 
+  * `pages` : Rogue HTML pages, which are assigned to the site.
 * `plugins` : bibtex plugin  
 * `theme` : templates and static files
-  * `templates` : 
+  * `templates` :
   * `static` :
-	* `css` : 
+	* `css` :
 	* `images` : Put your image here
-	* `fonts` : 
-* `output` : 
- 
+	* `fonts` :
+* `output` :
+
 ### Document Templates ###
 * `doc/templates/member-associate-example.md` : Template for a group member or associate
 * `doc/templates/project-example.md` : Template for a research project
@@ -64,7 +64,7 @@ Project Structure
 
 To create,
 
-* _a new member_, copy the template file to the `content/members/` directory 
-* _a new associate_, copy the template file to the `content/associates/` directory 
+* _a new member_, copy the template file to the `content/members/` directory
+* _a new associate_, copy the template file to the `content/alumni/` directory
 * _a new project_, copy the template file to the `content/projects/` directory
-* _a new publication_, update the appropriate bib file in `content/pubs.bib` directory 
+* _a new publication_, update the appropriate bib file in `content/pubs.bib` directory

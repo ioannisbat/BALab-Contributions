@@ -20,7 +20,7 @@ body {
   overflow-wrap: break-word;
 }
 
-*[id]:before { 
+*[id]:before {
   display: block;
   content: " ";
   margin-top: -75px;
@@ -216,7 +216,7 @@ footer {
   #printurl a {
     display: none;
   }
-  #printphoto a:after {
+  a:after {
     display: none;
   }
   footer {
