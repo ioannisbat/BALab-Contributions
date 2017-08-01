@@ -45,7 +45,7 @@ MENUITEMS = (
 )
 
 # directories to be copied into output/static/
-STATIC_PATHS = ['img', 'css', 'js']
+STATIC_PATHS = ['img', 'css', 'js','images/']
 # very useful for debugging purposes
 DELETE_OUTPUT_DIRECTORY = True
 RELATIVE_URLS = True

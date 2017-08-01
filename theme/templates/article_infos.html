@@ -18,9 +18,9 @@
         <div class="col-md-2">
           <p>
             {% if article.photo %}
-            <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/{{ article.photo }}" height="200" width="200" class="img-responsive" alt="...">
+            <img src="{{ SITEURL }}/images/{{ article.photo }}" height="200" width="200" class="img-responsive" alt="...">
             {% else %}
-            <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/lamp.png" height="200" width="200" class="img-responsive" alt="...">
+            <img src="{{ SITEURL }}/images/lamp.png" height="200" width="200" class="img-responsive" alt="...">
             {% endif %}
           </p>
         </div>
@@ -165,7 +165,7 @@
     <div class="panel-body">
       <p>
         {% if article.logo %}
-        <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/{{ article.logo }}"  style = "width:200; height:200" />
+        <img src="{{ SITEURL }}/images/{{ article.logo }}"  style = "width:200; height:200" />
         {% endif %}
       </p>
       <!-- Print project's Details & Scientific cordinators/Projects managers, if exists -->

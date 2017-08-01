@@ -23,9 +23,9 @@
           <!-- Print every member's photo or default photo linked to its profile -->
           <a href="{{ SITEURL }}/{{ article.url }}">
             {% if article.photo %}
-            <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/{{ article.photo }}" style="height:150px" class="img-responsive" alt="...">
+            <img src="{{ SITEURL }}/images/{{ article.photo }}" style="height:150px" class="img-responsive" alt="...">
             {% else %}
-            <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/lamp.png" style="height:150px" class="img-responsive" alt="...">
+            <img src="{{ SITEURL }}/images/lamp.png" style="height:150px" class="img-responsive" alt="...">
             {% endif %}
             <!-- Print member's name & surname in seperated lines -->
   					<div id="px1" class="caption">

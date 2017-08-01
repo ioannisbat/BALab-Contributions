@@ -31,7 +31,7 @@ slug: phd_achievements
 
       <h3>April 2015</h3>
       <p>
-      <img src="../theme/images/phd.png" border="0" align="right" alt="PhD logo">
+      <img src="{{ SITEURL }}/images/phd.png" border="0" align="right" alt="PhD logo">
       <b>Vassilios Karakoidas</b> successfully defends his PhD thesis.
       </p>
 
@@ -60,7 +60,7 @@ slug: phd_achievements
 
       <h3>March 2014</h3>
       <p>
-      <img src="../theme/images/phd.png" class="img-responsive" border="0" align="right" alt="PhD logo">
+      <img src="{{ SITEURL }}/images/phd.png" class="img-responsive" border="0" align="right" alt="PhD logo">
       <b>Dimitris Mitropoulos</b> successfully defends his PhD thesis.
       </p>
 
@@ -103,7 +103,7 @@ slug: phd_achievements
       Economic Studies, Athens University of
       Economics and Business.
       <br>
-      <img src="../theme/images/algoTrading.png" class="img-responsive" align="right" alt="2011 Algorithmic trading Competition">
+      <img src="{{ SITEURL }}/images/algoTrading.png" class="img-responsive" align="right" alt="2011 Algorithmic trading Competition">
       </p>
 
       <h3>September 2010</h3>
@@ -111,7 +111,7 @@ slug: phd_achievements
       <b>Marios Fragkoulis</b> is awarded a PhD research
       scholarship funded by the Propondis foundation.
       <br>
-      <img src="../theme/images/propontis.jpg" class="img-responsive" align="right" alt="Propontis logo">
+      <img src="{{ SITEURL }}/images/propontis.jpg" class="img-responsive" align="right" alt="Propontis logo">
       </p>
 
       <h3>September 2010</h3>
@@ -119,24 +119,24 @@ slug: phd_achievements
       <b>Dimitris Mitropoulos</b> is awarded a scholarship co-funded by the European Social Fund and National Resources -
       IRAKLITOS II Fellowships for research of Athens University of Economics and Business.
       <br>
-      <img src="../theme/images/irakleitos2.jpeg" class="img-responsive" alt="EPEAEK logo">
+      <img src="{{ SITEURL }}/images/irakleitos2.jpeg" class="img-responsive" alt="EPEAEK logo">
       </p>
 
       <h3>July 2009</h3>
       <p>
-      <img src="../theme/images/phd.png" class="img-responsive" border="0" align="right" alt="PhD logo">
+      <img src="{{ SITEURL }}/images/phd.png" class="img-responsive" border="0" align="right" alt="PhD logo">
       <b>Stephanos Androutsellis</b> successfully defends his PhD thesis.
       </p>
 
       <h3>July 2009</h3>
       <p>
-      <img src="../theme/images/phd.png" class="img-responsive" border="0" align="right" alt="PhD logo">
+      <img src="{{ SITEURL }}/images/phd.png" class="img-responsive" border="0" align="right" alt="PhD logo">
       <b>Georgios Gousios</b> successfully defends his PhD thesis.
       </p>
 
       <h3>February 2009</h3>
       <p>
-      <a href="http://oreilly.com/catalog/9780596517984/"><img src="../theme/images/ba-cover-sm.jpg" class="img-responsive" border="0" align="right" alt="Book cover of Beautiful Architecture"></a>
+      <a href="http://oreilly.com/catalog/9780596517984/"><img src="{{ SITEURL }}/images/ba-cover-sm.jpg" class="img-responsive" border="0" align="right" alt="Book cover of Beautiful Architecture"></a>
       The book
       <a href="http://oreilly.com/catalog/9780596517984/">Beautiful Architecture: Leading Thinkers Reveal the Hidden Beauty in Software Design</a>
       (O'Reilly, 2008,
@@ -150,7 +150,7 @@ slug: phd_achievements
 
       <h3>February 2009</h3>
       <p>
-      <img src="../theme/images/peve_logo.jpg" class="img-responsive" border="0" align="right" alt="PEVE logo">
+      <img src="{{ SITEURL }}/images/peve_logo.jpg" class="img-responsive" border="0" align="right" alt="PEVE logo">
       <b>Vassilios Karakoidas</b> is awarded funding for his research through
       AUEB's Funding Programme for Basic Research (PEVE).
       </p>
@@ -183,7 +183,7 @@ slug: phd_achievements
 
       <h3>June 2008</h3>
       <p>
-      <img src="../theme/images/literati-2008.jpg" class="img-responsive" border="0" align="right" alt="Highly Commended Paper distinction.">
+      <img src="{{ SITEURL }}/images/literati-2008.jpg" class="img-responsive" border="0" align="right" alt="Highly Commended Paper distinction.">
       The paper
       <a href="http://www.dmst.aueb.grps/pubs/jrnl/2007-IMCS-Promise/html/VS07.html">A PRoactive
       Malware Identification System based on the Computer Hygiene Principles</a>
@@ -209,14 +209,14 @@ slug: phd_achievements
 
       <h3>November 2007</h3>
       <p>
-      <img src="../theme/images/ionian.png" class="img-responsive" border="0" align="right" alt="Ionian University logo">
+      <img src="{{ SITEURL }}/images/ionian.png" class="img-responsive" border="0" align="right" alt="Ionian University logo">
       <b>Konstantinos Chorianopoulos</b> is elected Lecturer in the
       Department of Informatics at the Ionian University.
       </p>
 
       <h3>July 2007</h3>
       <p>
-      <img src="../theme/images/phd.png" class="img-responsive" border="0" align="right" alt="PhD logo">
+      <img src="{{ SITEURL }}/images/phd.png" class="img-responsive" border="0" align="right" alt="PhD logo">
       <b>Vasileios Vlachos</b> successfully defends his PhD thesis.
       </p>
 
@@ -230,14 +230,14 @@ slug: phd_achievements
       obtained the top yearly download rank in the ACM's digital library
       popular magazine and computing surveys articles category.
       <br>
-      <img src="../theme/images/acmcs-y1.jpg" class="img-responsive" alt="ACM Digital Library download ranks"> <br>
+      <img src="{{ SITEURL }}/images/acmcs-y1.jpg" class="img-responsive" alt="ACM Digital Library download ranks"> <br>
       Table from the
       <em>Communications of the ACM</em> Volume 49, Number 4 (2006), Pages 29-30.
       </p>
 
       <h3>January 2006</h3>
       <p>
-      <img src="../theme/images/pened-2003.jpg" class="img-responsive" border="0" align="right" alt="PENED-2003 logo">
+      <img src="{{ SITEURL }}/images/pened-2003.jpg" class="img-responsive" border="0" align="right" alt="PENED-2003 logo">
       <b>Stephanos Androutsellis Theotokis</b>,
       <b>Georgios Gousios</b>, and
       <b>Konstantinos Stroggylos</b>
@@ -261,7 +261,7 @@ slug: phd_achievements
       co-funded by the European Social Fund and National Resources - EPEAEK II -
       IRAKLITOS Fellowships for research of
       Athens University of Economics and Business.
-      <img src="../theme/images/epeaek.jpg" class="img-responsive" alt="EPEAEK logo">
+      <img src="{{ SITEURL }}/images/epeaek.jpg" class="img-responsive" alt="EPEAEK logo">
       </p>
 
       <h3>June 2004</h3>
@@ -273,7 +273,7 @@ slug: phd_achievements
 
       <h3>May 2004</h3>
       <p>
-      <img src="../theme/images/phd.png" class="img-responsive" border="0" align="right" alt="PhD logo">
+      <img src="{{ SITEURL }}/images/phd.png" class="img-responsive" border="0" align="right" alt="PhD logo">
       <b>Konstantinos Chorianopoulos</b> successfully defends his PhD thesis.
       </p>
 
@@ -288,7 +288,7 @@ slug: phd_achievements
 
       <h3>April 2004</h3>
       <p>
-      <img src="../theme/images/icup.jpg" class="img-responsive" border="0" align="right" alt="Imagine Cup logo">
+      <img src="{{ SITEURL }}/images/icup.jpg" class="img-responsive" border="0" align="right" alt="Imagine Cup logo">
       <b>Vasileios Vlachos</b> coordinated the student team that won the third place
       in the national phase of the Microsoft Imagine Cup 2004 competition.
       </p>
@@ -303,20 +303,20 @@ slug: phd_achievements
       obtained the top monthly download rank in the ACM's digital library
       popular magazine and computing surveys articles category.
       <br>
-      <img src="../theme/images/acmcs-m1.jpg" class="img-responsive" alt="ACM Digital Library download ranks"> <br>
+      <img src="{{ SITEURL }}/images/acmcs-m1.jpg" class="img-responsive" alt="ACM Digital Library download ranks"> <br>
       Table from the
       <em>Communications of the ACM</em> Volume 48, Number 9 (2005), Pages 29-30.
       </p>
 
       <h3>June 2002</h3>
       <p>
-      <img src="../theme/images/phd.png" class="img-responsive" border="0" align="right" alt="PhD logo">
+      <img src="{{ SITEURL }}/images/phd.png" class="img-responsive" border="0" align="right" alt="PhD logo">
       <b>Konstantinos Raptis</b> successfully defends his PhD thesis.
       </p>
 
       <h3>May 2002</h3>
       <p>
-      <img src="../theme/images/sane2002.jpg" class="img-responsive" border="0" align="right" alt="SANE 2002">
+      <img src="{{ SITEURL }}/images/sane2002.jpg" class="img-responsive" border="0" align="right" alt="SANE 2002">
       Best refereed paper award for the paper: Giorgos Gousios and Diomidis Spinellis. A comparison of portable dynamic web content
       technologies for the apache web server. In <i>Proceedings of the 3rd International
       System Administration and Networking Conference</i> SANE 2002, pages 103–119, May 2002.
