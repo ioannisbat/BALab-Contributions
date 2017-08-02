@@ -426,6 +426,12 @@
               {% endif %}
           {% endfor %}
           {% for project in articles if project.category|string() == 'projects' %}
+           {% if project.startdate[:4]|int() < article.title|int() and project.enddate[:4]|int() > article.title|int()%}
+              <li><a href="#ongoing_projects">Ongoing Projects</a></li>
+              {% break %}
+            {% endif %}
+          {% endfor %}
+          {% for project in articles if project.category|string() == 'projects' %}
              {% if project.enddate[:4] == article.title %}
                 <li><a href="#com_projects">Completed Projects</a></li>
                 {% break %}
@@ -469,6 +475,12 @@
                 <li><a href="#new_projects">New Projects</a></li>
                 {% break %}
               {% endif %}
+          {% endfor %}
+          {% for project in articles if project.category|string() == 'projects' %}
+           {% if project.startdate[:4]|int() < article.title|int() and project.enddate[:4]|int() > article.title|int()%}
+              <li><a href="#ongoing_projects">Ongoing Projects</a></li>
+              {% break %}
+            {% endif %}
           {% endfor %}
           {% for project in articles if project.category|string() == 'projects' %}
              {% if project.enddate[:4] == article.title %}
@@ -552,6 +564,23 @@
                  <ul>
                    {% for project in articles %}
                     {% if project.category|string() == 'projects' and project.startdate[:4] == article.title%}
+                      <p>
+                       <li>{{ project.shortname }} - {{project.projtitle}} <a href="{{ SITEURL }}/{{ project.url }}"><span class="glyphicon glyphicon-new-window"></span></a></li>
+                      </p>
+                    {% endif %}
+                   {% endfor %}
+                 </ul>
+               </ul>
+               {% for project in articles %}
+                 {% if project.category|string() == 'projects' and  project.startdate[:4]|int() < article.title|int() and project.enddate[:4]|int() > article.title|int() %}
+                  <h4 id="ongoing_projects" style="color:#203864;">Ongoing Projects</h4>
+                  {% break %}
+                 {% endif%}
+               {% endfor %}
+               <ul class="list-group">
+                 <ul>
+                   {% for project in articles %}
+                    {% if project.category|string() == 'projects' and project.startdate[:4]|int() < article.title|int() and project.enddate[:4]|int() > article.title|int() %}
                       <p>
                        <li>{{ project.shortname }} - {{project.projtitle}} <a href="{{ SITEURL }}/{{ project.url }}"><span class="glyphicon glyphicon-new-window"></span></a></li>
                       </p>
