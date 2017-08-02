@@ -17,4 +17,41 @@
     </div>
   </div>
 
+  <!-- Latest Publications -->
+  <div class="panel panel-default" id="px2">
+        <div class="panel-heading">
+          <h3>Latest Publications</h3>
+        </div>
+  <div class="panel-body">
+    <ul class="list-group">
+      <ul>
+        <div class = "col-md-6 col-lg-6 col-sm-12">
+           {% for publication in publications|sort(attribute='year')|reverse %}
+              {% if  loop.index == 4 %}
+    					  {% break %}
+              {% else %}
+                 <p>
+                   <li>{{ publication.text }} {% if  publication.url %} <a href="{{  publication.url }}"><span class="glyphicon glyphicon-new-window"></span></a> {% endif %} </li>
+                 </p>
+              {% endif %}
+           {% endfor %}
+				 </div>
+				<div class = "col-md-6 col-lg-6 col-sm-12">
+			     {% set right_column = [4,5,6] %}
+           {% for publication in publications|sort(attribute='year')|reverse %}
+              {% if  loop.index in right_column %}
+                  <p>
+                    <li>{{ publication.text }} {% if  publication.url %} <a href="{{  publication.url }}"><span class="glyphicon glyphicon-new-window"></span></a> {% endif %} </li>
+                  </p>
+              {% endif %}
+        			{% if  loop.index == 7 %}
+        				{% break %}
+              {% endif %}
+           {% endfor %}
+				 </div>
+      </ul>
+    </ul>
+  </div>
+</div>
+
 {% endblock content %}
