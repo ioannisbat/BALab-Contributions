@@ -37,7 +37,7 @@
                {% if article.github %}<span class="glyphicon glyphicon-link"></span> <b>Github:</b> {{article.github}}</br>{% endif %}
       			</p>
             {% if (article.phd_title or article.phd_startdate) and article.phd_completed == '0' %}
-              <h4> Phd Thesis </h4>
+              <h4> Research area </h4>
               {% if article.phd_title %}<b> Title:</b> {{article.phd_title}} </br>{% endif%}
               {% if article.phd_supervisor %}
                 <b> Supervisor:</b>
