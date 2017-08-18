@@ -5,7 +5,6 @@ Category: Members (if member) or Alumni (if alumni) BE CAREFUL: write it exactly
 Id: (Required)
 givenname: (Required)
 surname: (Required)
-memb_title: Dr. or Mr. or Mrs. etc (Optional)
 email: (Required)
 office_phone: (Optional)
 mobile_phone:  (Optional)

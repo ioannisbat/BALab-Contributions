@@ -48,12 +48,13 @@ Project Structure
   * `projects` : Project information (MD)
   * `pubs.bib` : publications - Bibliographic data (Bibtex)
   * `pages` : Rogue HTML pages, which are assigned to the site.
+  * `images` : Put your image here
 * `plugins` : bibtex plugin  
 * `theme` : templates and static files
   * `templates` :
   * `static` :
 	* `css` :
-	* `images` : Put your image here
+	* `images` :
 	* `fonts` :
 * `output` :
 
