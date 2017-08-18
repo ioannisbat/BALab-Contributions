@@ -4,7 +4,7 @@ Surname: Chioteli
 date: 20170818
 joined_date: 20170701
 category: members
-Photo: echioteli.jpg
+Photo: echioteli.JPG
 id: echioteli
 email: hioteli_st@hotmail.com
 web_site:
