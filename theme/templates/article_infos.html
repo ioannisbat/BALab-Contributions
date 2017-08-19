@@ -34,7 +34,7 @@
       			   {% if article.postal_address %}<span class="glyphicon glyphicon-inbox"></span> <b>Postal address:</b> {{article.postal_address}} </br>{% endif %}
                {% if article.web_site %}<span class="glyphicon glyphicon-globe"></span> <b>Web Site:</b> <a href="{{article.web_site}}">{{article.web_site}}</a></br>{% endif %}
                {% if article.web_log %}<span class="glyphicon glyphicon-globe"></span> <b>Web Log:</b> <a href="{{article.web_log}}">{{article.web_log}}</a></br>{% endif %}
-               {% if article.github %}<span class="glyphicon glyphicon-link"></span> <b>Github:</b> {{article.github}}</br>{% endif %}
+               {% if article.github %}<span class="glyphicon glyphicon-link"></span> <b>Github:</b> <a href="{{article.github}}">{{article.github}}</a></br>{% endif %}
       			</p>
             {% if (article.phd_title or article.phd_startdate) and article.phd_completed == '0' %}
               <h4> Research area </h4>
