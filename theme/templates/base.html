@@ -35,44 +35,64 @@
         <a href="{{ SITEURL }}/index.html"> <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/ba-logo2.png"  width="120" height="50" class="d-inline-block align-top" alt=""> </a>
       </div>
       <div id="navbar" class="collapse navbar-collapse">
-		<div class = "row">
-			<ul class="nav navbar-nav navbar-right">
-			  <li><a href="{{ SITEURL }}/index.html">Home</a></li>
-			  <li class="dropdown">
-				<a class="dropdown-toggle" data-toggle="dropdown" href="#">Staff
-				<span class="caret"></span></a>
-				<ul class="dropdown-menu">
-				  <li><a href="{{ SITEURL }}/category/members.html">Members & Associates</a></li>
-				  <li><a href="{{ SITEURL }}/category/alumni.html">Alumni</a></li>
-				  <li><a href="{{ SITEURL }}/pages/phd_achievements.html">PhD Student Achievements</a></li>
-				  <li><a href="{{ SITEURL }}/pages/join_The_Lab.html">Joining the lab</a></li>
-				</ul>
-			  </li>
-			  <li><a href="{{ SITEURL }}/category/projects.html">Projects</a></li>
-			  <li><a href="{{ SITEURL }}/publications.html">Publications</a></li>
-			  <li><a href="{{ SITEURL }}/pages/services.html">Services</a></li>
-			  <li><a href="{{ SITEURL }}/category/yearly-reports.html">Yearly Reports</a></li>
-			</ul>
-		</div>
-		<div class = "row">
-			<div align="right">
-				<div style="width:30%"><gcse:search></gcse:search></div>
-			</div>
-		</div>
-		<script>
-		   (function() {
-			 var cx = '001456668591254139637:9k2gx3wegk8';
-			 var gcse = document.createElement('script');
-			 gcse.type = 'text/javascript';
-			 gcse.async = true;
-			 gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-			 var s = document.getElementsByTagName('script')[0];
-			 s.parentNode.insertBefore(gcse, s);
-		   })();
-		</script>
+  			<ul class="nav navbar-nav navbar-right">
+  			  <li><a href="{{ SITEURL }}/index.html">Home</a></li>
+  			  <li class="dropdown">
+  				<a class="dropdown-toggle" data-toggle="dropdown" href="#">Staff
+  				<span class="caret"></span></a>
+  				<ul class="dropdown-menu">
+  				  <li><a href="{{ SITEURL }}/category/members.html">Members & Associates</a></li>
+  				  <li><a href="{{ SITEURL }}/category/alumni.html">Alumni</a></li>
+  				  <li><a href="{{ SITEURL }}/pages/phd_achievements.html">PhD Student Achievements</a></li>
+  				  <li><a href="{{ SITEURL }}/pages/join_The_Lab.html">Joining the lab</a></li>
+  				</ul>
+  			  </li>
+  			  <li><a href="{{ SITEURL }}/category/projects.html">Projects</a></li>
+  			  <li><a href="{{ SITEURL }}/publications.html">Publications</a></li>
+  			  <li><a href="{{ SITEURL }}/pages/services.html">Services</a></li>
+  			  <li><a href="{{ SITEURL }}/category/yearly-reports.html">Yearly Reports</a></li>
+          <li>
+            <a href="#modalSearch" data-toggle="modal" data-target="#modalSearch">
+              <span class="glyphicon glyphicon-search"></span> <span class="hidden-sm hidden-md hidden-lg">Search</span>
+            </a>
+          </li>
+  			</ul>
       </div><!--/.nav-collapse -->
     </div>
   </nav>
+
+    <!-- Search Modal -->
+  <div id="modalSearch" class="modal fade" role="dialog">
+     <div class="modal-dialog">
+
+         <!-- Modal content-->
+         <div class="modal-content">
+             <div class="modal-header">
+                 <!-- <a type="button" class="close" data-dismiss="modal">&times;</a> -->
+                 <h4 class="modal-title">Search BALab</h4>
+             </div>
+             <div class="modal-body">
+               <!-- Replace the following with your own search script from https://www.google.com/cse. -->
+               <script>
+                 (function() {
+                   var cx = '005094385257090023838:r1endlwnp2e';
+                   var gcse = document.createElement('script');
+                   gcse.type = 'text/javascript';
+                   gcse.async = true;
+                   gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+                   var s = document.getElementsByTagName('script')[0];
+                   s.parentNode.insertBefore(gcse, s);
+                 })();
+               </script>
+               <gcse:search enableAutoComplete="true"></gcse:search>
+            </div>
+             <div class="modal-footer">
+                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+             </div>
+         </div>
+
+     </div>
+  </div>
 
   <div class="container">
     <!-- Show logo for printer -->
