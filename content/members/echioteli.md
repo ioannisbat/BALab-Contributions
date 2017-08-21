@@ -7,9 +7,8 @@ category: members
 Photo: echioteli.JPG
 id: echioteli
 email: hioteli_st@hotmail.com
-web_site: https://www.linkedin.com/in/efstathia-stathoula-chioteli-777594123/
-github: https://github.com/stathoula/
-
+github: stathoula
+linkedin: efstathia-stathoula-chioteli-777594123
 <p>
  Efstathia Chioteli is an undergraduate student at the Athens University of Economics and Business (AUEB), in the Department of Management Science and Technology and an Erasmus student at the The Hague University of Applied sciences.
  </p>
