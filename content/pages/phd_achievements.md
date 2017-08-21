@@ -336,6 +336,6 @@ slug: phd_achievements
 </div>
 <div class="panel panel-default">
   <div class="panel-body">
-    <i class="text-muted">Note: Some of the above data refer to grandfathered work conducted by BALab's members at its progenitor laboratory, <a href="https://istlab.dmst.aueb.gr">[ISTLab]</a>.</i>
+    <i class="text-muted">Note: Some of the above data refer to grandfathered work conducted by BALab's members at its progenitor laboratory, <a href="https://istlab.dmst.aueb.gr">ISTLab</a>.</i>
   </div>
 </div>
