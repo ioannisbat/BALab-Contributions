@@ -3,5 +3,13 @@
 # Refresh the site's content
 #
 
+BASE=/home/dds/web/balab
+
 umask 0002
-pelican content/ --output=/home/dds/web/balab/
+mkdir $BASE/new
+chgrp iweb $BASE/new
+chmod 2775 $BASE/new
+pelican content/ --output=$BASE/new
+mv $BASE/current $BASE/old
+mv $BASE/new $BASE/current
+rm -rf $BASE/old
